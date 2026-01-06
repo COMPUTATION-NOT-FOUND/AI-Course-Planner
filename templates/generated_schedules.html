@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Course Schedules</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-12 rounded-lg shadow-lg w-full max-w-4xl h-full overflow-auto">
+        <div class="mb-8">
+            <h1 class="text-4xl font-semibold text-center mb-6">Generated Course Schedules</h1>
+            
+            <!-- Filter & Sort Controls -->
+            <div class="bg-gray-50 p-4 rounded-lg border shadow-sm">
+                <form action="{{ url_for('generated_schedules') }}" method="get" class="flex flex-wrap items-end gap-4 justify-center">
+                    
+                    <!-- Days Filter -->
+                    <div class="flex flex-col">
+                        <label for="filter_days" class="text-sm font-semibold text-gray-700 mb-1">Days per Week</label>
+                        <select name="filter_days" id="filter_days" class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-32">
+                            <option value="">All</option>
+                            <option value="3" {% if current_filter_days == '3' %}selected{% endif %}>3 Days</option>
+                            <option value="4" {% if current_filter_days == '4' %}selected{% endif %}>4 Days</option>
+                            <option value="5" {% if current_filter_days == '5' %}selected{% endif %}>5 Days</option>
+                            <option value="6" {% if current_filter_days == '6' %}selected{% endif %}>6 Days</option>
+                        </select>
+                    </div>
+
+                    <!-- Instructor Priorities (Dynamic) -->
+                    <div class="flex flex-col border-l pl-4 border-gray-300">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-sm font-semibold text-gray-700">Instructor Priorities</span>
+                            <div class="flex gap-1">
+                                <button type="button" onclick="addPriority()" class="bg-green-100 text-green-700 hover:bg-green-200 rounded px-2 py-0.5 text-xs font-bold border border-green-300" title="Add Priority Level">+</button>
+                                <button type="button" onclick="removePriority()" class="bg-red-100 text-red-700 hover:bg-red-200 rounded px-2 py-0.5 text-xs font-bold border border-red-300" title="Remove Last Priority">-</button>
+                            </div>
+                        </div>
+                        <div id="priorities-container" class="flex flex-col gap-2 max-h-48 overflow-y-auto pr-2">
+                            <!-- Dropdowns will be injected here -->
+                        </div>
+                        <input type="hidden" id="instructor-options-data" value='{{ all_instructors | tojson }}'>
+                    </div>
+
+                    <script>
+                        const allInstructors = JSON.parse(document.getElementById('instructor-options-data').value);
+                        const existingPriorities = {{ current_priorities | tojson }};
+                        const container = document.getElementById('priorities-container');
+                        const maxPriorities = 20;
+
+                        function createDropdown(index, selectedValue = "") {
+                            const wrapper = document.createElement('div');
+                            wrapper.className = 'flex items-center gap-2';
+                            wrapper.id = `priority-row-${index}`;
+                            
+                            const label = document.createElement('span');
+                            label.className = 'text-xs font-bold text-gray-500 w-4';
+                            label.textContent = `${index}.`;
+                            
+                            const select = document.createElement('select');
+                            select.name = `preferred_instructor_${index}`;
+                            select.className = 'p-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 w-48';
+                            
+                            const defaultOption = document.createElement('option');
+                            defaultOption.value = "";
+                            defaultOption.textContent = "-- None --";
+                            select.appendChild(defaultOption);
+                            
+                            allInstructors.forEach(inst => {
+                                const opt = document.createElement('option');
+                                opt.value = inst;
+                                opt.textContent = inst;
+                                if (inst === selectedValue) opt.selected = true;
+                                select.appendChild(opt);
+                            });
+                            
+                            wrapper.appendChild(label);
+                            wrapper.appendChild(select);
+                            return wrapper;
+                        }
+
+                        function addPriority() {
+                            const currentCount = container.children.length;
+                            if (currentCount >= maxPriorities) {
+                                alert("Maximum priority levels reached.");
+                                return;
+                            }
+                            const newIndex = currentCount + 1;
+                            container.appendChild(createDropdown(newIndex));
+                        }
+
+                        function removePriority() {
+                            const currentCount = container.children.length;
+                            if (currentCount > 1) {
+                                container.removeChild(container.lastChild);
+                            }
+                        }
+
+                        // Initialize
+                        if (existingPriorities.length > 0) {
+                            existingPriorities.forEach((p, i) => {
+                                container.appendChild(createDropdown(i + 1, p));
+                            });
+                        } else {
+                            // Default to one empty dropdown
+                            addPriority(); 
+                        }
+                    </script>
+
+                    <!-- Sort Order -->
+                    <div class="flex flex-col border-l pl-4 border-gray-300">
+                        <label for="sort_by" class="text-sm font-semibold text-gray-700 mb-1">Sort By</label>
+                        <select name="sort_by" id="sort_by" class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-48">
+                            <option value="count" {% if current_sort == 'count' %}selected{% endif %}>Most Courses (Default)</option>
+                            <option value="days" {% if current_sort == 'days' %}selected{% endif %}>Fewest Days on Campus</option>
+                            <option value="gaps" {% if current_sort == 'gaps' %}selected{% endif %}>Least Gaps (Compact)</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 font-semibold shadow-sm h-10 mb-[1px]">
+                        Apply Filters
+                    </button>
+                    
+                    <!-- Reset Link -->
+                    <a href="{{ url_for('generated_schedules') }}" class="text-gray-500 hover:text-gray-700 text-sm font-medium underline mb-3 ml-2">Reset</a>
+                </form>
+            </div>
+        </div>
+
+        {% if filter_empty %}
+        <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-8" role="alert">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm text-red-700">
+                        <span class="font-bold">No schedules found matching your filters.</span><br>
+                        Try relaxing the "Days per Week" filter or clearing the "Preferred Instructor".
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        
+        {% if auto_partial_fallback %}
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8" role="alert">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm text-yellow-700">
+                        <span class="font-bold">Note:</span> No complete schedule (including every course in the program) could be found due to time conflicts. 
+                        The schedules below are the best possible "partial" options, maximizing the number of non-conflicting courses.
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Display progress -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Progress</h2>
+            <ul class="space-y-4">
+                {% for step in progress %}
+                    <li class="text-gray-700">{{ step }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Schedule Tables -->
+    <div class="relative w-full"> 
+        {% if schedule_data %}
+            <div id="schedule-container">
+                {% for item in schedule_data %}
+                    <div class="schedule-slide transition-all duration-300 {% if not loop.first %}hidden{% endif %}" data-index="{{ loop.index0 }}">
+                        <div class="flex justify-between items-center mb-6">
+                            <div class="flex items-center gap-4">
+                                <h3 class="text-xl font-semibold">Schedule {{ loop.index }} of {{ schedule_data|length }}</h3>
+                                {% if item.is_partial %}
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-yellow-400">
+                                        Partial Schedule ({{ item.count }}/{{ total_courses }} Courses)
+                                    </span>
+                                {% else %}
+                                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-green-400">
+                                        Complete Schedule
+                                    </span>
+                                {% endif %}
+                                
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-blue-400" title="Total free time between classes">
+                                    Total Gaps: {{ item.total_gaps }} min
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-md shadow-sm overflow-x-auto border">
+                            <table class="table-auto border-collapse border w-full text-xs">
+                                <thead>
+                                    <tr class="bg-gray-100">
+                                        <th class="px-2 py-2 border text-left">Day</th>
+                                        {% for slot in ['08:30-09:45','10:00-11:15','11:30-12:45','13:00-14:15','14:30-15:45','16:00-17:15','17:30-18:45'] %}
+                                            <th class="px-2 py-2 border text-left">{{ slot }}</th>
+                                        {% endfor %}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for day in ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'] %}
+                                        <tr>
+                                            <td class="px-2 py-2 border font-semibold bg-gray-50">{{ day }}</td>
+                                            {% for time in ['08:30-09:45','10:00-11:15','11:30-12:45','13:00-14:15','14:30-15:45','16:00-17:15','17:30-18:45'] %}
+                                                <td class="px-1 py-1 border align-top h-16 w-32">
+                                                    {% set cell_courses = item.grid.get(time, {}).get(day, []) %}
+                                                    {% if cell_courses %}
+                                                        {% for course in cell_courses %}
+                                                            <div 
+                                                                class="p-1 mb-1 rounded text-[10px] leading-tight shadow-sm"
+                                                                {% if highlighted_course_ids[course.id] %}
+                                                                    style="background-color: {{ highlighted_course_ids[course.id] }};"
+                                                                {% else %}
+                                                                    class="bg-blue-50"
+                                                                {% endif %}
+                                                                title="{{ course.name }} ({{ course.id }})"
+                                                            >
+                                                                <span class="font-bold">{{ course.id }}</span><br>
+                                                                {{ course.name }}<br>
+                                                                <span class="italic text-gray-600">{{ course.instructor }}</span>
+                                                            </div>
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="flex items-center justify-between mt-6 bg-white p-4 rounded-lg shadow-sm border">
+                <button onclick="changeSchedule(-1)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    Previous
+                </button>
+                
+                <span class="font-mono font-medium text-lg text-gray-700 bg-gray-50 px-4 py-1 rounded shadow-inner border">
+                    <span id="current-schedule-display">1</span> / {{ schedule_data|length }}
+                </span>
+                
+                <button onclick="changeSchedule(1)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+
+            <script>
+                let currentIndex = 0;
+                const totalSchedules = {{ schedule_data|length }};
+                const slides = document.querySelectorAll('.schedule-slide');
+                const counterDisplay = document.getElementById('current-schedule-display');
+
+                function updateDisplay() {
+                    slides.forEach((slide, index) => {
+                        if (index === currentIndex) {
+                            slide.classList.remove('hidden');
+                        } else {
+                            slide.classList.add('hidden');
+                        }
+                    });
+                    counterDisplay.textContent = currentIndex + 1;
+                }
+
+                function changeSchedule(direction) {
+                    if (totalSchedules === 0) return;
+                    
+                    currentIndex += direction;
+                    
+                    // Loop around
+                    if (currentIndex < 0) {
+                        currentIndex = totalSchedules - 1;
+                    } else if (currentIndex >= totalSchedules) {
+                        currentIndex = 0;
+                    }
+                    
+                    updateDisplay();
+                }
+
+                // Keyboard navigation
+                document.addEventListener('keydown', function(event) {
+                    if (event.key === 'ArrowLeft') {
+                        changeSchedule(-1);
+                    } else if (event.key === 'ArrowRight') {
+                        changeSchedule(1);
+                    }
+                });
+            </script>
+        {% else %}
+            <div class="text-center py-8 text-gray-500 text-xl">
+                No valid schedules found.
+            </div>
+        {% endif %}
+    </div>
+        <!-- Return and Export buttons -->
+        <div class="flex justify-center gap-4 mt-8">
+            <a href="{{ url_for('schedule') }}" class="bg-gray-500 text-white py-4 px-8 rounded-md text-center hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                Return to Constraints
+            </a>
+            <a href="{{ url_for('export_schedules', sort_by=current_sort, filter_days=current_filter_days, preferred_instructor_1=current_priorities[0], preferred_instructor_2=current_priorities[1], preferred_instructor_3=current_priorities[2], preferred_instructor_4=current_priorities[3], preferred_instructor_5=current_priorities[4] ) }}" class="bg-green-600 text-white py-4 px-8 rounded-md text-center hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+                Export CSV
+            </a>
+        </div>
+    </div>
+</body>
+</html>

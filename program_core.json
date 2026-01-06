@@ -1,0 +1,162 @@
+[
+    {
+        "name": "Parallel and Distributed Computing",
+        "program": "BSCS - 6",
+        "instructor": "Mr. M. Zain Uddin",
+        "id": "100498",
+        "room": "MTC-17",
+        "day": "Monday",
+        "time": "08:30-09:45",
+        "comments": ""
+    },
+    {
+        "name": "Parallel and Distributed Computing",
+        "program": "BSCS - 6",
+        "instructor": "Mr. M. Zain Uddin",
+        "id": "100498",
+        "room": "MTC-17",
+        "day": "Wednesday",
+        "time": "08:30-09:45",
+        "comments": ""
+    },
+    {
+        "name": "Parallel and Distributed Computing",
+        "program": "BSCS - 6",
+        "instructor": "Mr. M. Zain Uddin",
+        "id": "100499",
+        "room": "MTC-17",
+        "day": "Tuesday",
+        "time": "08:30-09:45",
+        "comments": ""
+    },
+    {
+        "name": "Parallel and Distributed Computing",
+        "program": "BSCS - 6",
+        "instructor": "Mr. M. Zain Uddin",
+        "id": "100499",
+        "room": "MTC-17",
+        "day": "Thursday",
+        "time": "08:30-09:45",
+        "comments": ""
+    },
+    {
+        "name": "Parallel and Distributed Computing",
+        "program": "BSCS - 6",
+        "instructor": "Mr. M. Zain Uddin",
+        "id": "100498",
+        "room": "MCL-1",
+        "day": "Wednesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Parallel and Distributed Computing",
+        "program": "BSCS - 6",
+        "instructor": "Mr. M. Zain Uddin",
+        "id": "100499",
+        "room": "MCL-3",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Design and Analysis of Algorithm",
+        "program": "BSCS - 6",
+        "instructor": "Dr. Shahid Hussain",
+        "id": "100508 - 100509",
+        "room": "MTS 7",
+        "day": "Monday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Design and Analysis of Algorithm",
+        "program": "BSCS - 6",
+        "instructor": "Dr. Shahid Hussain",
+        "id": "100508 - 100509",
+        "room": "MTS 7",
+        "day": "Wednesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Parallel and Distributed Computing",
+        "program": "BSCS - 6",
+        "instructor": "Mr. M. Zain Uddin",
+        "id": "100499",
+        "room": "MCL-3",
+        "day": "Thursday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Parallel and Distributed Computing",
+        "program": "BSCS - 6",
+        "instructor": "Mr. M. Adil Saleem",
+        "id": "100500",
+        "room": "MTC-18",
+        "day": "Monday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Parallel and Distributed Computing",
+        "program": "BSCS - 6",
+        "instructor": "Mr. M. Adil Saleem",
+        "id": "100500",
+        "room": "MTC-18",
+        "day": "Wednesday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Design and Analysis of Algorithm",
+        "program": "BSCS - 6",
+        "instructor": "Dr. Taslim Murad",
+        "id": "100511",
+        "room": "MTC-21",
+        "day": "Tuesday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Design and Analysis of Algorithm",
+        "program": "BSCS - 6",
+        "instructor": "Dr. Taslim Murad",
+        "id": "100511",
+        "room": "MTC-21",
+        "day": "Thursday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Design and Analysis of Algorithm",
+        "program": "BSCS - 6",
+        "instructor": "Dr. Taslim Murad",
+        "id": "100510",
+        "room": "MTC-21",
+        "day": "Tuesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Design and Analysis of Algorithm",
+        "program": "BSCS - 6",
+        "instructor": "Dr. Taslim Murad",
+        "id": "100510",
+        "room": "MTC-21",
+        "day": "Thursday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Parallel and Distributed Computing",
+        "program": "BSCS - 6",
+        "instructor": "Mr. M. Adil Saleem",
+        "id": "100500",
+        "room": "MCL-3",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    }
+]

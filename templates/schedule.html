@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Schedule</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .selected-course {
+      background-color: #a7f3d0;
+      color: #115e59;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4 max-w-6xl">
+    
+    <!-- Wizard Header -->
+    <div class="mb-6 text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">{{ step_title }}</h1>
+        <div class="flex justify-center items-center gap-2">
+            {% for i in range(1, total_steps + 1) %}
+                <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm
+                    {% if i == current_step %} bg-blue-600 text-white
+                    {% elif i < current_step %} bg-green-500 text-white
+                    {% else %} bg-gray-300 text-gray-600 {% endif %}">
+                    {{ i }}
+                </div>
+                {% if not loop.last %}
+                    <div class="w-8 h-1 bg-gray-300">
+                        <div class="h-full {% if i < current_step %}bg-green-500{% endif %}"></div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Navigation Top -->
+    <div class="flex justify-between mb-4">
+        {% if current_step > 1 %}
+            <a href="{{ url_for('schedule', step=current_step-1) }}" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
+                &larr; Back
+            </a>
+        {% else %}
+            <div></div> <!-- Spacer -->
+        {% endif %}
+
+        <div class="flex gap-2">
+             <!-- Clear buttons for current step context could go here -->
+             <form method="post" action="{{ url_for('clear_constraints') }}">
+                <button type="submit" class="text-xs text-red-500 hover:underline">Reset All Selections</button>
+             </form>
+        </div>
+
+        {% if current_step < total_steps %}
+            <a href="{{ url_for('schedule', step=current_step+1) }}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded shadow-lg">
+                Next Step &rarr;
+            </a>
+        {% else %}
+            <form method="get" action="{{ url_for('ac3_schedule') }}">
+                <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded shadow-lg">
+                    Generate Schedule &rarr;
+                </button>
+            </form>
+        {% endif %}
+    </div>
+
+    <!-- Constraints Summary (Collapsible/Compact) -->
+    {% if constraints or no_class_constraints %}
+    <details class="mb-4 bg-white rounded shadow p-2">
+        <summary class="cursor-pointer font-semibold text-gray-700">View Selected Constraints ({{ constraints|length + no_class_constraints|length }})</summary>
+        <div class="mt-2 text-sm grid grid-cols-1 md:grid-cols-2 gap-4">
+            {% if constraints %}
+            <div>
+                <h4 class="font-bold text-gray-600">Courses:</h4>
+                <ul class="list-disc list-inside text-gray-600">
+                    {% for c in constraints %}
+                        <li>{{ c.name }} ({{ c.day }} {{ c.time }})</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            {% if no_class_constraints %}
+            <div>
+                <h4 class="font-bold text-gray-600">Blocked Times:</h4>
+                <ul class="list-disc list-inside text-gray-600">
+                    {% for d, t in no_class_constraints %}
+                        <li>{{ d }} {{ t }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </details>
+    {% endif %}
+
+    <!-- Main Schedule Grid -->
+    <div class="overflow-x-auto bg-white rounded-lg shadow">
+        <table class="table-auto border-collapse border w-full">
+          <thead>
+            <tr class="bg-gray-50 text-gray-700">
+              <th class="px-4 py-3 border font-bold text-left w-24">Day</th>
+              {% for slot in all_unique_slots %}
+                <th class="px-4 py-3 border font-bold text-left min-w-[150px]">{{ slot }}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for day in days %}
+              <tr>
+                <td class="px-4 py-2 border font-bold text-gray-800 bg-gray-50">{{ day }}</td>
+    
+                {% for time in all_unique_slots %}
+                  {% set is_available = time in time_slots.get(day, []) %}
+                  
+                  {% if is_available %}
+                      <td class="px-2 py-2 border align-top h-32 relative group transition-colors hover:bg-gray-50">
+                        
+                        <!-- 1. Check No Class Constraint -->
+                        {% set ns_blocked = false %}
+                        {% for nc_day, nc_time in no_class_constraints %}
+                            {% if nc_day == day and nc_time == time %}
+                                {% set ns_blocked = true %}
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if ns_blocked %}
+                            <div class="h-full w-full bg-red-100 border-l-4 border-red-500 p-2 rounded mb-1 flex flex-col justify-between">
+                                <span class="text-xs font-bold text-red-700 uppercase tracking-wide">Blocked</span>
+                                <form method="post" action="{{ url_for('schedule', step=current_step) }}">
+                                    <input type="hidden" name="no_class_day_remove" value="{{ day }}">
+                                    <input type="hidden" name="no_class_time_remove" value="{{ time }}">
+                                    <button type="submit" class="text-xs text-red-600 hover:text-red-800 underline">Unblock</button>
+                                </form>
+                            </div>
+                        {% endif %}
+
+                        <!-- 2. Check Course Constraints -->
+                        {% for c in constraints %}
+                            {% if c.day == day and c.time == time %}
+                                <div class="bg-green-100 border-l-4 border-green-500 p-2 rounded mb-1 shadow-sm">
+                                    <div class="text-xs font-bold text-green-800">{{ c.name }}</div>
+                                    <div class="text-xs text-green-700">{{ c.instructor }}</div>
+                                    <form method="post" action="{{ url_for('schedule', step=current_step) }}" class="mt-1">
+                                        <input type="hidden" name="remove_course_id" value="{{ c.id }}">
+                                        <button type="submit" class="text-xs text-green-600 hover:text-green-800 underline">Remove</button>
+                                    </form>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        <!-- 3. Show Available Options (Current Step) -->
+                        {% if not ns_blocked %} <!-- Hide options if blocked? Or show them but disabled? Hiding is cleaner. -->
+                            {% set row = schedule.get(time, {}) %}
+                            {% if row.get(day) %}
+                                <div class="space-y-1 mt-1">
+                                    {% for course in row[day] %}
+                                        <!-- Check if this specific course is already selected (in constraints) to hide it from options list -->
+                                        {% set is_selected = false %}
+                                        {% for c in constraints %}
+                                            {% if c.id == course.id %}{% set is_selected = true %}{% endif %}
+                                        {% endfor %}
+
+                                        {% if not is_selected %}
+                                            <form method="post" action="{{ url_for('schedule', step=current_step) }}">
+                                                <input type="hidden" name="course_id" value="{{ course.id }}">
+                                                <button type="submit" class="w-full text-left p-2 rounded border border-gray-200 hover:border-blue-400 hover:bg-blue-50 transition-all shadow-sm bg-white group">
+                                                    <div class="text-xs font-semibold text-gray-800 group-hover:text-blue-700">{{ course.name }}</div>
+                                                    <div class="text-[10px] text-gray-500">{{ course.instructor }}</div>
+                                                </button>
+                                            </form>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        {% endif %}
+
+                        <!-- 4. No Class Toggle (Always visible in Step 1, or if not blocked) -->
+                        {% if current_step == 1 and not ns_blocked %}
+                             <form method="post" action="{{ url_for('schedule', step=current_step) }}" class="absolute bottom-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <input type="hidden" name="no_class_day" value="{{ day }}">
+                                <input type="hidden" name="no_class_time" value="{{ time }}">
+                                <button type="submit" class="bg-gray-200 hover:bg-red-200 text-gray-600 hover:text-red-600 text-xs px-2 py-1 rounded" title="Block this slot">
+                                    Block
+                                </button>
+                            </form>
+                        {% endif %}
+
+                      </td>
+                  {% else %}
+                      <td class="px-2 py-2 border bg-gray-100"></td>
+                  {% endif %}
+                {% endfor %}
+    
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+
+    <!-- Navigation Bottom -->
+    <div class="flex justify-between mt-6">
+        {% if current_step > 1 %}
+            <a href="{{ url_for('schedule', step=current_step-1) }}" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded text-lg">
+                &larr; Back
+            </a>
+        {% else %}
+            <div></div>
+        {% endif %}
+
+        {% if current_step < total_steps %}
+            <a href="{{ url_for('schedule', step=current_step+1) }}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded shadow-lg text-lg">
+                Next Step &rarr;
+            </a>
+        {% else %}
+            <form method="get" action="{{ url_for('ac3_schedule') }}">
+                <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded shadow-lg text-lg">
+                    Generate Schedule &rarr;
+                </button>
+            </form>
+        {% endif %}
+    </div>
+
+  </div>
+</body>
+</html>
