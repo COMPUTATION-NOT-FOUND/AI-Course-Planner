@@ -10,6 +10,15 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Create a non-root user and group
+RUN addgroup --system appgroup && adduser --system --group appuser
+
+# Change ownership of the app directory
+RUN chown -R appuser:appgroup /app
+
+# Switch to non-root user
+USER appuser
+
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 

@@ -16,6 +16,24 @@
 </head>
 <body class="bg-gray-100">
   <div class="container mx-auto p-4 max-w-6xl">
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="mb-4">
+          {% for category, message in messages %}
+            <div class="p-4 rounded shadow-md {{ 'bg-red-100 text-red-700 border-l-4 border-red-500' if category == 'error' else 'bg-blue-100 text-blue-700 border-l-4 border-blue-500' }}">
+              {{ message }}
+            </div>
+            {% if category == 'error' %}
+              <script>
+                alert("{{ message }}");
+              </script>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
     
     <!-- Wizard Header -->
     <div class="mb-6 text-center">

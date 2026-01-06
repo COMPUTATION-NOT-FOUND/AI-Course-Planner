@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for, flash
 from flask_session import Session
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -7,7 +7,6 @@ import pandas as pd
 from typing import List, Dict
 from collections import defaultdict
 from datetime import datetime
-import ast
 import os
 from ac3 import AC3 
 
@@ -26,6 +25,7 @@ limiter = Limiter(
 # Configure Server-Side Session
 app.config["SESSION_TYPE"] = "filesystem"
 app.config["SESSION_PERMANENT"] = False
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload size
 Session(app)
 
 
@@ -624,9 +624,8 @@ def clear_no_class_constraints():
 
 @app.route('/quick_schedule_no_constraints', methods=['POST'])
 def quick_schedule_no_constraints():
-    save_constraints_to_session([])
-    save_no_class_constraints_to_session([])
-    return redirect(url_for('ac3_schedule'))
+    flash("Please select at least one course to proceed.", "error")
+    return redirect(url_for('schedule', step=2))
 
 
 @app.route('/ac3_schedule', methods=['GET','POST'])
@@ -638,6 +637,12 @@ def ac3_schedule():
     course_loader = CourseDataLoader(['program_core.json', 'electives.json', 'ns_electives.json'])
     session_course_constraints = get_constraints_from_session() 
     session_no_class = get_no_class_constraints_from_session()
+    
+    # Validation: Ensure at least one course constraint is selected
+    if not session_course_constraints:
+        flash("To prevent computational overload, please select at least one course constraint.", "error")
+        return redirect(url_for('schedule', step=2))
+
     allow_partial = session.get('allow_partial', False)
 
     # 1. Load Program Requirements
@@ -1033,4 +1038,5 @@ def export_schedules():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    debug_mode = os.environ.get("FLASK_DEBUG", "False").lower() == "true"
+    app.run(debug=debug_mode)
