@@ -16,8 +16,19 @@
                     name="program" 
                     placeholder="Enter program name" 
                     required 
+<<<<<<< HEAD
                     class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
+=======
+                    list="programs"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                <datalist id="programs">
+                    {% for prog in available_programs %}
+                        <option value="{{ prog }}"></option>
+                    {% endfor %}
+                </datalist>
+>>>>>>> deployment
             </div>
             <div class="flex justify-center">
                 <button 

@@ -1,0 +1,16 @@
+{
+    "BSCS-5": {
+        "Elective": 1
+    },
+    "BSCS-6": {
+        "Elective": 2,
+        "NS-Elective": 1
+    },
+    "BSCS-7": {
+        "Elective": 2,
+        "NS-Elective": 1
+    },
+    "BSCS-8": {
+        "Elective": 2
+    }
+}

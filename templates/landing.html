@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Scheduler - Configuration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto p-8 max-w-4xl">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">AI Course Scheduler</h1>
+            <p class="text-gray-600">Configure your data or start scheduling immediately.</p>
+        </header>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                            <!-- 1. Actions -->
+
+                            <div class="space-y-6">
+
+                                <!-- Main Action -->
+
+                                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500 hover:shadow-lg transition-shadow">
+
+                                    <h2 class="text-2xl font-semibold mb-4 text-gray-800">Ready to Schedule?</h2>
+
+                                    <p class="text-gray-600 mb-6">Proceed to select your program and generate schedules using existing data.</p>
+
+                                    <a href="{{ url_for('select_program') }}" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+
+                                        Start Scheduling &rarr;
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                
+
+                            <!-- 2. Requirements Editor -->
+
+                            <div class="bg-white p-6 rounded-xl shadow-md flex flex-col h-full">
+
+                                <div class="flex justify-between items-center mb-4">
+
+                                    <h2 class="text-xl font-semibold text-gray-800">Program Requirements</h2>
+
+                                    <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">JSON Format</span>
+
+                                </div>
+
+                                <form method="post" class="flex-grow flex flex-col">
+
+                                    <p class="text-sm text-gray-600 mb-2">Define elective slots for each program here.</p>
+
+                                    <textarea name="requirements_json" class="flex-grow w-full p-4 border border-gray-300 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none bg-gray-50 h-64" spellcheck="false">{{ requirements_content }}</textarea>
+
+                                    <button type="submit" name="action" value="save_requirements" class="w-full mt-4 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm font-semibold">
+
+                                        Save Requirements
+
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                
+
+                            <!-- 3. Program Core Editor -->
+
+                            <div class="bg-white p-6 rounded-xl shadow-md flex flex-col h-full">
+
+                                <div class="flex justify-between items-center mb-4">
+
+                                    <h2 class="text-xl font-semibold text-gray-800">Program Core</h2>
+
+                                    <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">JSON Format</span>
+
+                                </div>
+
+                                <form method="post" class="flex-grow flex flex-col">
+
+                                    <p class="text-sm text-gray-600 mb-2">Edit the raw schedule data here.</p>
+
+                                    <textarea name="schedule_json" class="flex-grow w-full p-4 border border-gray-300 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none bg-gray-50 h-64" spellcheck="false">{{ schedule_content }}</textarea>
+
+                                    <button type="submit" name="action" value="save_schedule" class="w-full mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-semibold">
+
+                                        Save Schedule
+
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                            <!-- 3a. NS Electives Editor -->
+
+                            <div class="bg-white p-6 rounded-xl shadow-md flex flex-col h-full">
+
+                                <div class="flex justify-between items-center mb-4">
+
+                                    <h2 class="text-xl font-semibold text-gray-800">NS Electives</h2>
+
+                                    <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">JSON Format</span>
+
+                                </div>
+
+                                <form method="post" class="flex-grow flex flex-col">
+
+                                    <p class="text-sm text-gray-600 mb-2">Edit the raw NS Electives data here.</p>
+
+                                    <textarea name="ns_electives_json" class="flex-grow w-full p-4 border border-gray-300 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none bg-gray-50 h-64" spellcheck="false">{{ ns_electives_content }}</textarea>
+
+                                    <button type="submit" name="action" value="save_ns_electives" class="w-full mt-4 bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition-colors text-sm font-semibold">
+
+                                        Save NS Electives
+
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                            <!-- 3b. Electives Editor -->
+
+                            <div class="bg-white p-6 rounded-xl shadow-md flex flex-col h-full">
+
+                                <div class="flex justify-between items-center mb-4">
+
+                                    <h2 class="text-xl font-semibold text-gray-800">Electives</h2>
+
+                                    <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">JSON Format</span>
+
+                                </div>
+
+                                <form method="post" class="flex-grow flex flex-col">
+
+                                    <p class="text-sm text-gray-600 mb-2">Edit the raw Electives data here.</p>
+
+                                    <textarea name="electives_json" class="flex-grow w-full p-4 border border-gray-300 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none bg-gray-50 h-64" spellcheck="false">{{ electives_content }}</textarea>
+
+                                    <button type="submit" name="action" value="save_electives" class="w-full mt-4 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm font-semibold">
+
+                                        Save Electives
+
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                            <!-- 4. Configuration Editor (Consolidated) -->
+
+                            <div class="bg-white p-6 rounded-xl shadow-md flex flex-col h-full">
+
+                                <div class="flex justify-between items-center mb-4">
+
+                                    <h2 class="text-xl font-semibold text-gray-800">Configuration (Days & Slots)</h2>
+
+                                    <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">JSON Format</span>
+
+                                </div>
+
+                                <form method="post" class="flex-grow flex flex-col">
+
+                                    <p class="text-sm text-gray-600 mb-2">Define nested time slots per day.</p>
+
+                                    <textarea name="config_json" class="flex-grow w-full p-4 border border-gray-300 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none bg-gray-50 h-64" spellcheck="false">{{ config_content }}</textarea>
+
+                                    <button type="submit" name="action" value="save_config" class="w-full mt-4 bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm font-semibold">
+
+                                        Save Configuration
+
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+        
+        {% if message %}
+        <div class="mt-8 p-4 rounded-lg bg-green-50 text-green-800 border border-green-200 flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            {{ message }}
+        </div>
+        {% endif %}
+        
+        {% if error %}
+        <div class="mt-8 p-4 rounded-lg bg-red-50 text-red-800 border border-red-200 flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            {{ error }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

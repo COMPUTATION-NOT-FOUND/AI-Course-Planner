@@ -1,0 +1,1522 @@
+[
+    {
+        "name": "Probability and Statistical Models",
+        "program": "NS-Elective",
+        "instructor": "Dr. Muhammad Sheraz",
+        "id": "100646",
+        "room": "MAS-1",
+        "day": "Monday",
+        "time": "08:30-09:45",
+        "comments": ""
+    },
+    {
+        "name": "Probability and Statistical Models",
+        "program": "NS-Elective",
+        "instructor": "Dr. Muhammad Sheraz",
+        "id": "100646",
+        "room": "MAS-1",
+        "day": "Wednesday",
+        "time": "08:30-09:45",
+        "comments": ""
+    },
+    {
+        "name": "Stochastic Processes",
+        "program": "NS-Elective",
+        "instructor": "Dr. Muhammad Sheraz",
+        "id": "100575",
+        "room": "MAS-1",
+        "day": "Tuesday",
+        "time": "08:30-09:45",
+        "comments": ""
+    },
+    {
+        "name": "Stochastic Processes",
+        "program": "NS-Elective",
+        "instructor": "Dr. Muhammad Sheraz",
+        "id": "100575",
+        "room": "MAS-1",
+        "day": "Thursday",
+        "time": "08:30-09:45",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Ms Yasmin Lodhi",
+        "id": "100175",
+        "room": "MCC-10",
+        "day": "Monday",
+        "time": "08:30-09:45",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Ms Yasmin Lodhi",
+        "id": "100175",
+        "room": "MCC-10",
+        "day": "Wednesday",
+        "time": "08:30-09:45",
+        "comments": ""
+    },
+    {
+        "name": "Calculus 1",
+        "program": "NS-Elective",
+        "instructor": "Dr. Naveed Ahmed",
+        "id": "100390",
+        "room": "MAC-5",
+        "day": "Monday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Calculus 1",
+        "program": "NS-Elective",
+        "instructor": "Dr. Naveed Ahmed",
+        "id": "100390",
+        "room": "MAC-5",
+        "day": "Wednesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Probability Theory",
+        "program": "NS-Elective",
+        "instructor": "Dr. Amir Bashir",
+        "id": "100662",
+        "room": "MAC-6",
+        "day": "Monday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Probability Theory",
+        "program": "NS-Elective",
+        "instructor": "Dr. Amir Bashir",
+        "id": "100662",
+        "room": "MAC-6",
+        "day": "Wednesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Probability Theory",
+        "program": "NS-Elective",
+        "instructor": "Dr. Amir Bashir",
+        "id": "100670",
+        "room": "MAC 6",
+        "day": "Tuesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Probability Theory",
+        "program": "NS-Elective",
+        "instructor": "Dr. Amir Bashir",
+        "id": "100670",
+        "room": "MAC 6",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Samreen Zaman",
+        "id": "100777",
+        "room": "MAC 6",
+        "day": "Friday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Samreen Zaman",
+        "id": "100777",
+        "room": "MAC 6",
+        "day": "Saturday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Hafizah Rumlah Amer",
+        "id": "100778",
+        "room": "MAC-7",
+        "day": "Friday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Hafizah Rumlah Amer",
+        "id": "100778",
+        "room": "MAC-7",
+        "day": "Saturday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Saher Iqbal",
+        "id": "100187",
+        "room": "MCC-09",
+        "day": "Tuesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Saher Iqbal",
+        "id": "100187",
+        "room": "MCC-09",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Yasmin Lodhi",
+        "id": "100175",
+        "room": "MCC-10",
+        "day": "Monday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Yasmin Lodhi",
+        "id": "100175",
+        "room": "MCC-10",
+        "day": "Wednesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Mirza Qaisar Ahmed Baig",
+        "id": "100176",
+        "room": "MCC-11",
+        "day": "Monday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Mirza Qaisar Ahmed Baig",
+        "id": "100176",
+        "room": "MCC-11",
+        "day": "Wednesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "German 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Mokhashaf Muntazir",
+        "id": "100188",
+        "room": "MCC-11",
+        "day": "Tuesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "German 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Mokhashaf Muntazir",
+        "id": "100188",
+        "room": "MCC-11",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Farhan Ahmed Siddiqui",
+        "id": "100189",
+        "room": "MCC-12",
+        "day": "Tuesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Farhan Ahmed Siddiqui",
+        "id": "100189",
+        "room": "MCC-12",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Financial Derivatives & Stochastic Models",
+        "program": "NS-Elective",
+        "instructor": "Dr. Muhammad Sheraz",
+        "id": "100882",
+        "room": "MCC-13",
+        "day": "Tuesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Financial Derivatives & Stochastic Models",
+        "program": "NS-Elective",
+        "instructor": "Dr. Muhammad Sheraz",
+        "id": "100882",
+        "room": "MCC-13",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Mathematical Economics",
+        "program": "NS-Elective",
+        "instructor": "Dr. Shahzad Ahmed",
+        "id": "100826",
+        "room": "MCC-15",
+        "day": "Saturday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Optimization Techniques",
+        "program": "NS-Elective",
+        "instructor": "Dr. Nasir Touheed",
+        "id": "100578",
+        "room": "MTC-22",
+        "day": "Monday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Optimization Techniques",
+        "program": "NS-Elective",
+        "instructor": "Dr. Nasir Touheed",
+        "id": "100578",
+        "room": "MTC-22",
+        "day": "Wednesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Abstract Algebra",
+        "program": "NS-Elective",
+        "instructor": "Dr. Junaid Alam",
+        "id": "100664",
+        "room": "MTS 6",
+        "day": "Tuesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Abstract Algebra",
+        "program": "NS-Elective",
+        "instructor": "Dr. Junaid Alam",
+        "id": "100664",
+        "room": "MTS 6",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Samreen Zaman",
+        "id": "100792",
+        "room": "MAC-3",
+        "day": "Friday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Samreen Zaman",
+        "id": "100792",
+        "room": "MAC-3",
+        "day": "Saturday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Calculus 1",
+        "program": "NS-Elective",
+        "instructor": "Dr. Naveed Ahmed",
+        "id": "100541",
+        "room": "MAC-5",
+        "day": "Monday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Calculus 1",
+        "program": "NS-Elective",
+        "instructor": "Dr. Naveed Ahmed",
+        "id": "100541",
+        "room": "MAC-5",
+        "day": "Wednesday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Hafizah Rumlah Amer",
+        "id": "100794",
+        "room": "MAC-7",
+        "day": "Friday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Hafizah Rumlah Amer",
+        "id": "100794",
+        "room": "MAC-7",
+        "day": "Saturday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Saher Iqbal",
+        "id": "100187",
+        "room": "MCC-09",
+        "day": "Tuesday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Saher Iqbal",
+        "id": "100187",
+        "room": "MCC-09",
+        "day": "Thursday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Teacher to be Allocated",
+        "id": "100190",
+        "room": "MCC-10",
+        "day": "Tuesday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Teacher to be Allocated",
+        "id": "100190",
+        "room": "MCC-10",
+        "day": "Thursday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Mirza Qaisar Ahmed Baig",
+        "id": "100176",
+        "room": "MCC-11",
+        "day": "Monday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Mirza Qaisar Ahmed Baig",
+        "id": "100176",
+        "room": "MCC-11",
+        "day": "Wednesday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "German 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Mokhashaf Muntazir",
+        "id": "100188",
+        "room": "MCC-11",
+        "day": "Tuesday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "German 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Mokhashaf Muntazir",
+        "id": "100188",
+        "room": "MCC-11",
+        "day": "Thursday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Saher Iqbal",
+        "id": "100177",
+        "room": "MCC12",
+        "day": "Monday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Saher Iqbal",
+        "id": "100177",
+        "room": "MCC12",
+        "day": "Wednesday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Sobia Akber",
+        "id": "100189",
+        "room": "MCC-12",
+        "day": "Tuesday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Sobia Akber",
+        "id": "100189",
+        "room": "MCC-12",
+        "day": "Thursday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Mathematical Economics",
+        "program": "NS-Elective",
+        "instructor": "Dr. Shahzad Ahmed",
+        "id": "100826",
+        "room": "MCC-15",
+        "day": "Saturday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Differential Geometry",
+        "program": "NS-Elective",
+        "instructor": "Dr. Umar Shehzad",
+        "id": "100668",
+        "room": "MTS 7",
+        "day": "Tuesday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Differential Geometry",
+        "program": "NS-Elective",
+        "instructor": "Dr. Umar Shehzad",
+        "id": "100668",
+        "room": "MTS 7",
+        "day": "Thursday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Mathematical Economics",
+        "program": "NS-Elective",
+        "instructor": "Dr. Ilfan Oh",
+        "id": "100828",
+        "room": "MAC 6",
+        "day": "Monday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Mathematical Economics",
+        "program": "NS-Elective",
+        "instructor": "Dr. Ilfan Oh",
+        "id": "100828",
+        "room": "MAC 6",
+        "day": "Wednesday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Mathematical Economics",
+        "program": "NS-Elective",
+        "instructor": "Dr. Ilfan Oh",
+        "id": "100829",
+        "room": "MAC 6",
+        "day": "Tuesday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Mathematical Economics",
+        "program": "NS-Elective",
+        "instructor": "Dr. Ilfan Oh",
+        "id": "100829",
+        "room": "MAC 6",
+        "day": "Thursday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Dr. Nasir Touheed",
+        "id": "100546",
+        "room": "MAS-2",
+        "day": "Monday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Dr. Nasir Touheed",
+        "id": "100546",
+        "room": "MAS-2",
+        "day": "Wednesday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Teacher to be Allocated",
+        "id": "100190",
+        "room": "MCC-10",
+        "day": "Tuesday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Teacher to be Allocated",
+        "id": "100190",
+        "room": "MCC-10",
+        "day": "Thursday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Saher Iqbal",
+        "id": "100177",
+        "room": "MCC12",
+        "day": "Monday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Chinese 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Saher Iqbal",
+        "id": "100177",
+        "room": "MCC12",
+        "day": "Wednesday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Hafizah Rumlah Amer",
+        "id": "100803",
+        "room": "MAC-2",
+        "day": "Friday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Hafizah Rumlah Amer",
+        "id": "100803",
+        "room": "MAC-2",
+        "day": "Saturday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Samreen Zaman",
+        "id": "100806",
+        "room": "MAC-3",
+        "day": "Friday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Ms. Samreen Zaman",
+        "id": "100806",
+        "room": "MAC-3",
+        "day": "Saturday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Mathematical Economics",
+        "program": "NS-Elective",
+        "instructor": "Dr. Ilfan Oh",
+        "id": "100831",
+        "room": "MAC 6",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Mathematical Economics",
+        "program": "NS-Elective",
+        "instructor": "Dr. Ilfan Oh",
+        "id": "100831",
+        "room": "MAC 6",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Probability Theory",
+        "program": "NS-Elective",
+        "instructor": "Dr. Amir Bashir",
+        "id": "100671",
+        "room": "MAC 6",
+        "day": "Tuesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Probability Theory",
+        "program": "NS-Elective",
+        "instructor": "Dr. Amir Bashir",
+        "id": "100671",
+        "room": "MAC 6",
+        "day": "Thursday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Muhammad Naeem",
+        "id": "100185",
+        "room": "MAS-1",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Muhammad Naeem",
+        "id": "100185",
+        "room": "MAS-1",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Sarra Boumellassa",
+        "id": "100179",
+        "room": "MCC-10",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Sarra Boumellassa",
+        "id": "100179",
+        "room": "MCC-10",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Teacher to be Allocated",
+        "id": "100191",
+        "room": "MCC-10",
+        "day": "Tuesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Teacher to be Allocated",
+        "id": "100191",
+        "room": "MCC-10",
+        "day": "Thursday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Ubaid ur Rahman",
+        "id": "100186",
+        "room": "MCC-11",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Ubaid ur Rahman",
+        "id": "100186",
+        "room": "MCC-11",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "French 2",
+        "program": "NS-Elective",
+        "instructor": "Ms.Hira Fahad",
+        "id": "100192",
+        "room": "MCC-11",
+        "day": "Tuesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "French 2",
+        "program": "NS-Elective",
+        "instructor": "Ms.Hira Fahad",
+        "id": "100192",
+        "room": "MCC-11",
+        "day": "Thursday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "French 2",
+        "program": "NS-Elective",
+        "instructor": "Ms. Sarra Boumellassa",
+        "id": "100181",
+        "room": "MCC12",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "French 2",
+        "program": "NS-Elective",
+        "instructor": "Ms. Sarra Boumellassa",
+        "id": "100181",
+        "room": "MCC12",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "German 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Huma Ghazanfar",
+        "id": "100193",
+        "room": "MCC12",
+        "day": "Tuesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "German 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Huma Ghazanfar",
+        "id": "100193",
+        "room": "MCC12",
+        "day": "Thursday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Spanish 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Francisco",
+        "id": "100182",
+        "room": "MCC-13",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Spanish 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Francisco",
+        "id": "100182",
+        "room": "MCC-13",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "German 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Furqan Abban Khatri",
+        "id": "100178",
+        "room": "MCC13",
+        "day": "Tuesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "German 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Furqan Abban Khatri",
+        "id": "100178",
+        "room": "MCC13",
+        "day": "Thursday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Mr. Razeen Uddin",
+        "id": "100550",
+        "room": "MCC-15",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Business Mathematics and Linear Algebra",
+        "program": "NS-Elective",
+        "instructor": "Mr. Razeen Uddin",
+        "id": "100550",
+        "room": "MCC-15",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Calculus",
+        "program": "NS-Elective",
+        "instructor": "Mr. Danish Hafeez",
+        "id": "100258",
+        "room": "MTC 16",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Calculus",
+        "program": "NS-Elective",
+        "instructor": "Mr. Danish Hafeez",
+        "id": "100258",
+        "room": "MTC 16",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Calculus I",
+        "program": "NS-Elective",
+        "instructor": "Mr. Muhammad Ashar Tafheem",
+        "id": "100431",
+        "room": "MTC-18",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Calculus I",
+        "program": "NS-Elective",
+        "instructor": "Mr. Muhammad Ashar Tafheem",
+        "id": "100431",
+        "room": "MTC-18",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Numerical Linear Algebra-1",
+        "program": "NS-Elective",
+        "instructor": "Dr. Syed Hisham bin Zubair",
+        "id": "100432",
+        "room": "MTC-21",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Numerical Linear Algebra-1",
+        "program": "NS-Elective",
+        "instructor": "Dr. Syed Hisham bin Zubair",
+        "id": "100432",
+        "room": "MTC-21",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Syed Farid Iqbal",
+        "id": "100183",
+        "room": "MTC-22",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Syed Farid Iqbal",
+        "id": "100183",
+        "room": "MTC-22",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Abdullah M Yousuf",
+        "id": "100195",
+        "room": "MTC-22",
+        "day": "Tuesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Abdullah M Yousuf",
+        "id": "100195",
+        "room": "MTC-22",
+        "day": "Thursday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Ali Zaman",
+        "id": "",
+        "room": "MTC-22",
+        "day": "Friday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Ali Zaman",
+        "id": "",
+        "room": "MTC-22",
+        "day": "Saturday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Abu Tahir Siddiq",
+        "id": "100184",
+        "room": "MTC-23",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Abu Tahir Siddiq",
+        "id": "100184",
+        "room": "MTC-23",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Syed Farid Iqbal",
+        "id": "100196",
+        "room": "MTC-23",
+        "day": "Tuesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Syed Farid Iqbal",
+        "id": "100196",
+        "room": "MTC-23",
+        "day": "Thursday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "College Algebra",
+        "program": "NS-Elective",
+        "instructor": "Mr. Zulfiqar Khan",
+        "id": "100264",
+        "room": "MTC 25",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "College Algebra",
+        "program": "NS-Elective",
+        "instructor": "Mr. Zulfiqar Khan",
+        "id": "100264",
+        "room": "MTC 25",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Calculus I",
+        "program": "NS-Elective",
+        "instructor": "Dr. Umar Shehzad",
+        "id": "100883",
+        "room": "MTC-26",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Calculus I",
+        "program": "NS-Elective",
+        "instructor": "Dr. Umar Shehzad",
+        "id": "100883",
+        "room": "MTC-26",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "College Algebra",
+        "program": "NS-Elective",
+        "instructor": "Dr. Maqsood Alam",
+        "id": "100555",
+        "room": "MAC-2",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "College Algebra",
+        "program": "NS-Elective",
+        "instructor": "Dr. Maqsood Alam",
+        "id": "100555",
+        "room": "MAC-2",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Calculus I",
+        "program": "NS-Elective",
+        "instructor": "Dr. Naveed Ahmed",
+        "id": "100556",
+        "room": "MAC-5",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Calculus I",
+        "program": "NS-Elective",
+        "instructor": "Dr. Naveed Ahmed",
+        "id": "100556",
+        "room": "MAC-5",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Muhammad Naeem",
+        "id": "100185",
+        "room": "MAS-1",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Muhammad Naeem",
+        "id": "100185",
+        "room": "MAS-1",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Sarra Boumellassa",
+        "id": "100179",
+        "room": "MCC-10",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Sarra Boumellassa",
+        "id": "100179",
+        "room": "MCC-10",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Teacher to be Allocated",
+        "id": "100191",
+        "room": "MCC-10",
+        "day": "Tuesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Teacher to be Allocated",
+        "id": "100191",
+        "room": "MCC-10",
+        "day": "Thursday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Teacher to be Allocated",
+        "id": "100180",
+        "room": "MCC-11",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 1",
+        "program": "NS-Elective",
+        "instructor": "Teacher to be Allocated",
+        "id": "100180",
+        "room": "MCC-11",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 2",
+        "program": "NS-Elective",
+        "instructor": "Ms. Hira Fahad",
+        "id": "100192",
+        "room": "MCC-11",
+        "day": "Tuesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 2",
+        "program": "NS-Elective",
+        "instructor": "Ms. Hira Fahad",
+        "id": "100192",
+        "room": "MCC-11",
+        "day": "Thursday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 2",
+        "program": "NS-Elective",
+        "instructor": "Ms. Sarra Boumellassa",
+        "id": "100181",
+        "room": "MCC12",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 2",
+        "program": "NS-Elective",
+        "instructor": "Ms. Sarra Boumellassa",
+        "id": "100181",
+        "room": "MCC12",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "German 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Huma Ghazanfar",
+        "id": "100193",
+        "room": "MCC12",
+        "day": "Tuesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "German 1",
+        "program": "NS-Elective",
+        "instructor": "Ms. Huma Ghazanfar",
+        "id": "100193",
+        "room": "MCC12",
+        "day": "Thursday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Spanish 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Francisco Javier Merello",
+        "id": "100182",
+        "room": "MCC-13",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Spanish 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Francisco Javier Merello",
+        "id": "100182",
+        "room": "MCC-13",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "German 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Furqan Abban Khatri",
+        "id": "100178",
+        "room": "MCC-13",
+        "day": "Thursday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 4",
+        "program": "NS-Elective",
+        "instructor": "TBA",
+        "id": "100634",
+        "room": "MTC-20",
+        "day": "Tuesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "French 4",
+        "program": "NS-Elective",
+        "instructor": "TBA",
+        "id": "100634",
+        "room": "MTC-20",
+        "day": "Thursday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr.Syed Farid Iqbal",
+        "id": "100183",
+        "room": "MTC-22",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr.Syed Farid Iqbal",
+        "id": "100183",
+        "room": "MTC-22",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr.Abdullah M Yousuf",
+        "id": "100195",
+        "room": "MTC-22",
+        "day": "Tuesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr.Abdullah M Yousuf",
+        "id": "100195",
+        "room": "MTC-22",
+        "day": "Thursday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Ali Zaman",
+        "id": "",
+        "room": "MTC-22",
+        "day": "Friday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Ali Zaman",
+        "id": "",
+        "room": "MTC-22",
+        "day": "Saturday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Abu Tahir Siddiq",
+        "id": "100184",
+        "room": "MTC-23",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 1",
+        "program": "NS-Elective",
+        "instructor": "Mr. Abu Tahir Siddiq",
+        "id": "100184",
+        "room": "MTC-23",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic- 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Syed Farid Iqbal",
+        "id": "100196",
+        "room": "MTC-23",
+        "day": "Tuesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic- 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Syed Farid Iqbal",
+        "id": "100196",
+        "room": "MTC-23",
+        "day": "Thursday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Ubaid ur Rehman",
+        "id": "100186",
+        "room": "MTC-25",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Arabic 2",
+        "program": "NS-Elective",
+        "instructor": "Mr. Ubaid ur Rehman",
+        "id": "100186",
+        "room": "MTC-25",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Einstein, Relativity & Spacetime (Mathematical Physics Elective)",
+        "program": "NS-Elective",
+        "instructor": "Dr. Babar Ahmed Qureshi",
+        "id": "100867",
+        "room": "MTS 7",
+        "day": "Monday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Einstein, Relativity & Spacetime (Mathematical Physics Elective)",
+        "program": "NS-Elective",
+        "instructor": "Dr. Babar Ahmed Qureshi",
+        "id": "100867",
+        "room": "MTS 7",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "College Algebra",
+        "program": "NS-Elective",
+        "instructor": "Dr. Maqsood Alam",
+        "id": "100558",
+        "room": "MAC-2",
+        "day": "Monday",
+        "time": "17:30-18:45",
+        "comments": ""
+    },
+    {
+        "name": "College Algebra",
+        "program": "NS-Elective",
+        "instructor": "Dr. Maqsood Alam",
+        "id": "100558",
+        "room": "MAC-2",
+        "day": "Wednesday",
+        "time": "17:30-18:45",
+        "comments": ""
+    },
+    {
+        "name": "French 4",
+        "program": "NS-Elective",
+        "instructor": "TBA",
+        "id": "100634",
+        "room": "MTC-20",
+        "day": "Tuesday",
+        "time": "17:30-18:45",
+        "comments": ""
+    }
+]

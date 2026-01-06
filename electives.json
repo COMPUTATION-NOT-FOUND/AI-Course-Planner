@@ -1,0 +1,282 @@
+[
+    {
+        "name": "NLP with Deep Learning",
+        "program": "Elective",
+        "instructor": "Dr. Sajjad Haider",
+        "id": "100892",
+        "room": "MTC-19",
+        "day": "Tuesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "NLP with Deep Learning",
+        "program": "Elective",
+        "instructor": "Dr. Sajjad Haider",
+        "id": "100892",
+        "room": "MTC-19",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Intelligence",
+        "program": "Elective",
+        "instructor": "Dr. Imran Khan",
+        "id": "100571",
+        "room": "MTC-20",
+        "day": "Tuesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Intelligence",
+        "program": "Elective",
+        "instructor": "Dr. Imran Khan",
+        "id": "100571",
+        "room": "MTC-20",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Advanced Algorithms",
+        "program": "Elective",
+        "instructor": "Dr. Shahid Hussain",
+        "id": "100633",
+        "room": "MTC-20A",
+        "day": "Tuesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Advanced Algorithms",
+        "program": "Elective",
+        "instructor": "Dr. Shahid Hussain",
+        "id": "100633",
+        "room": "MTC-20A",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Intelligence",
+        "program": "Elective",
+        "instructor": "Ms. Abeera Tariq",
+        "id": "100572",
+        "room": "Testing Lab - NBP",
+        "day": "Tuesday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Business Intelligence",
+        "program": "Elective",
+        "instructor": "Ms. Abeera Tariq",
+        "id": "100572",
+        "room": "Testing Lab - NBP",
+        "day": "Thursday",
+        "time": "10:00-11:15",
+        "comments": ""
+    },
+    {
+        "name": "Generative AI",
+        "program": "Elective",
+        "instructor": "Dr. Atif Tahir",
+        "id": "100562",
+        "room": "MAC-6",
+        "day": "Tuesday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Generative AI",
+        "program": "Elective",
+        "instructor": "Dr. Atif Tahir",
+        "id": "100562",
+        "room": "MAC-6",
+        "day": "Thursday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "NLP with Deep Learning",
+        "program": "Elective",
+        "instructor": "Dr. Sajjad Haider",
+        "id": "100893",
+        "room": "MTC-19",
+        "day": "Tuesday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "NLP with Deep Learning",
+        "program": "Elective",
+        "instructor": "Dr. Sajjad Haider",
+        "id": "100893",
+        "room": "MTC-19",
+        "day": "Thursday",
+        "time": "11:30-12:45",
+        "comments": ""
+    },
+    {
+        "name": "Software Testing",
+        "program": "Elective",
+        "instructor": "Mr. Farrukh Hassan",
+        "id": "100896",
+        "room": "MAC-7",
+        "day": "Tuesday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Software Testing",
+        "program": "Elective",
+        "instructor": "Mr. Farrukh Hassan",
+        "id": "100896",
+        "room": "MAC-7",
+        "day": "Thursday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "NLP with Deep Learning",
+        "program": "Elective",
+        "instructor": "Ms. Solat Jabeen",
+        "id": "100894",
+        "room": "MTC 16",
+        "day": "Monday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "NLP with Deep Learning",
+        "program": "Elective",
+        "instructor": "Ms. Solat Jabeen",
+        "id": "100894",
+        "room": "MTC 16",
+        "day": "Wednesday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Introduction to Computer Vision",
+        "program": "Elective",
+        "instructor": "Dr. Rizwan Khan",
+        "id": "100528",
+        "room": "MTC-17",
+        "day": "Tuesday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Introduction to Computer Vision",
+        "program": "Elective",
+        "instructor": "Dr. Rizwan Khan",
+        "id": "100528",
+        "room": "MTC-17",
+        "day": "Thursday",
+        "time": "13:00-14:15",
+        "comments": ""
+    },
+    {
+        "name": "Introduction to Blockchain",
+        "program": "Elective",
+        "instructor": "Dr. Ahmed Akhtar",
+        "id": "",
+        "room": "MTC-26",
+        "day": "Tuesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Introduction to Blockchain",
+        "program": "Elective",
+        "instructor": "Dr. Ahmed Akhtar",
+        "id": "",
+        "room": "MTC-26",
+        "day": "Thursday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Network Security",
+        "program": "Elective",
+        "instructor": "Dr. Faisal Iradat",
+        "id": "100529",
+        "room": "Testimg Lab - NBP",
+        "day": "Monday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Network Security",
+        "program": "Elective",
+        "instructor": "Dr. Faisal Iradat",
+        "id": "100529",
+        "room": "Testimg Lab - NBP",
+        "day": "Wednesday",
+        "time": "14:30-15:45",
+        "comments": ""
+    },
+    {
+        "name": "Tech Product Development (Only Wednesday from 4:00 pm to 6:45 pm)",
+        "program": "Elective",
+        "instructor": "Mr. Jawwad Ahmed Farid",
+        "id": "100527",
+        "room": "MAS-2",
+        "day": "Wednesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Data Models Decisions",
+        "program": "Elective",
+        "instructor": "Mr. Jawwad Ahmed Farid",
+        "id": "100895",
+        "room": "MAS-2",
+        "day": "Thursday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Web Based Application Developlment",
+        "program": "Elective",
+        "instructor": "Dr. Ahmed Akhtar",
+        "id": "",
+        "room": "MTC-26",
+        "day": "Tuesday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Web Based Application Developlment",
+        "program": "Elective",
+        "instructor": "Dr. Ahmed Akhtar",
+        "id": "",
+        "room": "MTC-26",
+        "day": "Thursday",
+        "time": "16:00-17:15",
+        "comments": ""
+    },
+    {
+        "name": "Tech Product Development",
+        "program": "Elective",
+        "instructor": "Dr. Jawwad Ahmed Farid",
+        "id": "100527",
+        "room": "MAS-2",
+        "day": "Wednesday",
+        "time": "17:30-18:45",
+        "comments": ""
+    },
+    {
+        "name": "Data Models Decisions",
+        "program": "Elective",
+        "instructor": "Mr. Jawwad Ahmed Farid",
+        "id": "100895",
+        "room": "MAS-2",
+        "day": "Thursday",
+        "time": "17:30-18:45",
+        "comments": ""
+    }
+]
