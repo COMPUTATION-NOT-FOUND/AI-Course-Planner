@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# Flask Session Files (Server-side session storage)
+flask_session/
+
+# IDE Settings
+.vscode/
+.idea/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Deployment / Temporary
+*.log
+*.pot
+*.mo
+*.csv
+# Keep the CSVs if they are core data, but ignore generated exports if any.
+# Assuming 'generated_schedules.csv' is an output file you don't want to track:
+generated_schedules.csv
+
+# Project Specific
+# (If config.json contains secrets, uncomment the next line. Since it seems to store timeslots, keeping it is fine.)
+# config.json
