@@ -60,26 +60,6 @@
         "comments": ""
     },
     {
-        "name": "Calculus 1",
-        "program": "NS-Elective",
-        "instructor": "Dr. Naveed Ahmed",
-        "id": "100390",
-        "room": "MAC-5",
-        "day": "Monday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Calculus 1",
-        "program": "NS-Elective",
-        "instructor": "Dr. Naveed Ahmed",
-        "id": "100390",
-        "room": "MAC-5",
-        "day": "Wednesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
         "name": "Probability Theory",
         "program": "NS-Elective",
         "instructor": "Dr. Amir Bashir",
@@ -116,46 +96,6 @@
         "id": "100670",
         "room": "MAC 6",
         "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Samreen Zaman",
-        "id": "100777",
-        "room": "MAC 6",
-        "day": "Friday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Samreen Zaman",
-        "id": "100777",
-        "room": "MAC 6",
-        "day": "Saturday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Hafizah Rumlah Amer",
-        "id": "100778",
-        "room": "MAC-7",
-        "day": "Friday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Hafizah Rumlah Amer",
-        "id": "100778",
-        "room": "MAC-7",
-        "day": "Saturday",
         "time": "10:00-11:15",
         "comments": ""
     },
@@ -327,66 +267,6 @@
         "room": "MTS 6",
         "day": "Thursday",
         "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Samreen Zaman",
-        "id": "100792",
-        "room": "MAC-3",
-        "day": "Friday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Samreen Zaman",
-        "id": "100792",
-        "room": "MAC-3",
-        "day": "Saturday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Calculus 1",
-        "program": "NS-Elective",
-        "instructor": "Dr. Naveed Ahmed",
-        "id": "100541",
-        "room": "MAC-5",
-        "day": "Monday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Calculus 1",
-        "program": "NS-Elective",
-        "instructor": "Dr. Naveed Ahmed",
-        "id": "100541",
-        "room": "MAC-5",
-        "day": "Wednesday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Hafizah Rumlah Amer",
-        "id": "100794",
-        "room": "MAC-7",
-        "day": "Friday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Hafizah Rumlah Amer",
-        "id": "100794",
-        "room": "MAC-7",
-        "day": "Saturday",
-        "time": "11:30-12:45",
         "comments": ""
     },
     {
@@ -580,26 +460,6 @@
         "comments": ""
     },
     {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Dr. Nasir Touheed",
-        "id": "100546",
-        "room": "MAS-2",
-        "day": "Monday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Dr. Nasir Touheed",
-        "id": "100546",
-        "room": "MAS-2",
-        "day": "Wednesday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
         "name": "French 1",
         "program": "NS-Elective",
         "instructor": "Teacher to be Allocated",
@@ -637,46 +497,6 @@
         "room": "MCC12",
         "day": "Wednesday",
         "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Hafizah Rumlah Amer",
-        "id": "100803",
-        "room": "MAC-2",
-        "day": "Friday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Hafizah Rumlah Amer",
-        "id": "100803",
-        "room": "MAC-2",
-        "day": "Saturday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Samreen Zaman",
-        "id": "100806",
-        "room": "MAC-3",
-        "day": "Friday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Ms. Samreen Zaman",
-        "id": "100806",
-        "room": "MAC-3",
-        "day": "Saturday",
-        "time": "14:30-15:45",
         "comments": ""
     },
     {
@@ -900,86 +720,6 @@
         "comments": ""
     },
     {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Mr. Razeen Uddin",
-        "id": "100550",
-        "room": "MCC-15",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Business Mathematics and Linear Algebra",
-        "program": "NS-Elective",
-        "instructor": "Mr. Razeen Uddin",
-        "id": "100550",
-        "room": "MCC-15",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Calculus",
-        "program": "NS-Elective",
-        "instructor": "Mr. Danish Hafeez",
-        "id": "100258",
-        "room": "MTC 16",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Calculus",
-        "program": "NS-Elective",
-        "instructor": "Mr. Danish Hafeez",
-        "id": "100258",
-        "room": "MTC 16",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Calculus I",
-        "program": "NS-Elective",
-        "instructor": "Mr. Muhammad Ashar Tafheem",
-        "id": "100431",
-        "room": "MTC-18",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Calculus I",
-        "program": "NS-Elective",
-        "instructor": "Mr. Muhammad Ashar Tafheem",
-        "id": "100431",
-        "room": "MTC-18",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Numerical Linear Algebra-1",
-        "program": "NS-Elective",
-        "instructor": "Dr. Syed Hisham bin Zubair",
-        "id": "100432",
-        "room": "MTC-21",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Numerical Linear Algebra-1",
-        "program": "NS-Elective",
-        "instructor": "Dr. Syed Hisham bin Zubair",
-        "id": "100432",
-        "room": "MTC-21",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
         "name": "Arabic 1",
         "program": "NS-Elective",
         "instructor": "Mr. Syed Farid Iqbal",
@@ -1077,86 +817,6 @@
         "room": "MTC-23",
         "day": "Thursday",
         "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "College Algebra",
-        "program": "NS-Elective",
-        "instructor": "Mr. Zulfiqar Khan",
-        "id": "100264",
-        "room": "MTC 25",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "College Algebra",
-        "program": "NS-Elective",
-        "instructor": "Mr. Zulfiqar Khan",
-        "id": "100264",
-        "room": "MTC 25",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Calculus I",
-        "program": "NS-Elective",
-        "instructor": "Dr. Umar Shehzad",
-        "id": "100883",
-        "room": "MTC-26",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Calculus I",
-        "program": "NS-Elective",
-        "instructor": "Dr. Umar Shehzad",
-        "id": "100883",
-        "room": "MTC-26",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "College Algebra",
-        "program": "NS-Elective",
-        "instructor": "Dr. Maqsood Alam",
-        "id": "100555",
-        "room": "MAC-2",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "College Algebra",
-        "program": "NS-Elective",
-        "instructor": "Dr. Maqsood Alam",
-        "id": "100555",
-        "room": "MAC-2",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Calculus I",
-        "program": "NS-Elective",
-        "instructor": "Dr. Naveed Ahmed",
-        "id": "100556",
-        "room": "MAC-5",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Calculus I",
-        "program": "NS-Elective",
-        "instructor": "Dr. Naveed Ahmed",
-        "id": "100556",
-        "room": "MAC-5",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
         "comments": ""
     },
     {
@@ -1487,26 +1147,6 @@
         "room": "MTS 7",
         "day": "Wednesday",
         "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "College Algebra",
-        "program": "NS-Elective",
-        "instructor": "Dr. Maqsood Alam",
-        "id": "100558",
-        "room": "MAC-2",
-        "day": "Monday",
-        "time": "17:30-18:45",
-        "comments": ""
-    },
-    {
-        "name": "College Algebra",
-        "program": "NS-Elective",
-        "instructor": "Dr. Maqsood Alam",
-        "id": "100558",
-        "room": "MAC-2",
-        "day": "Wednesday",
-        "time": "17:30-18:45",
         "comments": ""
     },
     {

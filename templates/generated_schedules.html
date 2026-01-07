@@ -328,5 +328,14 @@
             </a>
         </div>
     </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const limitReached = {{ limit_reached|tojson }};
+            if (limitReached) {
+                alert("Only first 500 displayed. Computational explosion: select more restraints.");
+            }
+        });
+    </script>
 </body>
 </html>

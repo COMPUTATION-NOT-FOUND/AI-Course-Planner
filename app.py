@@ -928,6 +928,12 @@ def generated_schedules():
     course_loader = CourseDataLoader(['program_core.json', 'electives.json', 'ns_electives.json'])
     highlighted_course_ids = course_loader.get_highlighted_course_ids()
 
+    # Check for limit
+    limit_reached = False
+    if len(schedule_data) > 500:
+        schedule_data = schedule_data[:500]
+        limit_reached = True
+        
     # Check if filtering resulted in empty set
     filter_empty = (len(schedule_data) == 0 and len(solutions) > 0)
 
@@ -941,7 +947,8 @@ def generated_schedules():
                            current_filter_days=filter_days,
                            current_priorities=priority_instructors,
                            all_instructors=all_instructors,
-                           filter_empty=filter_empty)
+                           filter_empty=filter_empty,
+                           limit_reached=limit_reached)
 
 
 @app.route('/export_schedules', methods=['GET'])
