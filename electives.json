@@ -183,7 +183,7 @@
         "name": "Introduction to Blockchain",
         "program": "Elective",
         "instructor": "Dr. Ahmed Akhtar",
-        "id": "",
+        "id": "100570",
         "room": "MTC-26",
         "day": "Tuesday",
         "time": "14:30-15:45",
@@ -193,7 +193,7 @@
         "name": "Introduction to Blockchain",
         "program": "Elective",
         "instructor": "Dr. Ahmed Akhtar",
-        "id": "",
+        "id": "100570",
         "room": "MTC-26",
         "day": "Thursday",
         "time": "14:30-15:45",
@@ -220,14 +220,14 @@
         "comments": ""
     },
     {
-        "name": "Tech Product Development (Only Wednesday from 4:00 pm to 6:45 pm)",
+        "name": "Tech Product Development",
         "program": "Elective",
         "instructor": "Mr. Jawwad Ahmed Farid",
         "id": "100527",
         "room": "MAS-2",
         "day": "Wednesday",
         "time": "16:00-17:15",
-        "comments": ""
+        "comments": "Only Wednesday from 4:00 pm to 6:45 pm"
     },
     {
         "name": "Data Models Decisions",
@@ -240,20 +240,20 @@
         "comments": ""
     },
     {
-        "name": "Web Based Application Developlment",
+        "name": "Web Based Application Development",
         "program": "Elective",
         "instructor": "Dr. Ahmed Akhtar",
-        "id": "",
+        "id": "100573",
         "room": "MTC-26",
         "day": "Tuesday",
         "time": "16:00-17:15",
         "comments": ""
     },
     {
-        "name": "Web Based Application Developlment",
+        "name": "Web Based Application Development",
         "program": "Elective",
         "instructor": "Dr. Ahmed Akhtar",
-        "id": "",
+        "id": "100573",
         "room": "MTC-26",
         "day": "Thursday",
         "time": "16:00-17:15",
@@ -262,7 +262,7 @@
     {
         "name": "Tech Product Development",
         "program": "Elective",
-        "instructor": "Dr. Jawwad Ahmed Farid",
+        "instructor": "Mr. Jawwad Ahmed Farid",
         "id": "100527",
         "room": "MAS-2",
         "day": "Wednesday",
