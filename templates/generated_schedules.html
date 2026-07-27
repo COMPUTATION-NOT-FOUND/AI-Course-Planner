@@ -20,10 +20,9 @@
                         <label for="filter_days" class="text-sm font-semibold text-gray-700 mb-1">Days per Week</label>
                         <select name="filter_days" id="filter_days" class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-32">
                             <option value="">All</option>
-                            <option value="3" {% if current_filter_days == '3' %}selected{% endif %}>3 Days</option>
-                            <option value="4" {% if current_filter_days == '4' %}selected{% endif %}>4 Days</option>
-                            <option value="5" {% if current_filter_days == '5' %}selected{% endif %}>5 Days</option>
-                            <option value="6" {% if current_filter_days == '6' %}selected{% endif %}>6 Days</option>
+                            {% for days, n in day_counts.items() %}
+                                <option value="{{ days }}" {% if current_filter_days == days|string %}selected{% endif %}>{{ days }} Day{{ '' if days == 1 else 's' }} ({{ n }})</option>
+                            {% endfor %}
                         </select>
                     </div>
 
@@ -111,9 +110,8 @@
                     <div class="flex flex-col border-l pl-4 border-gray-300">
                         <label for="sort_by" class="text-sm font-semibold text-gray-700 mb-1">Sort By</label>
                         <select name="sort_by" id="sort_by" class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-48">
-                            <option value="count" {% if current_sort == 'count' %}selected{% endif %}>Most Courses (Default)</option>
-                            <option value="days" {% if current_sort == 'days' %}selected{% endif %}>Fewest Days on Campus</option>
-                            <option value="gaps" {% if current_sort == 'gaps' %}selected{% endif %}>Least Gaps (Compact)</option>
+                            <option value="days" {% if current_sort != 'gaps' %}selected{% endif %}>Fewest Days on Campus</option>
+                            <option value="gaps" {% if current_sort == 'gaps' %}selected{% endif %}>Most Compact (fewest gaps)</option>
                         </select>
                     </div>
 
@@ -125,6 +123,11 @@
                     <!-- Reset Link -->
                     <a href="{{ url_for('generated_schedules') }}" class="text-gray-500 hover:text-gray-700 text-sm font-medium underline mb-3 ml-2">Reset</a>
                 </form>
+                <p class="text-xs text-gray-500 text-center mt-3">
+                    Ranked by: most courses &rarr; instructor priorities, in the order you list them
+                    &rarr; {{ 'fewest gaps, then fewest days' if current_sort == 'gaps' else 'fewest days, then fewest gaps' }}.
+                    &ldquo;Days per Week&rdquo; hides schedules rather than reordering them.
+                </p>
             </div>
         </div>
 
@@ -193,9 +196,15 @@
                                     </span>
                                 {% endif %}
                                 
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-blue-400" title="Total free time between classes">
-                                    Total Gaps: {{ item.total_gaps }} min
-                                </span>
+                                {% if item.free_blocks %}
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-blue-400" title="Empty timetable slots between your first and last class of the day">
+                                        {{ item.free_blocks }} free slot{{ '' if item.free_blocks == 1 else 's' }} ({{ item.total_gaps }} min)
+                                    </span>
+                                {% else %}
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-blue-400" title="Every class runs back to back">
+                                        No gaps
+                                    </span>
+                                {% endif %}
                             </div>
                         </div>
                         
@@ -323,7 +332,9 @@
             <a href="{{ url_for('schedule') }}" class="bg-gray-500 text-white py-4 px-8 rounded-md text-center hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
                 Return to Constraints
             </a>
-            <a href="{{ url_for('export_schedules', sort_by=current_sort, filter_days=current_filter_days, preferred_instructor_1=current_priorities[0], preferred_instructor_2=current_priorities[1], preferred_instructor_3=current_priorities[2], preferred_instructor_4=current_priorities[3], preferred_instructor_5=current_priorities[4] ) }}" class="bg-green-600 text-white py-4 px-8 rounded-md text-center hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 flex items-center gap-2">
+            {% set export_args = {'sort_by': current_sort, 'filter_days': current_filter_days} %}
+            {% for p in current_priorities %}{% set _ = export_args.update({'preferred_instructor_' ~ loop.index: p}) %}{% endfor %}
+            <a href="{{ url_for('export_schedules', **export_args) }}" class="bg-green-600 text-white py-4 px-8 rounded-md text-center hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg>

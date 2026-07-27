@@ -40,6 +40,12 @@ def load_grid_layout():
         return DEFAULT_DAYS, DEFAULT_SLOTS
 
 
+def slot_minutes(time_str):
+    """How long a timetable block lasts, in minutes."""
+    block = parse_slot('X %s' % time_str)
+    return (block[2] - block[1]) if block else 0
+
+
 def slot_span(time_str, grid_slots):
     """Grid columns an actual meeting overlaps.
 
@@ -785,13 +791,25 @@ def ac3_schedule():
                      picked_for_pool.append(sc.id)
                      seen_picked.add(sc.id)
             
-        # Create N slots
+        # Create N slots.
+        #
+        # Picking at least as many courses as there are slots is a SHORTLIST: every
+        # slot draws from the whole shortlist and the solver works out which
+        # combination of `count` actually fits together. Handing one pick to each
+        # slot instead would throw away every pick past the count, and would make the
+        # result depend on the order the user happened to click.
+        shortlisted = len(picked_for_pool) >= count
         for i in range(1, count + 1):
             var_name = f"{pool_name} {i}"
             pool_slots[pool_name].append(var_name)
 
-            # If we have a user pick for this slot index
-            if i <= len(picked_for_pool):
+            if shortlisted:
+                # Identical domains, nothing locked, so the solver's symmetry
+                # breaking reports each combination once instead of count! times.
+                domains[var_name] = list(picked_for_pool)
+            elif i <= len(picked_for_pool):
+                # Fewer picks than slots: those picks are requirements, and the
+                # remaining slots are filled from the rest of the pool.
                 domains[var_name] = [picked_for_pool[i-1]]
                 locked_vars.add(var_name)
             else:
@@ -838,17 +856,26 @@ def ac3_schedule():
     return redirect(url_for('generated_schedules'))
 
 
+def read_priorities(args, max_levels=20):
+    """Instructor priorities in slot order, keeping blank levels in place.
+
+    Dropping the blanks would renumber the list, silently promoting the instructor in
+    slot 2 to top priority when slot 1 is left as "-- None --".
+    """
+    values = [args.get(f'preferred_instructor_{i}', '').strip()
+              for i in range(1, max_levels + 1)]
+    while values and not values[-1]:
+        values.pop()
+    return values
+
+
 def get_processed_schedules(solutions, program_name, args):
     # Filter/Sort Parameters
-    sort_by = args.get('sort_by', 'count') 
+    sort_by = args.get('sort_by', 'count')
     filter_days = args.get('filter_days', '')
-    
+
     # Retrieve dynamic priorities (Max 20 to prevent abuse)
-    priority_instructors = []
-    for i in range(1, 21):
-        val = args.get(f'preferred_instructor_{i}', '').strip()
-        if val:
-            priority_instructors.append(val)
+    priority_instructors = read_priorities(args)
 
     course_loader = CourseDataLoader(['program_core.json', 'electives.json', 'ns_electives.json'])
     course_id_mapping = course_loader.get_course_id_constraint_mapping()
@@ -864,6 +891,9 @@ def get_processed_schedules(solutions, program_name, args):
 
     schedule_data = []
     all_instructors = set()
+    # How many schedules run over 1 day, 2 days, ... Counted before the day filter is
+    # applied, so the dropdown can only ever offer values that return something.
+    day_counts = defaultdict(int)
 
     # Process all solutions
     for idx, sol in enumerate(solutions):
@@ -873,12 +903,8 @@ def get_processed_schedules(solutions, program_name, args):
         days_with_classes = set()
         instructors_in_schedule = set()
         
-        # Helper to parse time to minutes
-        def to_minutes(t_str):
-            h, m = map(int, t_str.split(':'))
-            return h * 60 + m
-
-        day_intervals = defaultdict(list)
+        # Which timetable columns each day is busy in, for the gap calculation.
+        busy_columns = defaultdict(set)
 
         for var, cid in sol.items():
             count += 1
@@ -902,10 +928,8 @@ def get_processed_schedules(solutions, program_name, args):
                             grid[column][day].append({'id': cid, 'name': name,
                                                       'instructor': instructor,
                                                       'time': time})
-
-                        # Store for gap calculation
-                        start_str, end_str = time.split('-')
-                        day_intervals[day].append((to_minutes(start_str), to_minutes(end_str)))
+                            if column in grid_slots:
+                                busy_columns[day].add(grid_slots.index(column))
 
                         # Store for flat list
                         flat_courses.append({
@@ -917,19 +941,22 @@ def get_processed_schedules(solutions, program_name, args):
                         })
                         days_with_classes.add(day)
         
-        # Calculate Total Gaps
+        # Gaps are the free timetable blocks between the first and last class of a
+        # day. Measuring the raw minutes between consecutive classes instead counts
+        # the 15-minute changeover between adjacent blocks, so a back-to-back day
+        # would report 45 minutes of "gaps" the student cannot actually use.
+        free_blocks = 0
         total_gaps_minutes = 0
-        for day, intervals in day_intervals.items():
-            intervals.sort() # Sort by start time
-            for i in range(1, len(intervals)):
-                prev_end = intervals[i-1][1]
-                curr_start = intervals[i][0]
-                gap = curr_start - prev_end
-                if gap > 0:
-                    total_gaps_minutes += gap
+        for day, columns in busy_columns.items():
+            for index in range(min(columns), max(columns) + 1):
+                if index in columns:
+                    continue
+                free_blocks += 1
+                total_gaps_minutes += slot_minutes(grid_slots[index])
 
         num_days = len(days_with_classes)
-        
+        day_counts[num_days] += 1
+
         if filter_days and str(num_days) != filter_days:
             continue
 
@@ -949,25 +976,43 @@ def get_processed_schedules(solutions, program_name, args):
             'is_partial': count < total_program_courses,
             'num_days': num_days,
             'total_gaps': total_gaps_minutes,
+            'free_blocks': free_blocks,
             'priority_matches': priority_matches
         })
 
-    # Sorting Logic
+    # Ranking, strongest criterion first. Every component below reads
+    # "smaller is better", so this is a plain ascending sort - the old version
+    # sorted descending and had to flip signs, which is what made it hard to
+    # reason about.
+    #
+    #   1. Days per week    - not here; it is a filter, applied above.
+    #   2. Most courses     - a schedule missing a course loses to one that is
+    #                         complete, whatever else it has going for it.
+    #   3. Instructor       - compared level by level, so priority 1 outranks
+    #      priorities         priority 2 outranks priority 3, and matching only
+    #                         priority 1 beats matching only priority 2.
+    #   4. The "Sort By"    - fewest days, or most compact.
+    #      choice
+    #   5. Schedule number  - so equally good schedules keep a stable order
+    #                         instead of drifting between page loads.
     def sort_key(x):
-        matches_tuple = tuple(x['priority_matches'])
-        if sort_by == 'days':
-            return matches_tuple + (-x['num_days'], x['count'], -x['total_gaps'])
-        elif sort_by == 'gaps':
-            # Fewest Gaps (-total_gaps -> wait, we want Smallest gaps. Ascending.)
-            # But we are using reverse=True (Descending).
-            # So negate gap: -10 gaps > -100 gaps. (Fewest is "biggest" negative number).
-            return matches_tuple + (-x['total_gaps'], x['count'], -x['num_days'])
-        else: # 'count'
-            return matches_tuple + (x['count'], -x['num_days'], -x['total_gaps'])
+        most_courses = -x['count']
+        # 0 sorts before 1, so negate: a matched priority must rank first.
+        priorities = tuple(-matched for matched in x['priority_matches'])
+        fewest_days = x['num_days']
+        most_compact = (x['free_blocks'], x['total_gaps'])
 
-    schedule_data.sort(key=sort_key, reverse=True)
-    
-    return schedule_data, total_program_courses, sorted(list(all_instructors))
+        if sort_by == 'gaps':
+            chosen = (most_compact, fewest_days)
+        else:  # 'days', and the legacy 'count' default
+            chosen = (fewest_days, most_compact)
+
+        return (most_courses, priorities) + chosen + (x['schedule_index'],)
+
+    schedule_data.sort(key=sort_key)
+
+    return (schedule_data, total_program_courses, sorted(list(all_instructors)),
+            dict(sorted(day_counts.items())))
 
 
 @app.route('/generated_schedules', methods=['GET'])
@@ -977,19 +1022,17 @@ def generated_schedules():
     program_name = session.get('program_name', '')
     
     # Use helper to process schedules
-    schedule_data, total_program_courses, all_instructors = get_processed_schedules(solutions, program_name, request.args)
-    
+    schedule_data, total_program_courses, all_instructors, day_counts = get_processed_schedules(
+        solutions, program_name, request.args)
+
     # Get params for template
-    sort_by = request.args.get('sort_by', 'count') 
+    sort_by = request.args.get('sort_by', 'count')
     filter_days = request.args.get('filter_days', '')
-    
+
     # Reconstruct the list of priorities to repopulate the UI
-    priority_instructors = []
-    for i in range(1, 21):
-        val = request.args.get(f'preferred_instructor_{i}', '').strip()
-        if val:
-            priority_instructors.append(val)
-            
+    priority_instructors = read_priorities(request.args)
+
+
     course_loader = CourseDataLoader(['program_core.json', 'electives.json', 'ns_electives.json'])
     highlighted_course_ids = course_loader.get_highlighted_course_ids()
 
@@ -1019,7 +1062,8 @@ def generated_schedules():
                            limit_reached=limit_reached,
                            max_schedules=MAX_SCHEDULES,
                            grid_days=grid_days,
-                           grid_slots=grid_slots)
+                           grid_slots=grid_slots,
+                           day_counts=day_counts)
 
 
 @app.route('/export_schedules', methods=['GET'])
@@ -1031,7 +1075,7 @@ def export_schedules():
     program_name = session.get('program_name', '')
     
     # Reuse the same processing logic to get filtered & sorted schedules
-    schedule_data, _, _ = get_processed_schedules(solutions, program_name, request.args)
+    schedule_data, _, _, _ = get_processed_schedules(solutions, program_name, request.args)
     
     csv_rows = []
     
