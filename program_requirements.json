@@ -1,4 +1,11 @@
 {
+    "_comment": "Elective slots per semester, from the BSCS 2024-onwards curriculum (https://cs.iba.edu.pk/bscs/courseoutline.php). 'Elective' is the CS elective pool, 'NS-Elective' the general elective pool. Core courses are not listed here - they come from program_core.json. Fall terms only offer the odd semesters.",
+    "BSCS-1": {},
+    "BSCS-2": {},
+    "BSCS-3": {
+        "NS-Elective": 1
+    },
+    "BSCS-4": {},
     "BSCS-5": {
         "Elective": 1
     },
@@ -11,6 +18,7 @@
         "NS-Elective": 1
     },
     "BSCS-8": {
-        "Elective": 2
+        "Elective": 2,
+        "NS-Elective": 1
     }
 }

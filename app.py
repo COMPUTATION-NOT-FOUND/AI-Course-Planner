@@ -396,7 +396,10 @@ class CourseDataLoader:
                 day = normalize(course.day)
                 time = normalize(course.time)
                 constraint_key = f"{day} {time}"
-                course_id_constraint_mapping[course_id]['constraints'].append(constraint_key)
+                # A section can be listed both as its cohort's core course and in the
+                # general elective pool, so the same meeting arrives twice.
+                if constraint_key not in course_id_constraint_mapping[course_id]['constraints']:
+                    course_id_constraint_mapping[course_id]['constraints'].append(constraint_key)
 
         return course_id_constraint_mapping
     

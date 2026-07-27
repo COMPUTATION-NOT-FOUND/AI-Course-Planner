@@ -55,6 +55,12 @@ CS_POOL = 'Computer Science Elective'
 # Cohort labels such as "BSCS - 7" / "BBA - 3".
 COHORT_RE = re.compile(r'^(BS[A-Z]*|BBA)\s*-\s*\d+$', re.I)
 
+# A course taught to another degree's cohort still counts as a general elective for a
+# CS student - that is where Multivariable Calculus (BSEM-3/BSMT-3), Statistical
+# Inference (BBA-3/BSAF-3) and the rest live. Only the CS programme's own cohorts are
+# held back, since those are not general electives for a BSCS student.
+OWN_PROGRAM_PREFIX = 'BSCS'
+
 # Rows that are not bookable undergraduate classes.
 SKIP_NAME_RE = re.compile(
     r'^\s*(reserved\b|ms\s|mba\b|emba\b|new course\b|teacher to be)', re.I)
@@ -85,6 +91,12 @@ NAME_FIXUPS = [
     (re.compile(r'\+[A-Z]\d+:[A-Z]\d+'), ''),        # stray Excel range artefact
     (re.compile(r'\bSuatainablity\b', re.I), 'Sustainability'),
     (re.compile(r'\bto\s*All\b', re.I), 'to All'),
+    (re.compile(r'\bLinear\s+Algbera\b', re.I), 'Linear Algebra'),
+    # "Calculus I" / "Calculus-1" / "Calculus-I" are one course. Left as written they
+    # become three subjects and the solver would happily schedule all three.
+    (re.compile(r'^Calculus[\s-]*(I|1)$', re.I), 'Calculus-I'),
+    (re.compile(r'^Calculus[\s-]*(II|2)$', re.I), 'Calculus-II'),
+    (re.compile(r'^Principles? of Accounting$', re.I), 'Principles of Accounting'),
 ]
 ROOM_FIXUPS = [(re.compile(r'\bTestimg\b', re.I), 'Testing')]
 
@@ -279,7 +291,10 @@ def build_sections():
                                    parse_days(text, default_days),
                                    parse_times(text) or None))
 
-            for name, teacher, days, times in parsed:
+            programs = [p.strip() for p in program.split(',')
+                        if p.strip() and p.strip() != 'BBA']  # "Business Analytics Elective, BBA"
+
+            for pos, (name, teacher, days, times) in enumerate(parsed):
                 if not name or SKIP_NAME_RE.match(name):
                     continue
                 times = times or [block_time]
@@ -288,9 +303,16 @@ def build_sections():
                 m = RESTRICTION_RE.search(norm_ws(raw_name))
                 if m:
                     restriction = norm_ws(m.group(1)).title()
-                for prog in [p.strip() for p in program.split(',') if p.strip()]:
-                    if prog == 'BBA':      # "Business Analytics Elective, BBA"
-                        continue
+
+                # A cell holding two courses and two cohorts pairs them off in order
+                # ("Introduction to Programming (Lab) / Digital Logic Design (Lab)"
+                # against "BSCS - 1, BSCS - 3"). Anything else applies to all cohorts.
+                if len(parsed) == len(programs) > 1:
+                    row_programs = [programs[pos]]
+                else:
+                    row_programs = programs
+
+                for prog in row_programs:
                     sections.append({
                         'name': name,
                         'source_program': prog,
@@ -301,6 +323,36 @@ def build_sections():
                         'meetings': meetings,
                         'row': rownum,
                     })
+    return sections
+
+
+def reassign_labs(sections):
+    """Put each lab under the same cohort as the lecture it belongs to.
+
+    The workbook prints labs wherever a room was free, so the Database Systems lab
+    ends up in a BSCS-3 cell even though Database Systems is a BSCS-5 course. Only
+    unambiguous parents are used - if a lecture runs for several cohorts, the lab is
+    left where it was found.
+    """
+    parents = defaultdict(set)
+    for s in sections:
+        if not s['name'].endswith('(Lab)') and COHORT_RE.match(s['source_program']):
+            parents[s['name']].add(s['source_program'])
+
+    moved = 0
+    for s in sections:
+        if not s['name'].endswith('(Lab)'):
+            continue
+        if not COHORT_RE.match(s['source_program']):
+            continue
+        owners = parents.get(s['name'][:-len(' (Lab)')].strip(), set())
+        if len(owners) == 1:
+            owner = next(iter(owners))
+            if owner != s['source_program']:
+                s['source_program'] = owner
+                moved += 1
+    if moved:
+        print('reassigned %d lab section(s) to their lecture\'s cohort' % moved)
     return sections
 
 
@@ -365,7 +417,7 @@ def to_records(section, program_value, comment_bits):
 
 def main():
     check_only = '--check' in sys.argv
-    sections = assign_ids(merge_duplicates(build_sections()))
+    sections = assign_ids(merge_duplicates(reassign_labs(build_sections())))
 
     core, cs_electives, general = [], [], []
     dropped_restricted = 0
@@ -386,16 +438,27 @@ def main():
         else:
             core += to_records(s, prog,
                                ['UMS %s' % s['ums'] if s['ums'] else ''])
+            # Another degree's cohort course is a general elective for a CS student.
+            if not prog.upper().startswith(OWN_PROGRAM_PREFIX):
+                if re.search(r'only\s+bs', s['restriction'], re.I):
+                    dropped_restricted += 1
+                    continue
+                general += to_records(s, 'NS-Elective',
+                                      [prog, s['restriction'],
+                                       'UMS %s' % s['ums'] if s['ums'] else ''])
 
     print('sections: %d  ->  core %d recs / CS elective %d recs / general %d recs'
           % (len(sections), len(core), len(cs_electives), len(general)))
     print('dropped %d cohort-restricted general electives' % dropped_restricted)
 
-    print('\nBSCS - 7 core:')
-    for r in sorted([r for r in core if r['program'] == 'BSCS - 7'],
-                    key=lambda r: (r['time'], r['day'])):
-        print('  %-8s %-32s %-10s %-9s %-28s %s'
-              % (r['id'], r['name'], r['day'], r['time'], r['instructor'], r['room']))
+    for cohort in ('BSCS - 3', 'BSCS - 5', 'BSCS - 7'):
+        rows = [r for r in core if r['program'] == cohort]
+        titles = defaultdict(set)
+        for r in rows:
+            titles[r['name']].add(r['id'])
+        print('\n%s core (%d sections):' % (cohort, len({r['id'] for r in rows})))
+        for name in sorted(titles):
+            print('  %-42s %d section(s)' % (name, len(titles[name])))
 
     names = sorted({r['name'] for r in cs_electives})
     print('\nCS electives: %d distinct titles, %d sections'
