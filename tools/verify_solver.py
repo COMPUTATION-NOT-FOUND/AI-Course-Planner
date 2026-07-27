@@ -15,6 +15,7 @@ Checks the properties the old AC-3 solver got wrong:
 import os
 import sys
 from collections import defaultdict
+from itertools import permutations
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -96,6 +97,213 @@ def audit(solutions, mapping, expected_size=None):
     return bad_overlap, bad_dupe, bad_size, duplicate_sets
 
 
+def sections_by_name(names):
+    """{course name: [section id, ...]} for the given titles, across all pools."""
+    loader = CourseDataLoader(DATA)
+    found = defaultdict(set)
+    for course in loader.load_courses():
+        if course.name in names:
+            found[course.name].add(course.id)
+    return {name: sorted(ids) for name, ids in found.items()}
+
+
+def pick_sections(mapping, wanted):
+    """Resolve {course name: [start-end, ...]} to {course name: [section id, ...]}.
+
+    Sections are chosen by meeting time rather than by id, so the tests keep testing
+    the same timetable shape after the data is regenerated and ids shift.
+    """
+    available = sections_by_name(set(wanted))
+    picked = {}
+    for name, times in wanted.items():
+        ids = []
+        for time in times:
+            for cid in available.get(name, []):
+                if cid in ids:
+                    continue
+                if any(slot.endswith(time) for slot in mapping[cid]['constraints']):
+                    ids.append(cid)
+                    break
+        if len(ids) != len(times):
+            return None
+        picked[name] = ids
+    return picked
+
+
+def check_shortlist(mapping):
+    """Picking more electives than there are slots must widen the search, not narrow it.
+
+    Reproduces the bug report: three CS electives shortlisted for two slots, two core
+    sections, one general elective. The three electives sit at 08:30, 13:00 and 14:30
+    on Mon/Wed so every pair fits, giving C(3,2) x 2 core sections = 6 schedules.
+    """
+    picked = pick_sections(mapping, {
+        'Compiler Construction': ['08:30-09:45'],
+        'Parallel and Scalable Architectures': ['13:00-14:15'],
+        'Computer Security': ['14:30-15:45'],
+        'Human Computer Interaction': ['11:30-12:45', '16:00-17:15'],
+        'Multivariable Calculus': ['10:00-11:15'],
+    })
+    if not picked:
+        print('skip  shortlist check (expected sections not in the data)')
+        return
+
+    cs = {name: picked[name] for name in ('Compiler Construction',
+                                          'Parallel and Scalable Architectures',
+                                          'Computer Security')}
+    shortlist = [ids[0] for ids in cs.values()]
+    hci = picked['Human Computer Interaction']
+    general = picked['Multivariable Calculus']
+
+    def run(order):
+        domains = {'Human Computer Interaction': list(hci),
+                   'Elective 1': list(order),
+                   'Elective 2': list(order),
+                   'NS-Elective 1': list(general)}
+        return ScheduleSolver(domains, mapping,
+                              pool_slots={'Elective': ['Elective 1', 'Elective 2']},
+                              max_solutions=1000, time_limit=20.0).solve()
+
+    solutions = run(shortlist)
+    check('shortlist of 3 for 2 slots gives every pair', len(solutions) == 6,
+          '%d schedules, expected 6' % len(solutions))
+
+    used = {mapping[cid]['course_name'] for s in solutions for cid in s.values()}
+    check('every shortlisted elective is reachable', set(cs).issubset(used),
+          'missing %s' % sorted(set(cs) - used))
+
+    sizes = {len(s) for s in solutions}
+    check('shortlist schedules are complete', sizes == {4}, 'sizes %s' % sorted(sizes))
+
+    signatures = {frozenset(s.values()) for s in solutions}
+    check('shortlist has no duplicate schedules', len(signatures) == len(solutions))
+
+    # The failing property: results must not depend on the order the user clicked.
+    baseline = {tuple(sorted(s.items())) for s in solutions}
+    stable = all({tuple(sorted(s.items())) for s in run(list(perm))} == baseline
+                 for perm in permutations(shortlist))
+    check('shortlist is click-order independent', stable)
+
+    # Fewer picks than slots: the pick is a requirement, the other slot stays open.
+    loader = CourseDataLoader(DATA)
+    pool = sorted({c.id for c in loader.load_courses_by_program('Elective')})
+    one = shortlist[:1]
+    domains = {'Human Computer Interaction': hci[:1],
+               'Elective 1': list(one),
+               'Elective 2': [p for p in pool if p not in one],
+               'NS-Elective 1': list(general)}
+    under = ScheduleSolver(domains, mapping,
+                           pool_slots={'Elective': ['Elective 1', 'Elective 2']},
+                           locked_vars={'Elective 1'},
+                           max_solutions=1000, time_limit=20.0).solve()
+    check('under-picking keeps the pick in every schedule',
+          bool(under) and all(one[0] in s.values() for s in under),
+          '%d schedules' % len(under))
+    check('under-picking still varies the free slot',
+          len({s['Elective 2'] for s in under}) > 1)
+
+
+def check_gaps(mapping):
+    """A back-to-back day has no gaps; the 15-minute changeover is not free time."""
+    import app
+
+    picked = pick_sections(mapping, {
+        'Multivariable Calculus': ['10:00-11:15'],
+        'Human Computer Interaction': ['11:30-12:45'],
+        'Parallel and Scalable Architectures': ['13:00-14:15'],
+        'Computer Security': ['14:30-15:45'],
+    })
+    if not picked:
+        print('skip  gap check (expected sections not in the data)')
+        return
+
+    # 10:00, 11:30, 13:00, 14:30 on Mon+Wed - four consecutive blocks, no free period.
+    back_to_back = {name: ids[0] for name, ids in picked.items()}
+    # Dropping the 11:30 class leaves exactly one free block per day.
+    with_hole = {name: cid for name, cid in back_to_back.items()
+                 if name != 'Human Computer Interaction'}
+
+    with app.app.test_request_context('/generated_schedules'):
+        data, _, _, day_counts = app.get_processed_schedules(
+            [back_to_back, with_hole], 'BSCS - 7', {})
+
+    by_size = {len(s['flat_courses']): s for s in data}
+    solid = by_size[max(by_size)]
+    holed = by_size[min(by_size)]
+    check('back-to-back schedule reports no gaps',
+          solid['free_blocks'] == 0 and solid['total_gaps'] == 0,
+          '%d blocks / %d min' % (solid['free_blocks'], solid['total_gaps']))
+    check('a free period is counted once per day', holed['free_blocks'] == 2,
+          '%d blocks' % holed['free_blocks'])
+    check('day counts are offered for the filter', day_counts.get(2) == 2,
+          'day_counts=%s' % day_counts)
+
+
+def check_ranking(mapping):
+    """Instructor priorities outrank the Sort By choice, and the order is stable."""
+    import app
+
+    picked = pick_sections(mapping, {
+        'Compiler Construction': ['08:30-09:45'],
+        'Parallel and Scalable Architectures': ['13:00-14:15'],
+        'Computer Security': ['14:30-15:45'],
+        'Human Computer Interaction': ['11:30-12:45', '16:00-17:15'],
+        'Multivariable Calculus': ['10:00-11:15'],
+    })
+    if not picked:
+        print('skip  ranking check (expected sections not in the data)')
+        return
+
+    domains = {'Human Computer Interaction': picked['Human Computer Interaction'],
+               'Elective 1': [picked[n][0] for n in ('Compiler Construction',
+                                                     'Parallel and Scalable Architectures',
+                                                     'Computer Security')],
+               'NS-Elective 1': picked['Multivariable Calculus']}
+    domains['Elective 2'] = list(domains['Elective 1'])
+    solutions = ScheduleSolver(domains, mapping,
+                               pool_slots={'Elective': ['Elective 1', 'Elective 2']},
+                               max_solutions=1000, time_limit=20.0).solve()
+
+    psa = picked['Parallel and Scalable Architectures'][0]
+    comsec = picked['Computer Security'][0]
+    zafar = mapping[psa]['instructor']
+    iradat = mapping[comsec]['instructor']
+
+    def ranked(**args):
+        with app.app.test_request_context('/generated_schedules'):
+            data, _, _, _ = app.get_processed_schedules(solutions, 'BSCS - 7', args)
+        return data
+
+    for sort_by in ('days', 'gaps'):
+        data = ranked(sort_by=sort_by, preferred_instructor_1=zafar,
+                      preferred_instructor_2=iradat)
+        matches = [tuple(x['priority_matches']) for x in data]
+        check('priorities outrank "%s" sort' % sort_by,
+              matches == sorted(matches, reverse=True), '%s' % matches)
+
+    # Priority 1 alone must beat priority 2 alone, not merely "some match".
+    data = ranked(preferred_instructor_1=zafar, preferred_instructor_2=iradat)
+    order = [tuple(x['priority_matches']) for x in data]
+    check('priority 1 outranks priority 2', order.index((1, 0)) < order.index((0, 1)),
+          '%s' % order)
+
+    # A blank level must not promote the instructor below it.
+    blank = ranked(preferred_instructor_1='', preferred_instructor_2=iradat)
+    check('a blank priority level does not promote the next one',
+          all(x['priority_matches'][0] == 0 for x in blank))
+
+    # Within one priority group the Sort By choice decides, and repeats identically.
+    compact = ranked(sort_by='gaps')
+    check('compact sort orders by free blocks',
+          [x['free_blocks'] for x in compact] == sorted(x['free_blocks'] for x in compact))
+    fewest = ranked(sort_by='days')
+    check('days sort orders by days on campus',
+          [x['num_days'] for x in fewest] == sorted(x['num_days'] for x in fewest))
+    check('ranking is repeatable',
+          [x['schedule_index'] for x in ranked(sort_by='gaps')] ==
+          [x['schedule_index'] for x in compact])
+
+
 def main():
     domains, pool_slots, mapping = build_domains()
     print('BSCS - 7 domains: %s\n'
@@ -168,6 +376,10 @@ def main():
         check('partial run: no overlaps', bad_overlap == 0)
     else:
         print('skip  partial-mode check (no clashing elective found)')
+
+    check_shortlist(mapping)
+    check_gaps(mapping)
+    check_ranking(mapping)
 
     print()
     if failures:
