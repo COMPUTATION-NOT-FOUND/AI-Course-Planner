@@ -1,172 +1,7032 @@
 [
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Zain Uddin",
-        "id": "100498",
-        "room": "MTC-17",
-        "day": "Monday",
-        "time": "08:30-09:45",
-        "comments": ""
-    },
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Zain Uddin",
-        "id": "100498",
-        "room": "MTC-17",
-        "day": "Wednesday",
-        "time": "08:30-09:45",
-        "comments": ""
-    },
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Zain Uddin",
-        "id": "100499",
-        "room": "MTC-17",
-        "day": "Tuesday",
-        "time": "08:30-09:45",
-        "comments": ""
-    },
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Zain Uddin",
-        "id": "100499",
-        "room": "MTC-17",
-        "day": "Thursday",
-        "time": "08:30-09:45",
-        "comments": ""
-    },
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Zain Uddin",
-        "id": "100498",
-        "room": "MCL-1",
-        "day": "Wednesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Zain Uddin",
-        "id": "100499",
-        "room": "MCL-3",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Design and Analysis of Algorithm",
-        "program": "BSCS - 6",
-        "instructor": "Dr. Shahid Hussain",
-        "id": "100508 - 100509",
-        "room": "MTS 7",
-        "day": "Monday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Design and Analysis of Algorithm",
-        "program": "BSCS - 6",
-        "instructor": "Dr. Shahid Hussain",
-        "id": "100508 - 100509",
-        "room": "MTS 7",
-        "day": "Wednesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Zain Uddin",
-        "id": "100499",
-        "room": "MCL-3",
-        "day": "Thursday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Adil Saleem",
-        "id": "100500",
-        "room": "MTC-18",
-        "day": "Monday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Adil Saleem",
-        "id": "100500",
-        "room": "MTC-18",
-        "day": "Wednesday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Design and Analysis of Algorithm",
-        "program": "BSCS - 6",
-        "instructor": "Dr. Taslim Murad",
-        "id": "100511",
-        "room": "MTC-21",
-        "day": "Tuesday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Design and Analysis of Algorithm",
-        "program": "BSCS - 6",
-        "instructor": "Dr. Taslim Murad",
-        "id": "100511",
-        "room": "MTC-21",
-        "day": "Thursday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Design and Analysis of Algorithm",
-        "program": "BSCS - 6",
-        "instructor": "Dr. Taslim Murad",
-        "id": "100510",
-        "room": "MTC-21",
-        "day": "Tuesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Design and Analysis of Algorithm",
-        "program": "BSCS - 6",
-        "instructor": "Dr. Taslim Murad",
-        "id": "100510",
-        "room": "MTC-21",
-        "day": "Thursday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Adil Saleem",
-        "id": "100500",
-        "room": "MCL-3",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Parallel and Distributed Computing",
-        "program": "BSCS - 6",
-        "instructor": "Mr. M. Adil Saleem",
-        "id": "100500",
-        "room": "MCL-3",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    }
+  {
+    "name": "Emerging Technologies for Digital Transformation",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Abdul Basad",
+    "id": "F26-0120",
+    "room": "MAC-1",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Emerging Technologies for Digital Transformation",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Abdul Basad",
+    "id": "F26-0120",
+    "room": "MAC-1",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Muhammad Arif Khan",
+    "id": "F26-0202",
+    "room": "MAC-1",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Muhammad Arif Khan",
+    "id": "F26-0202",
+    "room": "MAC-1",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Management & Organizational Behaviour",
+    "program": "BSBA - 3",
+    "instructor": "Mr. Imran Javed",
+    "id": "F26-0278",
+    "room": "MAC-1",
+    "day": "Friday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Management & Organizational Behaviour",
+    "program": "BSBA - 3",
+    "instructor": "Mr. Imran Javed",
+    "id": "F26-0278",
+    "room": "MAC-1",
+    "day": "Saturday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Ghias ul Hasan",
+    "id": "F26-0367",
+    "room": "MAC-2",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Ghias ul Hasan",
+    "id": "F26-0367",
+    "room": "MAC-2",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Fawad Ahmad",
+    "id": "F26-0205",
+    "room": "MAC-2",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Fawad Ahmad",
+    "id": "F26-0205",
+    "room": "MAC-2",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Faizah Khan",
+    "id": "F26-0307",
+    "room": "MAC-2",
+    "day": "Friday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Faizah Khan",
+    "id": "F26-0307",
+    "room": "MAC-2",
+    "day": "Saturday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Fundamentals of Sociology",
+    "program": "BSSS - 1",
+    "instructor": "TBA",
+    "id": "F26-0169",
+    "room": "MAC-3",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Fundamentals of Sociology",
+    "program": "BSSS - 1",
+    "instructor": "TBA",
+    "id": "F26-0169",
+    "room": "MAC-3",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Saqib Sharif",
+    "id": "F26-0408",
+    "room": "MAC-3",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Saqib Sharif",
+    "id": "F26-0408",
+    "room": "MAC-3",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures",
+    "program": "BSCS - 3",
+    "instructor": "TBA",
+    "id": "F26-0081",
+    "room": "MAC-3",
+    "day": "Friday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures",
+    "program": "BSCS - 3",
+    "instructor": "TBA",
+    "id": "F26-0081",
+    "room": "MAC-3",
+    "day": "Saturday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Business Communication",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Nadia Sayeed",
+    "id": "F26-0026",
+    "room": "MAC-4",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Business Communication",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Nadia Sayeed",
+    "id": "F26-0026",
+    "room": "MAC-4",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "College Algebra",
+    "program": "BSSS - 1",
+    "instructor": "TBA",
+    "id": "F26-0067",
+    "room": "MAC-5",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "College Algebra",
+    "program": "BSSS - 1",
+    "instructor": "TBA",
+    "id": "F26-0067",
+    "room": "MAC-5",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Ehsan Badar",
+    "id": "F26-0135",
+    "room": "MAC-5",
+    "day": "Saturday",
+    "time": "09:00-12:00",
+    "comments": ""
+  },
+  {
+    "name": "History of Ideas",
+    "program": "BSSS - 1",
+    "instructor": "Dr. Abdul Wahab Suri",
+    "id": "101311",
+    "room": "MAC 6",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "UMS 101311"
+  },
+  {
+    "name": "History of Ideas",
+    "program": "BSSS - 1",
+    "instructor": "Dr. Abdul Wahab Suri",
+    "id": "101311",
+    "room": "MAC 6",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "UMS 101311"
+  },
+  {
+    "name": "Management & Organizational Behaviour",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Usman Nazir",
+    "id": "F26-0277",
+    "room": "MAC-7",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Management & Organizational Behaviour",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Usman Nazir",
+    "id": "F26-0277",
+    "room": "MAC-7",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Fawad Ahmad",
+    "id": "F26-0406",
+    "room": "MAC-8",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Fawad Ahmad",
+    "id": "F26-0406",
+    "room": "MAC-8",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting",
+    "program": "BSAF - 1",
+    "instructor": "TBA",
+    "id": "F26-0354",
+    "room": "MAS-1",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting",
+    "program": "BSAF - 1",
+    "instructor": "TBA",
+    "id": "F26-0354",
+    "room": "MAS-1",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 3",
+    "instructor": "Teacher to be Announce",
+    "id": "F26-0362",
+    "room": "MAS-2",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 3",
+    "instructor": "Teacher to be Announce",
+    "id": "F26-0362",
+    "room": "MAS-2",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Mr. Waseem Arain",
+    "id": "F26-0336",
+    "room": "MAS-2",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Mr. Waseem Arain",
+    "id": "F26-0336",
+    "room": "MAS-2",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus II",
+    "program": "BSECO - 3",
+    "instructor": "Mr. Syed Mujahid Ali",
+    "id": "F26-0043",
+    "room": "MAV-1",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus II",
+    "program": "BSECO - 3",
+    "instructor": "Mr. Syed Mujahid Ali",
+    "id": "F26-0043",
+    "room": "MAV-1",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Pakistan History",
+    "program": "BSSS - 3",
+    "instructor": "Dr. Humera Naz",
+    "id": "F26-0341",
+    "room": "MAV-1",
+    "day": "Friday",
+    "time": "09:45-10:25",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Zaira Anees",
+    "id": "101543",
+    "room": "MAV-2",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "UMS 101543"
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Zaira Anees",
+    "id": "101543",
+    "room": "MAV-2",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "UMS 101543"
+  },
+  {
+    "name": "Business Law",
+    "program": "BSAF - 3",
+    "instructor": "TBA",
+    "id": "F26-0035",
+    "room": "MCC-9",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Business Law",
+    "program": "BSAF - 3",
+    "instructor": "TBA",
+    "id": "F26-0035",
+    "room": "MCC-9",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Behraj Khan",
+    "id": "F26-0228",
+    "room": "MCC-9",
+    "day": "Friday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Behraj Khan",
+    "id": "F26-0228",
+    "room": "MCC-9",
+    "day": "Saturday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Moiz Ahmad",
+    "id": "F26-0445",
+    "room": "MCC-10",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Moiz Ahmad",
+    "id": "F26-0445",
+    "room": "MCC-10",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Moiz Ahmad",
+    "id": "F26-0446",
+    "room": "MCC-10",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Moiz Ahmad",
+    "id": "F26-0446",
+    "room": "MCC-10",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "College Algebra",
+    "program": "BSBA - 1",
+    "instructor": "Mr. Mujahid Ali",
+    "id": "F26-0063",
+    "room": "MCC-10",
+    "day": "Friday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "College Algebra",
+    "program": "BSBA - 1",
+    "instructor": "Mr. Mujahid Ali",
+    "id": "F26-0063",
+    "room": "MCC-10",
+    "day": "Saturday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Academic Writing",
+    "program": "BSEM - 3",
+    "instructor": "Ms. Fasiha Irfan",
+    "id": "F26-0196",
+    "room": "MCC-11",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Academic Writing",
+    "program": "BSEM - 3",
+    "instructor": "Ms. Fasiha Irfan",
+    "id": "F26-0196",
+    "room": "MCC-11",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSECO - 1",
+    "instructor": "Dr. Usama Ehsan",
+    "id": "F26-0253",
+    "room": "MCC-12",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSECO - 1",
+    "instructor": "Dr. Usama Ehsan",
+    "id": "F26-0253",
+    "room": "MCC-12",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Danish Godil",
+    "id": "F26-0284",
+    "room": "MCC-13",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Danish Godil",
+    "id": "F26-0284",
+    "room": "MCC-13",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Danish Godil",
+    "id": "F26-0285",
+    "room": "MCC-13",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Danish Godil",
+    "id": "F26-0285",
+    "room": "MCC-13",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 1",
+    "instructor": "Teacher to be Announce",
+    "id": "F26-0360",
+    "room": "MCC-15",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 1",
+    "instructor": "Teacher to be Announce",
+    "id": "F26-0360",
+    "room": "MCC-15",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design",
+    "program": "BSCS - 3",
+    "instructor": "Ms. Asma Tauqir",
+    "id": "F26-0108",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design",
+    "program": "BSCS - 3",
+    "instructor": "Ms. Asma Tauqir",
+    "id": "F26-0108",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Ashar Tafheem",
+    "id": "F26-0049",
+    "room": "MTC 16",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Ashar Tafheem",
+    "id": "F26-0049",
+    "room": "MTC 16",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSAF - 1",
+    "instructor": "Ms. Hafizah Rumlah Amer",
+    "id": "F26-0047",
+    "room": "MTC-17",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSAF - 1",
+    "instructor": "Ms. Hafizah Rumlah Amer",
+    "id": "F26-0047",
+    "room": "MTC-17",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Faisal Iradat",
+    "id": "F26-0105",
+    "room": "MTC-20",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Faisal Iradat",
+    "id": "F26-0105",
+    "room": "MTC-20",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 3",
+    "instructor": "Teacher to be Announced",
+    "id": "F26-0365",
+    "room": "MTC-20",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 3",
+    "instructor": "Teacher to be Announced",
+    "id": "F26-0365",
+    "room": "MTC-20",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Tasbiha Fatima",
+    "id": "F26-0339",
+    "room": "MTC-20A",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Tasbiha Fatima",
+    "id": "F26-0339",
+    "room": "MTC-20A",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Abdul Basit",
+    "id": "F26-0443",
+    "room": "MTC-21",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Abdul Basit",
+    "id": "F26-0443",
+    "room": "MTC-21",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSEDS - 1",
+    "instructor": "TBA",
+    "id": "F26-0254",
+    "room": "MTC-22",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSEDS - 1",
+    "instructor": "TBA",
+    "id": "F26-0254",
+    "room": "MTC-22",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Ms. Tahira Maryam Jafferi",
+    "id": "F26-0210",
+    "room": "MTC-22",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Ms. Tahira Maryam Jafferi",
+    "id": "F26-0210",
+    "room": "MTC-22",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Microeconomics",
+    "program": "BSEM - 1",
+    "instructor": "TBA",
+    "id": "F26-0384",
+    "room": "MTC-23",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Microeconomics",
+    "program": "BSEM - 1",
+    "instructor": "TBA",
+    "id": "F26-0384",
+    "room": "MTC-23",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSMT - 1",
+    "instructor": "TBA",
+    "id": "F26-0041",
+    "room": "MTC-24",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSMT - 1",
+    "instructor": "TBA",
+    "id": "F26-0041",
+    "room": "MTC-24",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BSBA - 3",
+    "instructor": "TBA",
+    "id": "F26-0395",
+    "room": "MTC-24",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BSBA - 3",
+    "instructor": "TBA",
+    "id": "F26-0395",
+    "room": "MTC-24",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-I",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Samreen Zaman",
+    "id": "F26-0054",
+    "room": "MTC-25",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-I",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Samreen Zaman",
+    "id": "F26-0054",
+    "room": "MTC-25",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Mahwish Baasit",
+    "id": "F26-0282",
+    "room": "MTC-25",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Mahwish Baasit",
+    "id": "F26-0282",
+    "room": "MTC-25",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "Mr. Ahsan Javed",
+    "id": "F26-0418",
+    "room": "MTC-26",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "Mr. Ahsan Javed",
+    "id": "F26-0418",
+    "room": "MTC-26",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "Mr. Ahsan Javed",
+    "id": "F26-0419",
+    "room": "MTC-26",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "Mr. Ahsan Javed",
+    "id": "F26-0419",
+    "room": "MTC-26",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Numerical Analysis",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Abdul Majid",
+    "id": "F26-0330",
+    "room": "MTS 6",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Numerical Analysis",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Abdul Majid",
+    "id": "F26-0330",
+    "room": "MTS 6",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSECO - 3",
+    "instructor": "TBA",
+    "id": "F26-0270",
+    "room": "MTS 6",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSECO - 3",
+    "instructor": "TBA",
+    "id": "F26-0270",
+    "room": "MTS 6",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-I",
+    "program": "BSCS - 1",
+    "instructor": "Dr. Danish Ali",
+    "id": "F26-0052",
+    "room": "MTS-7",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-I",
+    "program": "BSCS - 1",
+    "instructor": "Dr. Danish Ali",
+    "id": "F26-0052",
+    "room": "MTS-7",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0423",
+    "room": "MTS-7",
+    "day": "Friday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0423",
+    "room": "MTS-7",
+    "day": "Saturday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design",
+    "program": "BSCS - 3",
+    "instructor": "Mr. M. Zain Uddin",
+    "id": "F26-0106",
+    "room": "MTL-4",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design",
+    "program": "BSCS - 3",
+    "instructor": "Mr. M. Zain Uddin",
+    "id": "F26-0106",
+    "room": "MTL-4",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "Ms. Asma Tauqir",
+    "id": "F26-0113",
+    "room": "MTL-4",
+    "day": "Friday",
+    "time": "08:30-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Analytics",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Shafiullah",
+    "id": "F26-0201",
+    "room": "Finance Lab",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Analytics",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Shafiullah",
+    "id": "F26-0201",
+    "room": "Finance Lab",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": ""
+  },
+  {
+    "name": "College Algebra",
+    "program": "BSECO - 1",
+    "instructor": "Mr. Syed Mujahid Ali",
+    "id": "F26-0065",
+    "room": "EVENT HALL",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "College Algebra",
+    "program": "BSECO - 1",
+    "instructor": "Mr. Syed Mujahid Ali",
+    "id": "F26-0065",
+    "room": "EVENT HALL",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Pakistan History( Mega Class)",
+    "program": "BSSS - 3",
+    "instructor": "Dr. Humera Naz",
+    "id": "F26-0342",
+    "room": "EVENT HALL",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Pakistan History( Mega Class)",
+    "program": "BSSS - 3",
+    "instructor": "Dr. Humera Naz",
+    "id": "F26-0342",
+    "room": "EVENT HALL",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Emerging Technologies for Digital Transformation",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Abdul Basad",
+    "id": "F26-0121",
+    "room": "MAC-1",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Emerging Technologies for Digital Transformation",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Abdul Basad",
+    "id": "F26-0121",
+    "room": "MAC-1",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Muhammad Arif Khan",
+    "id": "F26-0203",
+    "room": "MAC-1",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Muhammad Arif Khan",
+    "id": "F26-0203",
+    "room": "MAC-1",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management and Organizational Behavior",
+    "program": "BBA - 3",
+    "instructor": "Mr. Imran Javed",
+    "id": "F26-0296",
+    "room": "MAC-1",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management and Organizational Behavior",
+    "program": "BBA - 3",
+    "instructor": "Mr. Imran Javed",
+    "id": "F26-0296",
+    "room": "MAC-1",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Nauman J. Amin",
+    "id": "F26-0128",
+    "room": "MAC-2",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Nauman J. Amin",
+    "id": "F26-0128",
+    "room": "MAC-2",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Faizah Khan",
+    "id": "F26-0308",
+    "room": "MAC-2",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Faizah Khan",
+    "id": "F26-0308",
+    "room": "MAC-2",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Noureen Ayaz",
+    "id": "101544",
+    "room": "MAC-3",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101544"
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Noureen Ayaz",
+    "id": "101544",
+    "room": "MAC-3",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101544"
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Madeeha Omer Lakhani",
+    "id": "F26-0130",
+    "room": "MAC-3",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Madeeha Omer Lakhani",
+    "id": "F26-0130",
+    "room": "MAC-3",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Aitzaz Ahsan Alias Sarang",
+    "id": "101545",
+    "room": "MAC-4",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101545"
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Aitzaz Ahsan Alias Sarang",
+    "id": "101545",
+    "room": "MAC-4",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101545"
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Abeera Tariq",
+    "id": "F26-0090",
+    "room": "MAC-4",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Abeera Tariq",
+    "id": "F26-0090",
+    "room": "MAC-4",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management and Organizational Behavior",
+    "program": "BBA - 3",
+    "instructor": "Ms. Sara Khan",
+    "id": "F26-0297",
+    "room": "MAC-5",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management and Organizational Behavior",
+    "program": "BBA - 3",
+    "instructor": "Ms. Sara Khan",
+    "id": "F26-0297",
+    "room": "MAC-5",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Fundamentals of Sociology",
+    "program": "BSSS - 1",
+    "instructor": "Dr. Ismat Abbas",
+    "id": "101300",
+    "room": "MAC-6",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101300"
+  },
+  {
+    "name": "Fundamentals of Sociology",
+    "program": "BSSS - 1",
+    "instructor": "Dr. Ismat Abbas",
+    "id": "101300",
+    "room": "MAC-6",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101300"
+  },
+  {
+    "name": "Management & Organizational Behaviour",
+    "program": "BSBA - 3",
+    "instructor": "Mr. Usman Nazir",
+    "id": "F26-0279",
+    "room": "MAC-7",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management & Organizational Behaviour",
+    "program": "BSBA - 3",
+    "instructor": "Mr. Usman Nazir",
+    "id": "F26-0279",
+    "room": "MAC-7",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Partial Differential Equations",
+    "program": "BSEM - 7",
+    "instructor": "Dr. Naveed Ahmed",
+    "id": "F26-0344",
+    "room": "MAC-7",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Partial Differential Equations",
+    "program": "BSEM - 7",
+    "instructor": "Dr. Naveed Ahmed",
+    "id": "F26-0344",
+    "room": "MAC-7",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Behraj Khan",
+    "id": "F26-0227",
+    "room": "MAC-7",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Behraj Khan",
+    "id": "F26-0227",
+    "room": "MAC-7",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Fundamentals of Statistics",
+    "program": "BSMT - 3",
+    "instructor": "Dr. Amir Bashir",
+    "id": "101368",
+    "room": "MAC-8",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101368"
+  },
+  {
+    "name": "Fundamentals of Statistics",
+    "program": "BSMT - 3",
+    "instructor": "Dr. Amir Bashir",
+    "id": "101368",
+    "room": "MAC-8",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101368"
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Amir Bashir",
+    "id": "F26-0430",
+    "room": "MAC-8",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Amir Bashir",
+    "id": "F26-0430",
+    "room": "MAC-8",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lecture C)",
+    "program": "BSEM - 5",
+    "instructor": "Ms. Fatima Sadik",
+    "id": "F26-0009",
+    "room": "MAS-1",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lecture C)",
+    "program": "BSEM - 5",
+    "instructor": "Ms. Fatima Sadik",
+    "id": "F26-0009",
+    "room": "MAS-1",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSEM - 1",
+    "instructor": "Dr. Naveed Ahmed",
+    "id": "F26-0039",
+    "room": "MAS-2",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSEM - 1",
+    "instructor": "Dr. Naveed Ahmed",
+    "id": "F26-0039",
+    "room": "MAS-2",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomic Theory",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Syed Wiqar Hussain",
+    "id": "F26-0317",
+    "room": "MAS-2",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomic Theory",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Syed Wiqar Hussain",
+    "id": "F26-0317",
+    "room": "MAS-2",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSMT - 1",
+    "instructor": "Dr. Raziuddin Siddiqui",
+    "id": "101369",
+    "room": "MAV-1",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101369"
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSMT - 1",
+    "instructor": "Dr. Raziuddin Siddiqui",
+    "id": "101369",
+    "room": "MAV-1",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101369"
+  },
+  {
+    "name": "History of Economic Thought",
+    "program": "BSECO - 7",
+    "instructor": "Ms. Javeria Younas Abbas",
+    "id": "F26-0176",
+    "room": "MAV-1",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "History of Economic Thought",
+    "program": "BSECO - 7",
+    "instructor": "Ms. Javeria Younas Abbas",
+    "id": "F26-0176",
+    "room": "MAV-1",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Zaira Anees",
+    "id": "101546",
+    "room": "MAV-2",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101546"
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Zaira Anees",
+    "id": "101546",
+    "room": "MAV-2",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101546"
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Mohsin Ali Patel",
+    "id": "F26-0288",
+    "room": "MAV-2",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Mohsin Ali Patel",
+    "id": "F26-0288",
+    "room": "MAV-2",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Speech Communication",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Talat Davis",
+    "id": "F26-0425",
+    "room": "MAV-2",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Speech Communication",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Talat Davis",
+    "id": "F26-0425",
+    "room": "MAV-2",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "Kiran Khan Ali",
+    "id": "F26-0375",
+    "room": "MCC-09",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "Kiran Khan Ali",
+    "id": "F26-0375",
+    "room": "MCC-09",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Philosophy",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Hatim Fassi Fihri",
+    "id": "F26-0385",
+    "room": "MCC-09",
+    "day": "Friday",
+    "time": "09:50-11:30",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 1",
+    "instructor": "Mr. Abdul Rahim Suriya",
+    "id": "101547",
+    "room": "MCC-10",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101547"
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 1",
+    "instructor": "Mr. Abdul Rahim Suriya",
+    "id": "101547",
+    "room": "MCC-10",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101547"
+  },
+  {
+    "name": "Computational Research Methods",
+    "program": "BSSS - 5",
+    "instructor": "Ms. Abiha Zahra",
+    "id": "F26-0070",
+    "room": "MCC-10",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Computational Research Methods",
+    "program": "BSSS - 5",
+    "instructor": "Ms. Abiha Zahra",
+    "id": "F26-0070",
+    "room": "MCC-10",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Academic Writing",
+    "program": "BSEM - 3",
+    "instructor": "Ms. Maria Hassan Siddiqui",
+    "id": "F26-0197",
+    "room": "MCC-11",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Academic Writing",
+    "program": "BSEM - 3",
+    "instructor": "Ms. Maria Hassan Siddiqui",
+    "id": "F26-0197",
+    "room": "MCC-11",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BBA - 3",
+    "instructor": "Mr. Kashif Rashid",
+    "id": "F26-0372",
+    "room": "MCC-11",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BBA - 3",
+    "instructor": "Mr. Kashif Rashid",
+    "id": "F26-0372",
+    "room": "MCC-11",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomic Theory",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Amir Jahan Khan",
+    "id": "F26-0315",
+    "room": "MCC12",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomic Theory",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Amir Jahan Khan",
+    "id": "F26-0315",
+    "room": "MCC12",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Microeconomics",
+    "program": "BSECO - 1",
+    "instructor": "Dr. Muhammad Nasir",
+    "id": "F26-0380",
+    "room": "MCC-14",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Microeconomics",
+    "program": "BSECO - 1",
+    "instructor": "Dr. Muhammad Nasir",
+    "id": "F26-0380",
+    "room": "MCC-14",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Businesss Analytics",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Shafiullah Qureshi",
+    "id": "F26-0211",
+    "room": "MCC-14",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Businesss Analytics",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Shafiullah Qureshi",
+    "id": "F26-0211",
+    "room": "MCC-14",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BBA - 3",
+    "instructor": "Dr. Javed Iqbal",
+    "id": "101548",
+    "room": "MCC-15",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101548"
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BBA - 3",
+    "instructor": "Dr. Javed Iqbal",
+    "id": "101548",
+    "room": "MCC-15",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101548"
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Ms. Tahira Maryam Jafferi",
+    "id": "F26-0209",
+    "room": "MCC-15",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Ms. Tahira Maryam Jafferi",
+    "id": "F26-0209",
+    "room": "MCC-15",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "TBA",
+    "id": "F26-0379",
+    "room": "MCL-1",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "TBA",
+    "id": "F26-0379",
+    "room": "MCL-1",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "TBA",
+    "id": "F26-0086",
+    "room": "MCL-1",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "Ms. Maria Rahim Khowaja",
+    "id": "F26-0096",
+    "room": "MCL-1",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Computing",
+    "program": "BSCS - 1",
+    "instructor": "Mr. M. Waseem Arain",
+    "id": "F26-0216",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Computing",
+    "program": "BSCS - 1",
+    "instructor": "Mr. M. Waseem Arain",
+    "id": "F26-0216",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Muhammad Yousuf Saudagar",
+    "id": "F26-0410",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Muhammad Yousuf Saudagar",
+    "id": "F26-0410",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0293",
+    "room": "MCL-3",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0293",
+    "room": "MCL-3",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Azima Khan",
+    "id": "F26-0404",
+    "room": "MCL-3",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Azima Khan",
+    "id": "F26-0404",
+    "room": "MCL-3",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems (Lab)",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Abeera Tariq",
+    "id": "F26-0097",
+    "room": "MCL-3",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems (Lab)",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0098",
+    "room": "MCL-3",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management and Organizational Behavior",
+    "program": "BBA - 3",
+    "instructor": "Dr. Nyla Ansari",
+    "id": "F26-0295",
+    "room": "MCS-3",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management and Organizational Behavior",
+    "program": "BBA - 3",
+    "instructor": "Dr. Nyla Ansari",
+    "id": "F26-0295",
+    "room": "MCS-3",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Business Communication",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Nadia Sayeed",
+    "id": "F26-0027",
+    "room": "MCS-3",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Business Communication",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Nadia Sayeed",
+    "id": "F26-0027",
+    "room": "MCS-3",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BBA - 3",
+    "instructor": "Dr. Nida Aslam Khan",
+    "id": "F26-0371",
+    "room": "MCS-4",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BBA - 3",
+    "instructor": "Dr. Nida Aslam Khan",
+    "id": "F26-0371",
+    "room": "MCS-4",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomics",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Muhammad Masood Siddiqui",
+    "id": "F26-0320",
+    "room": "MTC 16",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomics",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Muhammad Masood Siddiqui",
+    "id": "F26-0320",
+    "room": "MTC 16",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Business Communication",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Sarah Mazhar",
+    "id": "F26-0028",
+    "room": "MTC-17",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Business Communication",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Sarah Mazhar",
+    "id": "F26-0028",
+    "room": "MTC-17",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Development Economics",
+    "program": "BSECO - 7",
+    "instructor": "Ms. Ayesha Khatoon",
+    "id": "F26-0103",
+    "room": "MTC-20",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Development Economics",
+    "program": "BSECO - 7",
+    "instructor": "Ms. Ayesha Khatoon",
+    "id": "F26-0103",
+    "room": "MTC-20",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design",
+    "program": "BSCS - 3",
+    "instructor": "Mr. Zain Uddin",
+    "id": "F26-0107",
+    "room": "MTC-21",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design",
+    "program": "BSCS - 3",
+    "instructor": "Mr. Zain Uddin",
+    "id": "F26-0107",
+    "room": "MTC-21",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Abdul Basit",
+    "id": "F26-0441",
+    "room": "MTC-21",
+    "day": "Friday",
+    "time": "10:30-11:45",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Abdul Basit",
+    "id": "F26-0441",
+    "room": "MTC-21",
+    "day": "Saturday",
+    "time": "10:30-11:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BBA - 3",
+    "instructor": "Ms. Noureen Qayam",
+    "id": "101551",
+    "room": "MTC-22",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101551"
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BBA - 3",
+    "instructor": "Ms. Noureen Qayam",
+    "id": "101551",
+    "room": "MTC-22",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101551"
+  },
+  {
+    "name": "Data Structures",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Imran Rauf",
+    "id": "F26-0080",
+    "room": "MTC-23",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Imran Rauf",
+    "id": "F26-0080",
+    "room": "MTC-23",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ayesha",
+    "id": "F26-0390",
+    "room": "MTC-24",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ayesha",
+    "id": "F26-0390",
+    "room": "MTC-24",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-I",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Ashar Tafheem",
+    "id": "F26-0053",
+    "room": "MTC-24",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-I",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Ashar Tafheem",
+    "id": "F26-0053",
+    "room": "MTC-24",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Mahwish Baasit",
+    "id": "101552",
+    "room": "MTC-25",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101552"
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Mahwish Baasit",
+    "id": "101552",
+    "room": "MTC-25",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "UMS 101552"
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Mahwish Baasit",
+    "id": "F26-0283",
+    "room": "MTC-25",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Mahwish Baasit",
+    "id": "F26-0283",
+    "room": "MTC-25",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Discrete Mathematics",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Danish Ali",
+    "id": "F26-0117",
+    "room": "MTC-26",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Discrete Mathematics",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Danish Ali",
+    "id": "F26-0117",
+    "room": "MTC-26",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Shafique",
+    "id": "F26-0300",
+    "room": "MTC-26",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Shafique",
+    "id": "F26-0300",
+    "room": "MTC-26",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus II",
+    "program": "BSECO - 3",
+    "instructor": "Dr. Maqsood Alam",
+    "id": "F26-0042",
+    "room": "MTS 6",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus II",
+    "program": "BSECO - 3",
+    "instructor": "Dr. Maqsood Alam",
+    "id": "F26-0042",
+    "room": "MTS 6",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Junaid Alam Khan",
+    "id": "F26-0264",
+    "room": "MTS 6",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Junaid Alam Khan",
+    "id": "F26-0264",
+    "room": "MTS 6",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Multivariable Calculus",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Babar Ahmed Qureshi",
+    "id": "F26-0324",
+    "room": "MTS 7",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Multivariable Calculus",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Babar Ahmed Qureshi",
+    "id": "F26-0324",
+    "room": "MTS 7",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Macroeconomic Theory",
+    "program": "BSEM - 5",
+    "instructor": "Dr. Faiz ur Rehman",
+    "id": "F26-0276",
+    "room": "MTS 7",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Macroeconomic Theory",
+    "program": "BSEM - 5",
+    "instructor": "Dr. Faiz ur Rehman",
+    "id": "F26-0276",
+    "room": "MTS 7",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0422",
+    "room": "MTS 7",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0422",
+    "room": "MTS 7",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Fawad Ahmad",
+    "id": "F26-0407",
+    "room": "MTL-4",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Fawad Ahmad",
+    "id": "F26-0407",
+    "room": "MTL-4",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Saqib Sharif",
+    "id": "F26-0409",
+    "room": "MTL-4",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Saqib Sharif",
+    "id": "F26-0409",
+    "room": "MTL-4",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Data Analytics for Economists (Mega Section)",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Waliullah",
+    "id": "F26-0077",
+    "room": "Testing Lab - NBP",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Data Analytics for Economists (Mega Section)",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Waliullah",
+    "id": "F26-0077",
+    "room": "Testing Lab - NBP",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Syed Irfan Ahmed",
+    "id": "F26-0140",
+    "room": "Testing Lab - NBP",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Syed Irfan Ahmed",
+    "id": "F26-0140",
+    "room": "Testing Lab - NBP",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ubedullah",
+    "id": "F26-0314",
+    "room": "Finance Lab",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ubedullah",
+    "id": "F26-0314",
+    "room": "Finance Lab",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Business, Ethics and Society",
+    "program": "BSAF - 1",
+    "instructor": "Dr. Hassan Mahmood",
+    "id": "F26-0036",
+    "room": "AUDITORIUM",
+    "day": "Monday",
+    "time": "11:20-13:00",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting",
+    "program": "BSAF - 1",
+    "instructor": "Dr. Amama",
+    "id": "F26-0353",
+    "room": "EVENT HALL",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting",
+    "program": "BSAF - 1",
+    "instructor": "Dr. Amama",
+    "id": "F26-0353",
+    "room": "EVENT HALL",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Mr. Shahid Zaki",
+    "id": "F26-0301",
+    "room": "EVENT HALL",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Mr. Shahid Zaki",
+    "id": "F26-0301",
+    "room": "EVENT HALL",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Ayaz",
+    "id": "101553",
+    "room": "MAC-1",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101553"
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Ayaz",
+    "id": "101553",
+    "room": "MAC-1",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101553"
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Haroon Tabraze",
+    "id": "F26-0444",
+    "room": "MAC-1",
+    "day": "Friday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Haroon Tabraze",
+    "id": "F26-0444",
+    "room": "MAC-1",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Nauman J. Amin",
+    "id": "F26-0129",
+    "room": "MAC-2",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Nauman J. Amin",
+    "id": "F26-0129",
+    "room": "MAC-2",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Behraj Khan",
+    "id": "F26-0226",
+    "room": "MAC-2",
+    "day": "Friday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Behraj Khan",
+    "id": "F26-0226",
+    "room": "MAC-2",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Noureen Ayaz",
+    "id": "101554",
+    "room": "MAC-3",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101554"
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Noureen Ayaz",
+    "id": "101554",
+    "room": "MAC-3",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101554"
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Ms. Madeeha Omer Lakhani",
+    "id": "F26-0131",
+    "room": "MAC-3",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Ms. Madeeha Omer Lakhani",
+    "id": "F26-0131",
+    "room": "MAC-3",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Aitzaz Ahsan Alias Sarang",
+    "id": "101555",
+    "room": "MAC-4",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101555"
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BBA - 3",
+    "instructor": "Dr. Aitzaz Ahsan Alias Sarang",
+    "id": "101555",
+    "room": "MAC-4",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101555"
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Muhammad Shafique",
+    "id": "F26-0299",
+    "room": "MAC-4",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Muhammad Shafique",
+    "id": "F26-0299",
+    "room": "MAC-4",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BBA - 3",
+    "instructor": "Ms. Kiran Sardar Khan",
+    "id": "F26-0373",
+    "room": "MAC-4",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Analytics",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Khurum Junejo",
+    "id": "F26-0200",
+    "room": "MAC-5",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Analytics",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Khurum Junejo",
+    "id": "F26-0200",
+    "room": "MAC-5",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Management and Organizational Behavior",
+    "program": "BBA - 3",
+    "instructor": "Ms. Sara Khan",
+    "id": "F26-0298",
+    "room": "MAC-5",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Management and Organizational Behavior",
+    "program": "BBA - 3",
+    "instructor": "Ms. Sara Khan",
+    "id": "F26-0298",
+    "room": "MAC-5",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Fundamentals of Sociology",
+    "program": "BSSS - 1",
+    "instructor": "Dr. Ismat Abbas",
+    "id": "101301",
+    "room": "MAC-6",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101301"
+  },
+  {
+    "name": "Fundamentals of Sociology",
+    "program": "BSSS - 1",
+    "instructor": "Dr. Ismat Abbas",
+    "id": "101301",
+    "room": "MAC-6",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101301"
+  },
+  {
+    "name": "Statistical Modeling",
+    "program": "BSMT - 5",
+    "instructor": "Dr. Javed Iqbal",
+    "id": "101375",
+    "room": "MAC-6",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101375"
+  },
+  {
+    "name": "Statistical Modeling",
+    "program": "BSMT - 5",
+    "instructor": "Dr. Javed Iqbal",
+    "id": "101375",
+    "room": "MAC-6",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101375"
+  },
+  {
+    "name": "Introduction to Historical Methods",
+    "program": "BSSS - 1",
+    "instructor": "Mr. Shehroze Shaikh",
+    "id": "101304",
+    "room": "MAC-7",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101304"
+  },
+  {
+    "name": "Introduction to Historical Methods",
+    "program": "BSSS - 1",
+    "instructor": "Mr. Shehroze Shaikh",
+    "id": "101304",
+    "room": "MAC-7",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101304"
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Ms. Tahira Maryam Jafferi",
+    "id": "F26-0208",
+    "room": "MAC-7",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Ms. Tahira Maryam Jafferi",
+    "id": "F26-0208",
+    "room": "MAC-7",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Historical Methods",
+    "program": "BSSS - 1",
+    "instructor": "TBA",
+    "id": "101479",
+    "room": "MAC-8",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101479"
+  },
+  {
+    "name": "Introduction to Historical Methods",
+    "program": "BSSS - 1",
+    "instructor": "TBA",
+    "id": "101479",
+    "room": "MAC-8",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101479"
+  },
+  {
+    "name": "Introduction to Differential Equations",
+    "program": "BSEM - 5",
+    "instructor": "Dr. Shabana Nisar",
+    "id": "F26-0219",
+    "room": "MAC-8",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Differential Equations",
+    "program": "BSEM - 5",
+    "instructor": "Dr. Shabana Nisar",
+    "id": "F26-0219",
+    "room": "MAC-8",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Computing",
+    "program": "BSCS - 1",
+    "instructor": "Dr. Farukh Hasan Syed",
+    "id": "F26-0214",
+    "room": "MAC-8",
+    "day": "Friday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Computing",
+    "program": "BSCS - 1",
+    "instructor": "Dr. Farukh Hasan Syed",
+    "id": "F26-0214",
+    "room": "MAC-8",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lecture D)",
+    "program": "BSEM - 5",
+    "instructor": "Ms. Fatima Sadik",
+    "id": "F26-0010",
+    "room": "MAS-1",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lecture D)",
+    "program": "BSEM - 5",
+    "instructor": "Ms. Fatima Sadik",
+    "id": "F26-0010",
+    "room": "MAS-1",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BBA - 3",
+    "instructor": "Dr. Ihtesham Ud Din",
+    "id": "F26-0370",
+    "room": "MAS-1",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BBA - 3",
+    "instructor": "Dr. Ihtesham Ud Din",
+    "id": "F26-0370",
+    "room": "MAS-1",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Alia Hasan",
+    "id": "F26-0376",
+    "room": "MAS-2",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Alia Hasan",
+    "id": "F26-0376",
+    "room": "MAS-2",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Macroeconomic Theory",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Faiz ur Rehman",
+    "id": "F26-0274",
+    "room": "MAS-2",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Macroeconomic Theory",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Faiz ur Rehman",
+    "id": "F26-0274",
+    "room": "MAS-2",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Imran Rauf",
+    "id": "F26-0079",
+    "room": "MAS-2",
+    "day": "Friday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Imran Rauf",
+    "id": "F26-0079",
+    "room": "MAS-2",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSSS - 3",
+    "instructor": "TBA",
+    "id": "F26-0437",
+    "room": "MAV-1",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSSS - 3",
+    "instructor": "TBA",
+    "id": "F26-0437",
+    "room": "MAV-1",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "History of Economic Thought",
+    "program": "BSECO - 7",
+    "instructor": "Ms. Javeria Younas Abbas",
+    "id": "F26-0177",
+    "room": "MAV-1",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "History of Economic Thought",
+    "program": "BSECO - 7",
+    "instructor": "Ms. Javeria Younas Abbas",
+    "id": "F26-0177",
+    "room": "MAV-1",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Speech Communication",
+    "program": "BSBA - 1",
+    "instructor": "Ms. Talat Davis",
+    "id": "F26-0426",
+    "room": "MAV-2",
+    "day": "Friday",
+    "time": "11:35-12:50",
+    "comments": ""
+  },
+  {
+    "name": "Speech Communication",
+    "program": "BSBA - 1",
+    "instructor": "Ms. Talat Davis",
+    "id": "F26-0426",
+    "room": "MAV-2",
+    "day": "Saturday",
+    "time": "11:35-12:50",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting",
+    "program": "BSBA - 3",
+    "instructor": "Mr. Ghias ul Hasan",
+    "id": "F26-0355",
+    "room": "MCC-9",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting",
+    "program": "BSBA - 3",
+    "instructor": "Mr. Ghias ul Hasan",
+    "id": "F26-0355",
+    "room": "MCC-9",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures",
+    "program": "BSCS - 3",
+    "instructor": "TBA",
+    "id": "F26-0082",
+    "room": "MCC-9",
+    "day": "Friday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures",
+    "program": "BSCS - 3",
+    "instructor": "TBA",
+    "id": "F26-0082",
+    "room": "MCC-9",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 1",
+    "instructor": "Mr. Abdul Rahim Suriya",
+    "id": "101556",
+    "room": "MCC-10",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101556"
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 1",
+    "instructor": "Mr. Abdul Rahim Suriya",
+    "id": "101556",
+    "room": "MCC-10",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101556"
+  },
+  {
+    "name": "Principles of Microeconomics",
+    "program": "BSEM - 1",
+    "instructor": "Dr. Muhammad Nasir",
+    "id": "F26-0383",
+    "room": "MCC-11",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Microeconomics",
+    "program": "BSEM - 1",
+    "instructor": "Dr. Muhammad Nasir",
+    "id": "F26-0383",
+    "room": "MCC-11",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Mathematical Statistics and Probability",
+    "program": "BSMT - 7",
+    "instructor": "Dr. Muhammad Sheraz",
+    "id": "101376",
+    "room": "MCC-11",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101376"
+  },
+  {
+    "name": "Mathematical Statistics and Probability",
+    "program": "BSMT - 7",
+    "instructor": "Dr. Muhammad Sheraz",
+    "id": "101376",
+    "room": "MCC-11",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101376"
+  },
+  {
+    "name": "College Algebra",
+    "program": "BSECO - 1",
+    "instructor": "Dr. Maqsood Alam",
+    "id": "F26-0064",
+    "room": "MCC-12",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "College Algebra",
+    "program": "BSECO - 1",
+    "instructor": "Dr. Maqsood Alam",
+    "id": "F26-0064",
+    "room": "MCC-12",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomic Theory",
+    "program": "BSEM - 5",
+    "instructor": "Dr. Amir Jahan Khan",
+    "id": "F26-0318",
+    "room": "MCC12",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomic Theory",
+    "program": "BSEM - 5",
+    "instructor": "Dr. Amir Jahan Khan",
+    "id": "F26-0318",
+    "room": "MCC12",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Intermediate Microeconomics",
+    "program": "BSECO - 3",
+    "instructor": "Dr. Anwar Shah",
+    "id": "F26-0186",
+    "room": "MCC-13",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Intermediate Microeconomics",
+    "program": "BSECO - 3",
+    "instructor": "Dr. Anwar Shah",
+    "id": "F26-0186",
+    "room": "MCC-13",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Kiran Khan",
+    "id": "F26-0378",
+    "room": "MCC-14",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Kiran Khan",
+    "id": "F26-0378",
+    "room": "MCC-14",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Kiran Khan",
+    "id": "F26-0378",
+    "room": "MCC-14",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Kiran Khan",
+    "id": "F26-0378",
+    "room": "MCC-14",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BBA - 3",
+    "instructor": "Dr. Javed Iqbal",
+    "id": "101558",
+    "room": "MCC-15",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101558"
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BBA - 3",
+    "instructor": "Dr. Javed Iqbal",
+    "id": "101558",
+    "room": "MCC-15",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101558"
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Alia Hasan",
+    "id": "F26-0377",
+    "room": "MCC-15",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Alia Hasan",
+    "id": "F26-0377",
+    "room": "MCC-15",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Numerical Linear Algebra-I",
+    "program": "BSMT - 5",
+    "instructor": "Dr. Hisham Bin Zubair",
+    "id": "101371",
+    "room": "MCL-1",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101371"
+  },
+  {
+    "name": "Numerical Linear Algebra-I",
+    "program": "BSMT - 5",
+    "instructor": "Dr. Hisham Bin Zubair",
+    "id": "101371",
+    "room": "MCL-1",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101371"
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0095",
+    "room": "MCL-1",
+    "day": "Friday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Human Computer Interaction",
+    "program": "BSCS - 7",
+    "instructor": "Ms. Afshan Ejaz",
+    "id": "F26-0182",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Human Computer Interaction",
+    "program": "BSCS - 7",
+    "instructor": "Ms. Afshan Ejaz",
+    "id": "F26-0182",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Muhammad Yousuf Saudagar",
+    "id": "F26-0411",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Muhammad Yousuf Saudagar",
+    "id": "F26-0411",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Psychology for Business (101559)",
+    "program": "BBA - 1",
+    "instructor": "Dr. Wajid H. Rizvi",
+    "id": "F26-0398",
+    "room": "MCS-3",
+    "day": "Monday",
+    "time": "11:15-12:55",
+    "comments": "UMS 101559"
+  },
+  {
+    "name": "Psychology for Business (101560)",
+    "program": "BBA - 1",
+    "instructor": "Dr. Wajid H. Rizvi",
+    "id": "F26-0399",
+    "room": "MCS-3",
+    "day": "Monday",
+    "time": "11:15-12:55",
+    "comments": "UMS 101559"
+  },
+  {
+    "name": "Psychology for Business (101561)",
+    "program": "BBA - 1",
+    "instructor": "Dr. Wajid H. Rizvi",
+    "id": "F26-0400",
+    "room": "MCS-3",
+    "day": "Wednesday",
+    "time": "11:15-12:55",
+    "comments": "UMS 101559"
+  },
+  {
+    "name": "Development Economics",
+    "program": "BSECO - 7",
+    "instructor": "Dr. Lubna Naz",
+    "id": "F26-0101",
+    "room": "MTC 16",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Development Economics",
+    "program": "BSECO - 7",
+    "instructor": "Dr. Lubna Naz",
+    "id": "F26-0101",
+    "room": "MTC 16",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomics",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Muhammad Masood Siddiqui",
+    "id": "F26-0321",
+    "room": "MTC 16",
+    "day": "Friday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomics",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Muhammad Masood Siddiqui",
+    "id": "F26-0321",
+    "room": "MTC 16",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Mr. Waseem Arain",
+    "id": "F26-0337",
+    "room": "MTC-17",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Mr. Waseem Arain",
+    "id": "F26-0337",
+    "room": "MTC-17",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Raziuddin",
+    "id": "F26-0267",
+    "room": "MTC-17",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Raziuddin",
+    "id": "F26-0267",
+    "room": "MTC-17",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Ashar",
+    "id": "101562",
+    "room": "MTC-18",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101562"
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Ashar",
+    "id": "101562",
+    "room": "MTC-18",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101562"
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSMT - 1",
+    "instructor": "Dr. Raziuddin Siddiqui",
+    "id": "101370",
+    "room": "MTC-19",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101370"
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSMT - 1",
+    "instructor": "Dr. Raziuddin Siddiqui",
+    "id": "101370",
+    "room": "MTC-19",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101370"
+  },
+  {
+    "name": "Introduction to Programming",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Samreen Kazi",
+    "id": "F26-0229",
+    "room": "MTC-20",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Samreen Kazi",
+    "id": "F26-0229",
+    "room": "MTC-20",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Azima Khan",
+    "id": "F26-0405",
+    "room": "MTC-20",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Azima Khan",
+    "id": "F26-0405",
+    "room": "MTC-20",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSEDS - 1",
+    "instructor": "Dr. Umar Shahzad",
+    "id": "F26-0038",
+    "room": "MTC-21",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSEDS - 1",
+    "instructor": "Dr. Umar Shahzad",
+    "id": "F26-0038",
+    "room": "MTC-21",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Abdul Basit",
+    "id": "F26-0442",
+    "room": "MTC-21",
+    "day": "Friday",
+    "time": "12:00-13:15",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Abdul Basit",
+    "id": "F26-0442",
+    "room": "MTC-21",
+    "day": "Saturday",
+    "time": "12:00-13:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSAF - 1",
+    "instructor": "Ms. Hafizah Rumlah Amer",
+    "id": "F26-0048",
+    "room": "MTC-22",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSAF - 1",
+    "instructor": "Ms. Hafizah Rumlah Amer",
+    "id": "F26-0048",
+    "room": "MTC-22",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Business Communication",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Sarah Mazhar",
+    "id": "F26-0029",
+    "room": "MTC-24",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Business Communication",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Sarah Mazhar",
+    "id": "F26-0029",
+    "room": "MTC-24",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Ashar Tafheem",
+    "id": "F26-0050",
+    "room": "MTC-24",
+    "day": "Friday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Ashar Tafheem",
+    "id": "F26-0050",
+    "room": "MTC-24",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Social and Cultural Anthropology",
+    "program": "BSSS - 3",
+    "instructor": "Mr. Ehtesham Rehmani",
+    "id": "101316",
+    "room": "MTC 25",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101316"
+  },
+  {
+    "name": "Introduction to Social and Cultural Anthropology",
+    "program": "BSSS - 3",
+    "instructor": "Mr. Ehtesham Rehmani",
+    "id": "101316",
+    "room": "MTC 25",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101316"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Danish Ali",
+    "id": "F26-0118",
+    "room": "MTC-26",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Discrete Mathematics",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Danish Ali",
+    "id": "F26-0118",
+    "room": "MTC-26",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Samreen Zaman",
+    "id": "F26-0037",
+    "room": "MTC-27",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Samreen Zaman",
+    "id": "F26-0037",
+    "room": "MTC-27",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Real Analysis I",
+    "program": "BSEM - 5",
+    "instructor": "Mr. Ahmad Raza",
+    "id": "F26-0402",
+    "room": "MTS 6",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Real Analysis I",
+    "program": "BSEM - 5",
+    "instructor": "Mr. Ahmad Raza",
+    "id": "F26-0402",
+    "room": "MTS 6",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Junaid Alam Khan",
+    "id": "F26-0265",
+    "room": "MTS 6",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Junaid Alam Khan",
+    "id": "F26-0265",
+    "room": "MTS 6",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Multivariable Calculus",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Babar Ahmed Qureshi",
+    "id": "F26-0325",
+    "room": "MTS 7",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Multivariable Calculus",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Babar Ahmed Qureshi",
+    "id": "F26-0325",
+    "room": "MTS 7",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Differential Equations",
+    "program": "BSMT - 3",
+    "instructor": "Dr. Maqsood Alam",
+    "id": "101377",
+    "room": "MTS 7",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101377"
+  },
+  {
+    "name": "Introduction to Differential Equations",
+    "program": "BSMT - 3",
+    "instructor": "Dr. Maqsood Alam",
+    "id": "101377",
+    "room": "MTS 7",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "UMS 101377"
+  },
+  {
+    "name": "Digital Logic Design (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "Mr. M. Zain Uddin",
+    "id": "F26-0112",
+    "room": "MTL-4",
+    "day": "Wednesday",
+    "time": "11:30-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "Mr. M. Zain Uddin",
+    "id": "F26-0111",
+    "room": "MTL-4",
+    "day": "Thursday",
+    "time": "11:30-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Data Analytics for Economists (Mega Section)",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Waliullah",
+    "id": "F26-0078",
+    "room": "Testing Lab - NBP",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Data Analytics for Economists (Mega Section)",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Waliullah",
+    "id": "F26-0078",
+    "room": "Testing Lab - NBP",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design",
+    "program": "BSCS - 3",
+    "instructor": "Ms. Tasbiha Fatima",
+    "id": "F26-0109",
+    "room": "Testing Lab - NBP",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design",
+    "program": "BSCS - 3",
+    "instructor": "Ms. Tasbiha Fatima",
+    "id": "F26-0109",
+    "room": "Testing Lab - NBP",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Academic Writing",
+    "program": "BSECO - 3",
+    "instructor": "Ms. Maria Hassan Siddiqui",
+    "id": "F26-0194",
+    "room": "Adamjee Conference Room",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Academic Writing",
+    "program": "BSECO - 3",
+    "instructor": "Ms. Maria Hassan Siddiqui",
+    "id": "F26-0194",
+    "room": "Adamjee Conference Room",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Syed Irfan Ahmed",
+    "id": "F26-0138",
+    "room": "Finance Lab",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Syed Irfan Ahmed",
+    "id": "F26-0138",
+    "room": "Finance Lab",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": ""
+  },
+  {
+    "name": "Business Law",
+    "program": "BSAF - 3",
+    "instructor": "Ms. Mehreen Nazar",
+    "id": "F26-0034",
+    "room": "MTC 16",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Business Law",
+    "program": "BSAF - 3",
+    "instructor": "Ms. Mehreen Nazar",
+    "id": "F26-0034",
+    "room": "MTC 16",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Ayaz",
+    "id": "101563",
+    "room": "MAC-1",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101563"
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Ayaz",
+    "id": "101563",
+    "room": "MAC-1",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101563"
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 3",
+    "instructor": "Teacher to be Announced",
+    "id": "F26-0363",
+    "room": "MAC-1",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 3",
+    "instructor": "Teacher to be Announced",
+    "id": "F26-0363",
+    "room": "MAC-1",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Zaira Anees",
+    "id": "101564",
+    "room": "MAC-2",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101564"
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Zaira Anees",
+    "id": "101564",
+    "room": "MAC-2",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101564"
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 3",
+    "instructor": "Teacher to be Announced",
+    "id": "F26-0364",
+    "room": "MAC-2",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 3",
+    "instructor": "Teacher to be Announced",
+    "id": "F26-0364",
+    "room": "MAC-2",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Saad Usman",
+    "id": "F26-0136",
+    "room": "MAC-2",
+    "day": "Saturday",
+    "time": "14:00-16:30",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSSS - 3",
+    "instructor": "TBA",
+    "id": "F26-0435",
+    "room": "MAC-3",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSSS - 3",
+    "instructor": "TBA",
+    "id": "F26-0435",
+    "room": "MAC-3",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSSS - 3",
+    "instructor": "TBA",
+    "id": "F26-0436",
+    "room": "MAC-3",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSSS - 3",
+    "instructor": "TBA",
+    "id": "F26-0436",
+    "room": "MAC-3",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "College Algebra",
+    "program": "BSSS - 1",
+    "instructor": "TBA",
+    "id": "F26-0066",
+    "room": "MAC-4",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "College Algebra",
+    "program": "BSSS - 1",
+    "instructor": "TBA",
+    "id": "F26-0066",
+    "room": "MAC-4",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Mahwish Baasit",
+    "id": "F26-0280",
+    "room": "MAC-4",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Mahwish Baasit",
+    "id": "F26-0280",
+    "room": "MAC-4",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Marketing",
+    "program": "BBA - 3",
+    "instructor": "Ms. Kiran Sardar Khan",
+    "id": "F26-0374",
+    "room": "MAC-4",
+    "day": "Saturday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSSS - 1",
+    "instructor": "Ms. Hafizah Rumlah Amer",
+    "id": "101426",
+    "room": "MAC-5",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101426"
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSSS - 1",
+    "instructor": "Ms. Hafizah Rumlah Amer",
+    "id": "101426",
+    "room": "MAC-5",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101426"
+  },
+  {
+    "name": "Introduction to Social and Cultural Anthropology",
+    "program": "BSSS - 3",
+    "instructor": "Mr. Ehtesham Rehmani",
+    "id": "101315",
+    "room": "MAC 6",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101315"
+  },
+  {
+    "name": "Introduction to Social and Cultural Anthropology",
+    "program": "BSSS - 3",
+    "instructor": "Mr. Ehtesham Rehmani",
+    "id": "101315",
+    "room": "MAC 6",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101315"
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0290",
+    "room": "MAC-7",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0290",
+    "room": "MAC-7",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0291",
+    "room": "MAC-8",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0291",
+    "room": "MAC-8",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Differential Equations",
+    "program": "BSEM - 5",
+    "instructor": "Dr. Shabana Nisar",
+    "id": "F26-0220",
+    "room": "MAC-8",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Differential Equations",
+    "program": "BSEM - 5",
+    "instructor": "Dr. Shabana Nisar",
+    "id": "F26-0220",
+    "room": "MAC-8",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Intermediate Microeconomics",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Aadil Nakhoda",
+    "id": "F26-0188",
+    "room": "MAS-1",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Intermediate Microeconomics",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Aadil Nakhoda",
+    "id": "F26-0188",
+    "room": "MAS-1",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ihtesham Ud Din",
+    "id": "F26-0312",
+    "room": "MAS-1",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ihtesham Ud Din",
+    "id": "F26-0312",
+    "room": "MAS-1",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lecture A)",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Muhammad Salman Khalid",
+    "id": "F26-0007",
+    "room": "MAS-2",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lecture A)",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Muhammad Salman Khalid",
+    "id": "F26-0007",
+    "room": "MAS-2",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Intermediate Microeconomics",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Ilfan Oh",
+    "id": "F26-0189",
+    "room": "MAV-1",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Intermediate Microeconomics",
+    "program": "BSEM - 3",
+    "instructor": "Dr. Ilfan Oh",
+    "id": "F26-0189",
+    "room": "MAV-1",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSEM - 1",
+    "instructor": "Dr. Saqib Ur Rehman",
+    "id": "F26-0255",
+    "room": "MAV-2",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSEM - 1",
+    "instructor": "Dr. Saqib Ur Rehman",
+    "id": "F26-0255",
+    "room": "MAV-2",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Microeconomics",
+    "program": "BSECO - 1",
+    "instructor": "Dr. Sahar Arshad Mahmood",
+    "id": "F26-0381",
+    "room": "MCC-09",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Microeconomics",
+    "program": "BSECO - 1",
+    "instructor": "Dr. Sahar Arshad Mahmood",
+    "id": "F26-0381",
+    "room": "MCC-09",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 1",
+    "instructor": "Mr. Abdul Rahim Suriya",
+    "id": "101565",
+    "room": "MCC-10",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101565"
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 1",
+    "instructor": "Mr. Abdul Rahim Suriya",
+    "id": "101565",
+    "room": "MCC-10",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101565"
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSAF - 1",
+    "instructor": "Dr. Umar Shahzad",
+    "id": "F26-0045",
+    "room": "MCC-11",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSAF - 1",
+    "instructor": "Dr. Umar Shahzad",
+    "id": "F26-0045",
+    "room": "MCC-11",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0420",
+    "room": "MCC-11",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0420",
+    "room": "MCC-11",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus II",
+    "program": "BSECO - 3",
+    "instructor": "Mr. Syed Mujahid Ali",
+    "id": "F26-0044",
+    "room": "MCC12",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus II",
+    "program": "BSECO - 3",
+    "instructor": "Mr. Syed Mujahid Ali",
+    "id": "F26-0044",
+    "room": "MCC12",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomic Theory",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Noman Ahmad",
+    "id": "F26-0316",
+    "room": "MCC-13",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomic Theory",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Noman Ahmad",
+    "id": "F26-0316",
+    "room": "MCC-13",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Mr. Shahid Zaki",
+    "id": "F26-0302",
+    "room": "MCC-15",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Mr. Shahid Zaki",
+    "id": "F26-0302",
+    "room": "MCC-15",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "TBA",
+    "id": "F26-0115",
+    "room": "MCL-1",
+    "day": "Monday",
+    "time": "13:00-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0292",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0292",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Muhammad Yousuf Saudagar",
+    "id": "F26-0412",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Regulations and Financial Markets",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Muhammad Yousuf Saudagar",
+    "id": "F26-0412",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Business Law",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Rahat Aziz",
+    "id": "F26-0031",
+    "room": "MCL-3",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Business Law",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Rahat Aziz",
+    "id": "F26-0031",
+    "room": "MCL-3",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "Mr. Daniyal Haseeb",
+    "id": "F26-0085",
+    "room": "MCL-3",
+    "day": "Saturday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Macroeconomic Theory",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Tehseen Iqbal",
+    "id": "F26-0275",
+    "room": "MCS-3",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Macroeconomic Theory",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Tehseen Iqbal",
+    "id": "F26-0275",
+    "room": "MCS-3",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0447",
+    "room": "MTC 16",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0447",
+    "room": "MTC 16",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 1",
+    "instructor": "Teacher to be announce",
+    "id": "F26-0361",
+    "room": "MTC-18",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 1",
+    "instructor": "Teacher to be announce",
+    "id": "F26-0361",
+    "room": "MTC-18",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Samreen Kazi",
+    "id": "F26-0230",
+    "room": "MTC-20",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Samreen Kazi",
+    "id": "F26-0230",
+    "room": "MTC-20",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSECO - 3",
+    "instructor": "TBA",
+    "id": "F26-0268",
+    "room": "MTC-21",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSECO - 3",
+    "instructor": "TBA",
+    "id": "F26-0268",
+    "room": "MTC-21",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0421",
+    "room": "MTC-24",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Software Engineering",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0421",
+    "room": "MTC-24",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Abeera Tariq",
+    "id": "F26-0091",
+    "room": "MTC-24",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Abeera Tariq",
+    "id": "F26-0091",
+    "room": "MTC-24",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Yaseen Ahmed Meenai",
+    "id": "F26-0432",
+    "room": "MTC 25",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Yaseen Ahmed Meenai",
+    "id": "F26-0432",
+    "room": "MTC 25",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0448",
+    "room": "MTC-26",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Taxation",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0448",
+    "room": "MTC-26",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Business Communication",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0030",
+    "room": "MTC-26",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Business Communication",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0030",
+    "room": "MTC-26",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Samreen Zaman",
+    "id": "F26-0051",
+    "room": "MTC-29",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Samreen Zaman",
+    "id": "F26-0051",
+    "room": "MTC-29",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSECO - 3",
+    "instructor": "TBA",
+    "id": "F26-0269",
+    "room": "MTS 6",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSECO - 3",
+    "instructor": "TBA",
+    "id": "F26-0269",
+    "room": "MTS 6",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Quantum Mechanics",
+    "program": "BSMT - 5",
+    "instructor": "Dr. Azeem Hassan",
+    "id": "101372",
+    "room": "MTS 7",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101372"
+  },
+  {
+    "name": "Introduction to Quantum Mechanics",
+    "program": "BSMT - 5",
+    "instructor": "Dr. Azeem Hassan",
+    "id": "101372",
+    "room": "MTS 7",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "UMS 101372"
+  },
+  {
+    "name": "Introduction to Programming (Lab)",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Barira Khan Ghauri",
+    "id": "F26-0234",
+    "room": "MTL-4",
+    "day": "Monday",
+    "time": "13:00-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "Ms. Barira Khan Ghauri",
+    "id": "F26-0236",
+    "room": "MTL-4",
+    "day": "Monday",
+    "time": "13:00-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design (Lab)",
+    "program": "BSCS - 1",
+    "instructor": "Mr. M. Zain Uddin",
+    "id": "F26-0110",
+    "room": "MTL-4",
+    "day": "Wednesday",
+    "time": "11:30-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Digital Logic Design (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "Ms. Tasbiha FAtima",
+    "id": "F26-0114",
+    "room": "MTL-4",
+    "day": "Tuesday",
+    "time": "13:00-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lab C)",
+    "program": "BSEM - 5",
+    "instructor": "Ms. Fatima Sadik",
+    "id": "F26-0005",
+    "room": "Testing Lab - NBP",
+    "day": "Monday",
+    "time": "13:00-14:00",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lab D)",
+    "program": "BSEM - 5",
+    "instructor": "Ms. Fatima Sadik",
+    "id": "F26-0006",
+    "room": "Testing Lab - NBP",
+    "day": "Wednesday",
+    "time": "13:00-14:00",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0289",
+    "room": "Finance Lab",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "TBA",
+    "id": "F26-0289",
+    "room": "Finance Lab",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Syed Irfan Ahmed",
+    "id": "F26-0139",
+    "room": "Finance Lab",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Syed Irfan Ahmed",
+    "id": "F26-0139",
+    "room": "Finance Lab",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": ""
+  },
+  {
+    "name": "History of Ideas (MEGA CLASS",
+    "program": "BSSS - 1",
+    "instructor": "Dr. Irfan Muhammad",
+    "id": "F26-0179",
+    "room": "AUDITORIUM",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "History of Ideas (MEGA CLASS",
+    "program": "BSSS - 1",
+    "instructor": "Dr. Irfan Muhammad",
+    "id": "F26-0179",
+    "room": "AUDITORIUM",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Pakistan History",
+    "program": "BSAF - 1",
+    "instructor": "Dr. Humaira Naz",
+    "id": "F26-0340",
+    "room": "EVENT HALL",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Mujeeb U Rehman Bhayo",
+    "id": "101566",
+    "room": "MAC-1",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101566"
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Mujeeb U Rehman Bhayo",
+    "id": "101566",
+    "room": "MAC-1",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101566"
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ayesha",
+    "id": "101567",
+    "room": "MAC-2",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101567"
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ayesha",
+    "id": "101567",
+    "room": "MAC-2",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101567"
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BBA - 3",
+    "instructor": "Dr. Akhtar Raza",
+    "id": "F26-0427",
+    "room": "MAC-2",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BBA - 3",
+    "instructor": "Dr. Akhtar Raza",
+    "id": "F26-0427",
+    "room": "MAC-2",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Ms. Madeeha Omer Lakhani",
+    "id": "F26-0132",
+    "room": "MAC-3",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Ms. Madeeha Omer Lakhani",
+    "id": "F26-0132",
+    "room": "MAC-3",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Computing",
+    "program": "BSCS - 1",
+    "instructor": "Dr. Farrukh Hasan Syed",
+    "id": "F26-0213",
+    "room": "MAC-3",
+    "day": "Friday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Computing",
+    "program": "BSCS - 1",
+    "instructor": "Dr. Farrukh Hasan Syed",
+    "id": "F26-0213",
+    "room": "MAC-3",
+    "day": "Saturday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Mahwish Baasit",
+    "id": "F26-0281",
+    "room": "MAC-4",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BBA - 5",
+    "instructor": "Ms. Mahwish Baasit",
+    "id": "F26-0281",
+    "room": "MAC-4",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Aitzaz Ahsan Alias Sarang",
+    "id": "F26-0204",
+    "room": "MAC-5",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Aitzaz Ahsan Alias Sarang",
+    "id": "F26-0204",
+    "room": "MAC-5",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Management and Organizational Behavior",
+    "program": "BBA - 3",
+    "instructor": "Dr. Nasir Aghan",
+    "id": "F26-0294",
+    "room": "MAC-5",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Management and Organizational Behavior",
+    "program": "BBA - 3",
+    "instructor": "Dr. Nasir Aghan",
+    "id": "F26-0294",
+    "room": "MAC-5",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Social and Cultural Anthropology",
+    "program": "BSSS - 3",
+    "instructor": "TBA",
+    "id": "F26-0237",
+    "room": "MAC 6",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Social and Cultural Anthropology",
+    "program": "BSSS - 3",
+    "instructor": "TBA",
+    "id": "F26-0237",
+    "room": "MAC 6",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Mohsin Ali Patel",
+    "id": "F26-0286",
+    "room": "MAC 6",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Mohsin Ali Patel",
+    "id": "F26-0286",
+    "room": "MAC 6",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Historical Methods",
+    "program": "BSSS - 1",
+    "instructor": "Mr. Shehroze Shaikh",
+    "id": "101305",
+    "room": "MAC-7",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101305"
+  },
+  {
+    "name": "Introduction to Historical Methods",
+    "program": "BSSS - 1",
+    "instructor": "Mr. Shehroze Shaikh",
+    "id": "101305",
+    "room": "MAC-7",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101305"
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ayesha",
+    "id": "F26-0389",
+    "room": "MAC-7",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ayesha",
+    "id": "F26-0389",
+    "room": "MAC-7",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Amir Bashir",
+    "id": "F26-0429",
+    "room": "MAC 8",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Amir Bashir",
+    "id": "F26-0429",
+    "room": "MAC 8",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BBA - 3",
+    "instructor": "Dr. Farah Yasmeen",
+    "id": "101568",
+    "room": "MAS-1",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101568"
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BBA - 3",
+    "instructor": "Dr. Farah Yasmeen",
+    "id": "101568",
+    "room": "MAS-1",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101568"
+  },
+  {
+    "name": "Intermediate Microeconomics",
+    "program": "BSECO - 3",
+    "instructor": "Dr. Adil Nakhoda",
+    "id": "F26-0185",
+    "room": "MAS-2",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Intermediate Microeconomics",
+    "program": "BSECO - 3",
+    "instructor": "Dr. Adil Nakhoda",
+    "id": "F26-0185",
+    "room": "MAS-2",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lecture B)",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Muhammad Salman Khalid",
+    "id": "F26-0008",
+    "room": "MAS-2",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lecture B)",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Muhammad Salman Khalid",
+    "id": "F26-0008",
+    "room": "MAS-2",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Intermediate Microeconomics",
+    "program": "BSECO - 3",
+    "instructor": "Dr. Ilfan Oh",
+    "id": "F26-0187",
+    "room": "MAV-1",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Intermediate Microeconomics",
+    "program": "BSECO - 3",
+    "instructor": "Dr. Ilfan Oh",
+    "id": "F26-0187",
+    "room": "MAV-1",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "History of Economic Thought",
+    "program": "BSECO - 7",
+    "instructor": "Ms. Javeria Younas Abbas",
+    "id": "F26-0178",
+    "room": "MAV-1",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "History of Economic Thought",
+    "program": "BSECO - 7",
+    "instructor": "Ms. Javeria Younas Abbas",
+    "id": "F26-0178",
+    "room": "MAV-1",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algbera",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Nazish Kanwal",
+    "id": "F26-0263",
+    "room": "MAV-2",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algbera",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Nazish Kanwal",
+    "id": "F26-0263",
+    "room": "MAV-2",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Microeconomics",
+    "program": "BSEDS - 1",
+    "instructor": "Dr. Sahar Arshad Mahmood",
+    "id": "F26-0382",
+    "room": "MCC-9",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Microeconomics",
+    "program": "BSEDS - 1",
+    "instructor": "Dr. Sahar Arshad Mahmood",
+    "id": "F26-0382",
+    "room": "MCC-9",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSAF - 1",
+    "instructor": "Dr. Umar Shahzad",
+    "id": "F26-0046",
+    "room": "MCC-11",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Calculus-1",
+    "program": "BSAF - 1",
+    "instructor": "Dr. Umar Shahzad",
+    "id": "F26-0046",
+    "room": "MCC-11",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSEM - 1",
+    "instructor": "Dr. Saqib Ur Rehman",
+    "id": "F26-0256",
+    "room": "MCC12",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSEM - 1",
+    "instructor": "Dr. Saqib Ur Rehman",
+    "id": "F26-0256",
+    "room": "MCC12",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomic Theory",
+    "program": "BSEM - 5",
+    "instructor": "Dr. Noman Ahmad",
+    "id": "F26-0319",
+    "room": "MCC-13",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Microeconomic Theory",
+    "program": "BSEM - 5",
+    "instructor": "Dr. Noman Ahmad",
+    "id": "F26-0319",
+    "room": "MCC-13",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Dr. Salman Zafar",
+    "id": "F26-0335",
+    "room": "MCC-13",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Dr. Salman Zafar",
+    "id": "F26-0335",
+    "room": "MCC-13",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Human Computer Interaction",
+    "program": "BSCS - 7",
+    "instructor": "Ms. Afshan Ejaz",
+    "id": "F26-0180",
+    "room": "MCC-15",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Human Computer Interaction",
+    "program": "BSCS - 7",
+    "instructor": "Ms. Afshan Ejaz",
+    "id": "F26-0180",
+    "room": "MCC-15",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0094",
+    "room": "MCC-15",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "TBA",
+    "id": "F26-0094",
+    "room": "MCC-15",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Computational Research Methods",
+    "program": "BSSS - 5",
+    "instructor": "Mr. Kazim Jafri",
+    "id": "101312",
+    "room": "MCL-1",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101312"
+  },
+  {
+    "name": "Computational Research Methods",
+    "program": "BSSS - 5",
+    "instructor": "Mr. Kazim Jafri",
+    "id": "101312",
+    "room": "MCL-1",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101312"
+  },
+  {
+    "name": "Introduction to Programming (Lab)",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Behraj Khan",
+    "id": "F26-0231",
+    "room": "MCL-1",
+    "day": "Friday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Business Law",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Rahat Aziz",
+    "id": "F26-0032",
+    "room": "MCL-3",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Business Law",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Rahat Aziz",
+    "id": "F26-0032",
+    "room": "MCL-3",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming (Lab)",
+    "program": "BSCS - 1",
+    "instructor": "Ms. Barira Khan Ghauri",
+    "id": "F26-0233",
+    "room": "MCL-3",
+    "day": "Friday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting (Mega Class)",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Annie Ahmed",
+    "id": "F26-0358",
+    "room": "MCS-3",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting (Mega Class)",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Annie Ahmed",
+    "id": "F26-0358",
+    "room": "MCS-3",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Computing",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Jawwad Farid",
+    "id": "F26-0215",
+    "room": "MCS-3",
+    "day": "Saturday",
+    "time": "14:30-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures (Lecture)",
+    "program": "BSMT - 5",
+    "instructor": "TBA",
+    "id": "F26-0089",
+    "room": "MTC-18",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101536"
+  },
+  {
+    "name": "Data Structures (Lecture)",
+    "program": "BSMT - 5",
+    "instructor": "TBA",
+    "id": "F26-0089",
+    "room": "MTC-18",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101536"
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Raja Shahzad Shaikh",
+    "id": "F26-0206",
+    "room": "MTC-20",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Raja Shahzad Shaikh",
+    "id": "F26-0206",
+    "room": "MTC-20",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Anthropology of Politics: Power, Self, and Everyday Life",
+    "program": "BSSS - 5",
+    "instructor": "Dr. Shumaila Ahmed",
+    "id": "101310",
+    "room": "MTC-20A",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101310"
+  },
+  {
+    "name": "Anthropology of Politics: Power, Self, and Everyday Life",
+    "program": "BSSS - 5",
+    "instructor": "Dr. Shumaila Ahmed",
+    "id": "101310",
+    "room": "MTC-20A",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101310"
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Huma Amir",
+    "id": "F26-0310",
+    "room": "MTC-21",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Huma Amir",
+    "id": "F26-0310",
+    "room": "MTC-21",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BBA - 1",
+    "instructor": "Mr. Imran Shaheen",
+    "id": "101569",
+    "room": "MTC 25",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101569"
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BBA - 1",
+    "instructor": "Mr. Imran Shaheen",
+    "id": "101569",
+    "room": "MTC 25",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101569"
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Yaseen Ahmed Meenai",
+    "id": "F26-0433",
+    "room": "MTC 25",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Yaseen Ahmed Meenai",
+    "id": "F26-0433",
+    "room": "MTC 25",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Ashar",
+    "id": "101570",
+    "room": "MTC-26",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101570"
+  },
+  {
+    "name": "Managerial Policy",
+    "program": "BBA - 7",
+    "instructor": "Dr. Ashar",
+    "id": "101570",
+    "room": "MTC-26",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101570"
+  },
+  {
+    "name": "Introduction to Academic Writing",
+    "program": "BSECO - 3",
+    "instructor": "Ms. Rameen Saad",
+    "id": "F26-0195",
+    "room": "MTC-28",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Academic Writing",
+    "program": "BSECO - 3",
+    "instructor": "Ms. Rameen Saad",
+    "id": "F26-0195",
+    "room": "MTC-28",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Numerical Analysis",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Abdul Majid",
+    "id": "F26-0329",
+    "room": "MTC-29",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Numerical Analysis",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Abdul Majid",
+    "id": "F26-0329",
+    "room": "MTC-29",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Real Analysis I",
+    "program": "BSEM - 5",
+    "instructor": "Mr. Ahmad Raza",
+    "id": "F26-0403",
+    "room": "MTS 6",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Real Analysis I",
+    "program": "BSEM - 5",
+    "instructor": "Mr. Ahmad Raza",
+    "id": "F26-0403",
+    "room": "MTS 6",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Imran Nasir",
+    "id": "F26-0247",
+    "room": "MTS 6",
+    "day": "Friday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Imran Nasir",
+    "id": "F26-0247",
+    "room": "MTS 6",
+    "day": "Saturday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Mechanics",
+    "program": "BSMT - 3",
+    "instructor": "Dr. Azeem Hassan",
+    "id": "101373",
+    "room": "MTS 7",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101373"
+  },
+  {
+    "name": "Mechanics",
+    "program": "BSMT - 3",
+    "instructor": "Dr. Azeem Hassan",
+    "id": "101373",
+    "room": "MTS 7",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "UMS 101373"
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0251",
+    "room": "MTS 7",
+    "day": "Friday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0251",
+    "room": "MTS 7",
+    "day": "Saturday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Programming (Lab)",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0235",
+    "room": "MTL-4",
+    "day": "Wednesday",
+    "time": "14:30-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Imran Rauf",
+    "id": "F26-0084",
+    "room": "MTL-4",
+    "day": "Friday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures (Lab)",
+    "program": "BSCS - 3",
+    "instructor": "TBA",
+    "id": "F26-0087",
+    "room": "MTL-4",
+    "day": "Saturday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Mohsin Sadaqat",
+    "id": "F26-0133",
+    "room": "Finance Lab",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Mohsin Sadaqat",
+    "id": "F26-0133",
+    "room": "Finance Lab",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": ""
+  },
+  {
+    "name": "Fundamentals of Sociology( MEGA CLASS)",
+    "program": "BSSS - 1",
+    "instructor": "Dr. Zaheer Ali",
+    "id": "F26-0170",
+    "room": "EVENT HALL",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Fundamentals of Sociology( MEGA CLASS)",
+    "program": "BSSS - 1",
+    "instructor": "Dr. Zaheer Ali",
+    "id": "F26-0170",
+    "room": "EVENT HALL",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Mujeeb U Rehman Bhayo",
+    "id": "101571",
+    "room": "MAC-1",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101571"
+  },
+  {
+    "name": "Financial Management",
+    "program": "BBA - 5",
+    "instructor": "Dr. Mujeeb U Rehman Bhayo",
+    "id": "101571",
+    "room": "MAC-1",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101571"
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Mr. Sajjad Ahmed",
+    "id": "F26-0391",
+    "room": "MAC-1",
+    "day": "Friday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Mr. Sajjad Ahmed",
+    "id": "F26-0391",
+    "room": "MAC-1",
+    "day": "Saturday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 3",
+    "instructor": "To be Allocated",
+    "id": "F26-0366",
+    "room": "MAC-2",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BBA - 3",
+    "instructor": "To be Allocated",
+    "id": "F26-0366",
+    "room": "MAC-2",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Social and Cultural Anthropology",
+    "program": "BSSS - 3",
+    "instructor": "TBA",
+    "id": "F26-0238",
+    "room": "MAC-3",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Social and Cultural Anthropology",
+    "program": "BSSS - 3",
+    "instructor": "TBA",
+    "id": "F26-0238",
+    "room": "MAC-3",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Social and Cultural Anthropology",
+    "program": "BSSS - 3",
+    "instructor": "Dr. Shumaila Ahmed",
+    "id": "101309",
+    "room": "MAC-4",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101309"
+  },
+  {
+    "name": "Introduction to Social and Cultural Anthropology",
+    "program": "BSSS - 3",
+    "instructor": "Dr. Shumaila Ahmed",
+    "id": "101309",
+    "room": "MAC-4",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101309"
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Dr. Salman Zafar",
+    "id": "F26-0334",
+    "room": "MAC-4",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Dr. Salman Zafar",
+    "id": "F26-0334",
+    "room": "MAC-4",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus",
+    "program": "BSSS - 1",
+    "instructor": "Mr. Danish Hafeez",
+    "id": "101359",
+    "room": "MAC-5",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101359"
+  },
+  {
+    "name": "Calculus",
+    "program": "BSSS - 1",
+    "instructor": "Mr. Danish Hafeez",
+    "id": "101359",
+    "room": "MAC-5",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101359"
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Muhammad Sheraz",
+    "id": "F26-0431",
+    "room": "MAC-5",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Muhammad Sheraz",
+    "id": "F26-0431",
+    "room": "MAC-5",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSBA - 1",
+    "instructor": "Dr. M. Najam Uddin",
+    "id": "F26-0242",
+    "room": "MAC-6",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSBA - 1",
+    "instructor": "Dr. M. Najam Uddin",
+    "id": "F26-0242",
+    "room": "MAC-6",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Mohsin Ali Patel",
+    "id": "F26-0287",
+    "room": "MAC 6",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Management Accounting",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Mohsin Ali Patel",
+    "id": "F26-0287",
+    "room": "MAC 6",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Syed Ali Raza Naqvi",
+    "id": "F26-0243",
+    "room": "MAC-7",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Syed Ali Raza Naqvi",
+    "id": "F26-0243",
+    "room": "MAC-7",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Real Analysis I",
+    "program": "BSMT - 5",
+    "instructor": "Dr. Naveed Ahmed",
+    "id": "101378",
+    "room": "MAC-7",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101378"
+  },
+  {
+    "name": "Real Analysis I",
+    "program": "BSMT - 5",
+    "instructor": "Dr. Naveed Ahmed",
+    "id": "101378",
+    "room": "MAC-7",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101378"
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Akhter Raza",
+    "id": "F26-0428",
+    "room": "MAC 8",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Dr. Akhter Raza",
+    "id": "F26-0428",
+    "room": "MAC 8",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BBA - 3",
+    "instructor": "Dr. Farah Yasmeen",
+    "id": "101572",
+    "room": "MAS-1",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101572"
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BBA - 3",
+    "instructor": "Dr. Farah Yasmeen",
+    "id": "101572",
+    "room": "MAS-1",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101572"
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ihtesham Ud Din",
+    "id": "F26-0313",
+    "room": "MAS-1",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Ihtesham Ud Din",
+    "id": "F26-0313",
+    "room": "MAS-1",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSEM - 1",
+    "instructor": "TBA",
+    "id": "F26-0040",
+    "room": "MAS-2",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Calculus I",
+    "program": "BSEM - 1",
+    "instructor": "TBA",
+    "id": "F26-0040",
+    "room": "MAS-2",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Farah Naz Baig",
+    "id": "F26-0309",
+    "room": "MAV-2",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Farah Naz Baig",
+    "id": "F26-0309",
+    "room": "MAV-2",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Tasbiha Fatima",
+    "id": "F26-0338",
+    "room": "MCC-10",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Operating Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Tasbiha Fatima",
+    "id": "F26-0338",
+    "room": "MCC-10",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Human Computer Interaction",
+    "program": "BSCS - 7",
+    "instructor": "Ms. Afshan Ejaz",
+    "id": "F26-0181",
+    "room": "MCC-15",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Human Computer Interaction",
+    "program": "BSCS - 7",
+    "instructor": "Ms. Afshan Ejaz",
+    "id": "F26-0181",
+    "room": "MCC-15",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures (Lab)",
+    "program": "BSMT - 5",
+    "instructor": "TBA",
+    "id": "F26-0088",
+    "room": "MCL-1",
+    "day": "Monday",
+    "time": "16:00-18:45",
+    "comments": "UMS 101536"
+  },
+  {
+    "name": "Computational Research Methods",
+    "program": "BSSS - 5",
+    "instructor": "Mr. Kazim Jafri",
+    "id": "101313",
+    "room": "MCL-1",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101313"
+  },
+  {
+    "name": "Computational Research Methods",
+    "program": "BSSS - 5",
+    "instructor": "Mr. Kazim Jafri",
+    "id": "101313",
+    "room": "MCL-1",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101313"
+  },
+  {
+    "name": "Introduction to Programming (Lab)",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Daniyal Haseeb",
+    "id": "F26-0232",
+    "room": "MCL-3",
+    "day": "Friday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Data Structures (Lab)",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Daniyal Haseeb",
+    "id": "F26-0083",
+    "room": "MCL-3",
+    "day": "Saturday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Development Economics",
+    "program": "BSEM - 7",
+    "instructor": "Dr. Zeeshan Atique",
+    "id": "F26-0104",
+    "room": "MCS-3",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Development Economics",
+    "program": "BSEM - 7",
+    "instructor": "Dr. Zeeshan Atique",
+    "id": "F26-0104",
+    "room": "MCS-3",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting ( MEGA SECTION )",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Annie Ahmed",
+    "id": "F26-0357",
+    "room": "MCS-3",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting ( MEGA SECTION )",
+    "program": "BSBA - 3",
+    "instructor": "Ms. Annie Ahmed",
+    "id": "F26-0357",
+    "room": "MCS-3",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting ( MEGA SECTION )",
+    "program": "BSAF - 3",
+    "instructor": "Ms. Annie Ahmed",
+    "id": "F26-0356",
+    "room": "MCS-3",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Principle of Accounting ( MEGA SECTION )",
+    "program": "BSAF - 3",
+    "instructor": "Ms. Annie Ahmed",
+    "id": "F26-0356",
+    "room": "MCS-3",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Maria Rahim Khowaja",
+    "id": "F26-0093",
+    "room": "MTC 16",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Maria Rahim Khowaja",
+    "id": "F26-0093",
+    "room": "MTC 16",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Historical Methods",
+    "program": "BSSS - 1",
+    "instructor": "TBA",
+    "id": "101480",
+    "room": "MTC-17",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101480"
+  },
+  {
+    "name": "Introduction to Historical Methods",
+    "program": "BSSS - 1",
+    "instructor": "TBA",
+    "id": "101480",
+    "room": "MTC-17",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101480"
+  },
+  {
+    "name": "Numerical Analysis",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Shahid Ashraf",
+    "id": "F26-0331",
+    "room": "MTC-17",
+    "day": "Friday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Numerical Analysis",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Shahid Ashraf",
+    "id": "F26-0331",
+    "room": "MTC-17",
+    "day": "Saturday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Numerical Analysis",
+    "program": "BSCS - 3",
+    "instructor": "TBA",
+    "id": "F26-0333",
+    "room": "MTC-18",
+    "day": "Friday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Numerical Analysis",
+    "program": "BSCS - 3",
+    "instructor": "TBA",
+    "id": "F26-0333",
+    "room": "MTC-18",
+    "day": "Saturday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Raja Shahzad Shaikh",
+    "id": "F26-0207",
+    "room": "MTC-20",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Business Finance",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Raja Shahzad Shaikh",
+    "id": "F26-0207",
+    "room": "MTC-20",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Maria Khowaja",
+    "id": "F26-0092",
+    "room": "MTC-20A",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Database Systems",
+    "program": "BSCS - 5",
+    "instructor": "Ms. Maria Khowaja",
+    "id": "F26-0092",
+    "room": "MTC-20A",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BBA - 1",
+    "instructor": "Dr. Syed Adnan Ali",
+    "id": "101573",
+    "room": "MTC-21",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101573"
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BBA - 1",
+    "instructor": "Dr. Syed Adnan Ali",
+    "id": "101573",
+    "room": "MTC-21",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101573"
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Huma Amir",
+    "id": "F26-0311",
+    "room": "MTC-21",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Methods of Business Research",
+    "program": "BBA - 5",
+    "instructor": "Dr. Huma Amir",
+    "id": "F26-0311",
+    "room": "MTC-21",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0248",
+    "room": "MTC-22",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0248",
+    "room": "MTC-22",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSAF - 1",
+    "instructor": "Mr. Zohaib Aziz",
+    "id": "F26-0240",
+    "room": "MTC-23",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSAF - 1",
+    "instructor": "Mr. Zohaib Aziz",
+    "id": "F26-0240",
+    "room": "MTC-23",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Imran Nasir",
+    "id": "F26-0245",
+    "room": "MTC-24",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Imran Nasir",
+    "id": "F26-0245",
+    "room": "MTC-24",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BBA - 1",
+    "instructor": "Mr. Imran Shaheen",
+    "id": "101574",
+    "room": "MTC-25",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101574"
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BBA - 1",
+    "instructor": "Mr. Imran Shaheen",
+    "id": "101574",
+    "room": "MTC-25",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101574"
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Yaseen Ahmed Meenai",
+    "id": "F26-0434",
+    "room": "MTC 25",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Statistical Inference",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Yaseen Ahmed Meenai",
+    "id": "F26-0434",
+    "room": "MTC 25",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0250",
+    "room": "MTC-26",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0250",
+    "room": "MTC-26",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Computing",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0217",
+    "room": "MTS 6",
+    "day": "Friday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Computing",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0217",
+    "room": "MTS 6",
+    "day": "Saturday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Multivariable Calculus",
+    "program": "BSMT - 3",
+    "instructor": "TBA",
+    "id": "101374",
+    "room": "MTS 7",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101374"
+  },
+  {
+    "name": "Multivariable Calculus",
+    "program": "BSMT - 3",
+    "instructor": "TBA",
+    "id": "101374",
+    "room": "MTS 7",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "UMS 101374"
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Nazish Kanwal",
+    "id": "F26-0266",
+    "room": "MTS 7",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Linear Algebra",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Nazish Kanwal",
+    "id": "F26-0266",
+    "room": "MTS 7",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lab A)",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Muhammad Salman Khalid",
+    "id": "F26-0003",
+    "room": "Testing Lab - NBP",
+    "day": "Tuesday",
+    "time": "16:00-17:00",
+    "comments": ""
+  },
+  {
+    "name": "Applied Econometrics I (Lab B)",
+    "program": "BSECO - 5",
+    "instructor": "Dr. Muhammad Salman Khalid",
+    "id": "F26-0004",
+    "room": "Testing Lab - NBP",
+    "day": "Thursday",
+    "time": "16:00-17:00",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Mohsin Sadaqat",
+    "id": "F26-0134",
+    "room": "Finance Lab",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Dr. Mohsin Sadaqat",
+    "id": "F26-0134",
+    "room": "Finance Lab",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Mr. Sajjad Ahmed",
+    "id": "F26-0392",
+    "room": "MAC-1",
+    "day": "Friday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Mr. Sajjad Ahmed",
+    "id": "F26-0392",
+    "room": "MAC-1",
+    "day": "Saturday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Muhammad Wasif",
+    "id": "F26-0393",
+    "room": "MAC-3",
+    "day": "Thursday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Muhammad Wasif",
+    "id": "F26-0393",
+    "room": "MAC-3",
+    "day": "Tuesday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BBA - 1",
+    "instructor": "Dr. Syed Tauqeer Ahmed",
+    "id": "101576",
+    "room": "MAC-5",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": "UMS 101576"
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BBA - 1",
+    "instructor": "Dr. Syed Tauqeer Ahmed",
+    "id": "101576",
+    "room": "MAC-5",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": "UMS 101576"
+  },
+  {
+    "name": "Financial Modeling",
+    "program": "BSAF - 5",
+    "instructor": "Mr. Saad Usman",
+    "id": "F26-0137",
+    "room": "MAC-2",
+    "day": "Tuesday",
+    "time": "18:30-21:00",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSECO - 1",
+    "instructor": "Dr. Najam Uddin",
+    "id": "F26-0252",
+    "room": "MAC-6",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSECO - 1",
+    "instructor": "Dr. Najam Uddin",
+    "id": "F26-0252",
+    "room": "MAC-6",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Syed Ali Raza Naqvi",
+    "id": "F26-0244",
+    "room": "MAC-7",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSBA - 1",
+    "instructor": "Dr. Syed Ali Raza Naqvi",
+    "id": "F26-0244",
+    "room": "MAC-7",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSAF - 1",
+    "instructor": "Dr. Syed Tauqeer Ahmed",
+    "id": "F26-0239",
+    "room": "MAC 8",
+    "day": "Friday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSAF - 1",
+    "instructor": "Dr. Syed Tauqeer Ahmed",
+    "id": "F26-0239",
+    "room": "MAC 8",
+    "day": "Saturday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting (Mega Section)",
+    "program": "BSBA - 1",
+    "instructor": "Mr. Ghias ul Hassan",
+    "id": "F26-0369",
+    "room": "MAS-1",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting (Mega Section)",
+    "program": "BSBA - 1",
+    "instructor": "Mr. Ghias ul Hassan",
+    "id": "F26-0369",
+    "room": "MAS-1",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Muhammad Wasif",
+    "id": "F26-0394",
+    "room": "MAS-2",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BSBA - 3",
+    "instructor": "Dr. Muhammad Wasif",
+    "id": "F26-0394",
+    "room": "MAS-2",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Business Law",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Rahat Aziz",
+    "id": "F26-0033",
+    "room": "MCL-3",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Business Law",
+    "program": "BSAF - 3",
+    "instructor": "Mr. Rahat Aziz",
+    "id": "F26-0033",
+    "room": "MCL-3",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Development Economics",
+    "program": "BSECO - 7",
+    "instructor": "Dr. Zeeshan Atique",
+    "id": "F26-0102",
+    "room": "MCS-3",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Development Economics",
+    "program": "BSECO - 7",
+    "instructor": "Dr. Zeeshan Atique",
+    "id": "F26-0102",
+    "room": "MCS-3",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Ahsan Mustaqeem",
+    "id": "F26-0387",
+    "room": "MCS-3",
+    "day": "Friday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Ahsan Mustaqeem",
+    "id": "F26-0387",
+    "room": "MCS-3",
+    "day": "Saturday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Ahsan Mustaqeem",
+    "id": "F26-0388",
+    "room": "MCS-3",
+    "day": "Friday",
+    "time": "18:00-19:15",
+    "comments": ""
+  },
+  {
+    "name": "Production and Operation Management",
+    "program": "BBA - 5",
+    "instructor": "Ahsan Mustaqeem",
+    "id": "F26-0388",
+    "room": "MCS-3",
+    "day": "Saturday",
+    "time": "18:00-19:15",
+    "comments": ""
+  },
+  {
+    "name": "Numerical Analysis",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Shahid Ashraf",
+    "id": "F26-0332",
+    "room": "MTC-17",
+    "day": "Friday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Numerical Analysis",
+    "program": "BSCS - 3",
+    "instructor": "Dr. Shahid Ashraf",
+    "id": "F26-0332",
+    "room": "MTC-17",
+    "day": "Saturday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BBA - 1",
+    "instructor": "Dr. Syed Adnan Ali",
+    "id": "101577",
+    "room": "MTC-21",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": "UMS 101577"
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BBA - 1",
+    "instructor": "Dr. Syed Adnan Ali",
+    "id": "101577",
+    "room": "MTC-21",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": "UMS 101577"
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSAF - 1",
+    "instructor": "Mr. Zohaib Aziz",
+    "id": "F26-0241",
+    "room": "MTC-23",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSAF - 1",
+    "instructor": "Mr. Zohaib Aziz",
+    "id": "F26-0241",
+    "room": "MTC-23",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Imran Nasir",
+    "id": "F26-0246",
+    "room": "MTC-24",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "Mr. Imran Nasir",
+    "id": "F26-0246",
+    "room": "MTC-24",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0249",
+    "room": "MTC-25",
+    "day": "Monday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Introduction to Statistics",
+    "program": "BSCS - 1",
+    "instructor": "TBA",
+    "id": "F26-0249",
+    "room": "MTC-25",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BSBA - 1",
+    "instructor": "Mr. Ghias ul Hasan",
+    "id": "F26-0368",
+    "room": "MAC-1",
+    "day": "Monday",
+    "time": "19:00-20:15",
+    "comments": ""
+  },
+  {
+    "name": "Principles of Accounting",
+    "program": "BSBA - 1",
+    "instructor": "Mr. Ghias ul Hasan",
+    "id": "F26-0368",
+    "room": "MAC-1",
+    "day": "Wednesday",
+    "time": "19:00-20:15",
+    "comments": ""
+  }
 ]

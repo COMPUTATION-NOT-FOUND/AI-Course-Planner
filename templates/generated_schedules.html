@@ -204,16 +204,16 @@
                                 <thead>
                                     <tr class="bg-gray-100">
                                         <th class="px-2 py-2 border text-left">Day</th>
-                                        {% for slot in ['08:30-09:45','10:00-11:15','11:30-12:45','13:00-14:15','14:30-15:45','16:00-17:15','17:30-18:45'] %}
+                                        {% for slot in grid_slots %}
                                             <th class="px-2 py-2 border text-left">{{ slot }}</th>
                                         {% endfor %}
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {% for day in ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'] %}
+                                    {% for day in grid_days %}
                                         <tr>
                                             <td class="px-2 py-2 border font-semibold bg-gray-50">{{ day }}</td>
-                                            {% for time in ['08:30-09:45','10:00-11:15','11:30-12:45','13:00-14:15','14:30-15:45','16:00-17:15','17:30-18:45'] %}
+                                            {% for time in grid_slots %}
                                                 <td class="px-1 py-1 border align-top h-16 w-32">
                                                     {% set cell_courses = item.grid.get(time, {}).get(day, []) %}
                                                     {% if cell_courses %}
@@ -229,6 +229,9 @@
                                                             >
                                                                 <span class="font-bold">{{ course.id }}</span><br>
                                                                 {{ course.name }}<br>
+                                                                {% if course.time != time %}
+                                                                    <span class="text-gray-700">{{ course.time }}</span><br>
+                                                                {% endif %}
                                                                 <span class="italic text-gray-600">{{ course.instructor }}</span>
                                                             </div>
                                                         {% endfor %}
@@ -332,8 +335,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const limitReached = {{ limit_reached|tojson }};
+            const maxSchedules = {{ max_schedules|tojson }};
             if (limitReached) {
-                alert("Only first 500 displayed. Computational explosion: select more restraints.");
+                alert("The search stopped at " + maxSchedules + " schedules. Select more courses or block more time slots to narrow it down.");
             }
         });
     </script>

@@ -11,11 +11,12 @@
         <h1 class="text-3xl font-semibold text-center mb-6">Enter Program Name</h1>
         <form method="post" class="space-y-4">
             <div>
-                <input 
-                    type="text" 
-                    name="program" 
-                    placeholder="Enter program name" 
-                    required 
+                <input
+                    type="text"
+                    name="program"
+                    placeholder="Enter program name"
+                    value="{{ default_program }}"
+                    required
                     list="programs"
                     class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >

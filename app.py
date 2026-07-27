@@ -2,13 +2,61 @@ from flask import Flask, render_template, request, session, redirect, url_for, f
 from flask_session import Session
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+import csv
+import io
 import json
-import pandas as pd
 from typing import List, Dict
 from collections import defaultdict
 from datetime import datetime
 import os
-from ac3 import AC3 
+from cpsat_solver import ScheduleSolver, parse_slot
+
+# Pre-selected on the program picker. BSCS-7 is the semester this build targets.
+DEFAULT_PROGRAM = "BSCS - 7"
+
+# Caps on the CP-SAT search. These bound memory and response time on Render's free
+# tier, where the whole app shares 512MB.
+MAX_SCHEDULES = 500
+SOLVER_TIME_LIMIT = 8.0
+
+DEFAULT_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+DEFAULT_SLOTS = ['08:30-09:45', '10:00-11:15', '11:30-12:45', '13:00-14:15',
+                 '14:30-15:45', '16:00-17:15', '17:30-18:45', '19:00-20:15']
+
+
+def load_grid_layout():
+    """The days and timetable columns to render, taken from config.json."""
+    try:
+        with open('config.json', 'r') as f:
+            config = json.load(f)
+        days = config.get('days') or DEFAULT_DAYS
+        raw_slots = config.get('time_slots', {})
+        if isinstance(raw_slots, list):
+            slots = list(raw_slots)
+        else:
+            slots = sorted({s for day_slots in raw_slots.values() for s in day_slots})
+        return days, (slots or DEFAULT_SLOTS)
+    except (FileNotFoundError, json.JSONDecodeError, AttributeError):
+        return DEFAULT_DAYS, DEFAULT_SLOTS
+
+
+def slot_span(time_str, grid_slots):
+    """Grid columns an actual meeting overlaps.
+
+    Real class times do not always line up with the standard blocks - a Friday
+    double slot runs 08:30-11:15 and some Saturday classes start at 09:00. Without
+    this those classes would simply not appear in the timetable.
+    """
+    meeting = parse_slot('X %s' % time_str)
+    if not meeting:
+        return [time_str]
+    _, start, end = meeting
+    covered = []
+    for slot in grid_slots:
+        block = parse_slot('X %s' % slot)
+        if block and block[1] < end and start < block[2]:
+            covered.append(slot)
+    return covered or [time_str]
 
 app = Flask(__name__)
 # Security: Use env var for secret key in production
@@ -56,12 +104,13 @@ def root():
                             file.save(courses_path)
                             message = "Course data (JSON) uploaded successfully."
                         elif filename.endswith('.csv'):
-                            # Convert CSV to JSON
-                            df = pd.read_csv(file)
-                            # Basic cleanup: ensure string types
-                            df = df.astype(str)
-                            # Save as JSON records
-                            df.to_json(courses_path, orient='records', indent=4)
+                            # Convert CSV to JSON records, everything as strings.
+                            text = io.TextIOWrapper(file.stream, encoding='utf-8-sig')
+                            records = [{k: ('' if v is None else str(v))
+                                        for k, v in row.items()}
+                                       for row in csv.DictReader(text)]
+                            with open(courses_path, 'w') as out:
+                                json.dump(records, out, indent=4)
                             message = "Course data (CSV) converted and uploaded successfully."
                         else:
                             error = "Invalid file type. Please upload .json or .csv."
@@ -448,6 +497,8 @@ def select_program():
     session.clear()
     course_loader = CourseDataLoader(['program_core.json'])
     available_programs = sorted(list(course_loader.get_available_programs()))
+    # Offer the default first so it heads the datalist.
+    available_programs.sort(key=lambda p: p != DEFAULT_PROGRAM)
 
     if request.method == 'POST':
         if 'program' in request.form:
@@ -466,7 +517,10 @@ def select_program():
             # Redirect to the schedule route after selecting the program
             return redirect(url_for('schedule'))
 
-    return render_template('index.html', available_programs=available_programs)
+    default_program = DEFAULT_PROGRAM if DEFAULT_PROGRAM in available_programs else ''
+    return render_template('index.html',
+                           available_programs=available_programs,
+                           default_program=default_program)
 
 
 @app.route('/schedule', methods=['GET', 'POST'])
@@ -674,30 +728,33 @@ def ac3_schedule():
                 return False
         return True
 
+    pool_slots = defaultdict(list)   # pool -> its slot variables, in order
+    locked_vars = set()              # variables pinned to a single user-picked section
+
     # A. Core Courses
     program_courses = course_loader.load_courses_by_program(program_name)
     print(f"DEBUG: Found {len(program_courses)} raw core courses for {program_name}")
     
-    # Group core by name to build domains
+    # Group core by name to build domains. Every course the program requires becomes a
+    # variable even if the user has blocked all of its sections - the domain is then
+    # empty, which turns the run partial instead of quietly dropping the course.
     core_grouped = defaultdict(set) # Use set to prevent duplicates
     for c in program_courses:
-        # Only consider valid IDs
-        if is_id_valid(c.id):
-            core_grouped[c.name].add(c.id)
-            active_cid_constraints[c.id] = full_mapping[c.id]
-        
+        core_grouped[c.name].add(c.id)
+
     for name, ids in core_grouped.items():
+        valid_ids = {cid for cid in ids if is_id_valid(cid)}
+        for cid in valid_ids:
+            active_cid_constraints[cid] = full_mapping[cid]
+
         # Check if user picked specific sections (session_constraints)
-        picked_ids = [sc.id for sc in session_course_constraints if sc.name == name]
+        picked_ids = {sc.id for sc in session_course_constraints if sc.name == name}
         if picked_ids:
-            # Let's filter picked IDs too to be safe/consistent.
-            valid_picked = [pid for pid in picked_ids if is_id_valid(pid)]
-            if valid_picked:
-                 domains[name] = list(set(valid_picked)) # Ensure unique
-            else:
-                 domains[name] = [] 
+            domains[name] = sorted(picked_ids & valid_ids)
+            if domains[name]:
+                locked_vars.add(name)
         else:
-            domains[name] = list(ids) # Convert set to list
+            domains[name] = sorted(valid_ids)
             
     print(f"DEBUG: Constructed Core Domains: {list(domains.keys())}")
 
@@ -728,53 +785,52 @@ def ac3_schedule():
         # Create N slots
         for i in range(1, count + 1):
             var_name = f"{pool_name} {i}"
-            
+            pool_slots[pool_name].append(var_name)
+
             # If we have a user pick for this slot index
             if i <= len(picked_for_pool):
                 domains[var_name] = [picked_for_pool[i-1]]
+                locked_vars.add(var_name)
             else:
-                # IMPORTANT: Remove already picked items from the general pool 
+                # IMPORTANT: Remove already picked items from the general pool
                 # to prevent "same subject" conflicts if the user didn't pick enough
                 remaining_ids = [pid for pid in pool_ids if pid not in seen_picked]
                 domains[var_name] = remaining_ids
-    
+
     print(f"DEBUG: Final Domains Keys: {list(domains.keys())}")
 
-    # Determine skip_ac3
-    skip_ac3 = (not session_course_constraints and not session_no_class)
+    def run_solver(partial):
+        # A fresh model every time. The old solver reused a domains dict its first
+        # pass had already pruned in place, so the fallback searched a broken space.
+        return ScheduleSolver(
+            domains=domains,
+            cid_constraints=active_cid_constraints,
+            allow_partial=partial,
+            pool_slots=pool_slots,
+            locked_vars=locked_vars,
+            max_solutions=MAX_SCHEDULES,
+            time_limit=SOLVER_TIME_LIMIT,
+        )
 
-    # Initialize AC-3
-    ac3_algo = AC3(
-        courses=[], # Not used when domains/constraints provided explicitly
-        cid_constraints=active_cid_constraints,
-        session_constraints=session_course_constraints,
-        no_class_constraints=session_no_class,
-        allow_partial=allow_partial,
-        skip_ac3=skip_ac3,
-        domains=domains
-    )
+    solver = run_solver(allow_partial)
+    solutions = solver.solve()
 
-    # Run and store
-    solutions = ac3_algo.solve()
-    
-    # Fallback logic remains same...
+    # Nothing fits perfectly - fall back to the best partial schedules we can build.
     if not solutions and not allow_partial:
         print("DEBUG: No complete schedules found. Retrying with partial schedules enabled.")
-        ac3_algo_partial = AC3(
-            courses=[],
-            cid_constraints=active_cid_constraints, # Use the same expanded map
-            session_constraints=session_course_constraints,
-            no_class_constraints=session_no_class,
-            allow_partial=True,
-            domains=domains # Pass the same domains
-        )
-        solutions = ac3_algo_partial.solve()
+        solver = run_solver(True)
+        solutions = solver.solve()
         session['auto_partial_fallback'] = True
     else:
         session.pop('auto_partial_fallback', None)
 
     session['ac3_solutions'] = solutions
-    session['ac3_progress'] = ac3_algo.progress
+    session['ac3_progress'] = solver.progress
+    session['solver_limit_reached'] = solver.limit_reached
+    # Every requirement slot, core and elective. A schedule holding fewer than this
+    # is partial - the old count looked only at core courses, so any schedule with
+    # electives was reported as complete even when a course was missing.
+    session['total_slots'] = len(domains)
 
     return redirect(url_for('generated_schedules'))
 
@@ -794,12 +850,14 @@ def get_processed_schedules(solutions, program_name, args):
     course_loader = CourseDataLoader(['program_core.json', 'electives.json', 'ns_electives.json'])
     course_id_mapping = course_loader.get_course_id_constraint_mapping()
     
-    # Get total courses count
-    total_program_courses = 0
-    if program_name:
+    # How many courses a complete schedule holds: one per requirement slot.
+    total_program_courses = session.get('total_slots', 0)
+    if not total_program_courses and program_name:
         program_courses = course_loader.load_courses_by_program(program_name)
         unique_names = {c.name for c in program_courses}
         total_program_courses = len(unique_names)
+
+    grid_days, grid_slots = load_grid_layout()
 
     schedule_data = []
     all_instructors = set()
@@ -834,10 +892,14 @@ def get_processed_schedules(solutions, program_name, args):
                     if len(parts) >= 2:
                         day = parts[0]
                         time = parts[1]
-                        
-                        # Store for grid
-                        grid[time][day].append({'id': cid, 'name': name, 'instructor': instructor})
-                        
+
+                        # Store for grid. A class spanning several blocks (or starting
+                        # off-grid) is drawn in every column it overlaps.
+                        for column in slot_span(time, grid_slots):
+                            grid[column][day].append({'id': cid, 'name': name,
+                                                      'instructor': instructor,
+                                                      'time': time})
+
                         # Store for gap calculation
                         start_str, end_str = time.split('-')
                         day_intervals[day].append((to_minutes(start_str), to_minutes(end_str)))
@@ -928,14 +990,17 @@ def generated_schedules():
     course_loader = CourseDataLoader(['program_core.json', 'electives.json', 'ns_electives.json'])
     highlighted_course_ids = course_loader.get_highlighted_course_ids()
 
-    # Check for limit
-    limit_reached = False
-    if len(schedule_data) > 500:
-        schedule_data = schedule_data[:500]
+    # The solver already stops at MAX_SCHEDULES, so this is normally just a report
+    # of that. The slice stays as a guard for sessions written by an older build.
+    limit_reached = session.get('solver_limit_reached', False)
+    if len(schedule_data) > MAX_SCHEDULES:
+        schedule_data = schedule_data[:MAX_SCHEDULES]
         limit_reached = True
-        
+
     # Check if filtering resulted in empty set
     filter_empty = (len(schedule_data) == 0 and len(solutions) > 0)
+
+    grid_days, grid_slots = load_grid_layout()
 
     return render_template('generated_schedules.html',
                            schedule_data=schedule_data,
@@ -948,7 +1013,10 @@ def generated_schedules():
                            current_priorities=priority_instructors,
                            all_instructors=all_instructors,
                            filter_empty=filter_empty,
-                           limit_reached=limit_reached)
+                           limit_reached=limit_reached,
+                           max_schedules=MAX_SCHEDULES,
+                           grid_days=grid_days,
+                           grid_slots=grid_slots)
 
 
 @app.route('/export_schedules', methods=['GET'])

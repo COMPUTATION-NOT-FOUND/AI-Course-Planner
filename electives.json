@@ -1,282 +1,302 @@
 [
-    {
-        "name": "NLP with Deep Learning",
-        "program": "Elective",
-        "instructor": "Dr. Sajjad Haider",
-        "id": "100892",
-        "room": "MTC-19",
-        "day": "Tuesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "NLP with Deep Learning",
-        "program": "Elective",
-        "instructor": "Dr. Sajjad Haider",
-        "id": "100892",
-        "room": "MTC-19",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Intelligence",
-        "program": "Elective",
-        "instructor": "Dr. Imran Khan",
-        "id": "100571",
-        "room": "MTC-20",
-        "day": "Tuesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Intelligence",
-        "program": "Elective",
-        "instructor": "Dr. Imran Khan",
-        "id": "100571",
-        "room": "MTC-20",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Advanced Algorithms",
-        "program": "Elective",
-        "instructor": "Dr. Shahid Hussain",
-        "id": "100633",
-        "room": "MTC-20A",
-        "day": "Tuesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Advanced Algorithms",
-        "program": "Elective",
-        "instructor": "Dr. Shahid Hussain",
-        "id": "100633",
-        "room": "MTC-20A",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Intelligence",
-        "program": "Elective",
-        "instructor": "Ms. Abeera Tariq",
-        "id": "100572",
-        "room": "Testing Lab - NBP",
-        "day": "Tuesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Business Intelligence",
-        "program": "Elective",
-        "instructor": "Ms. Abeera Tariq",
-        "id": "100572",
-        "room": "Testing Lab - NBP",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Generative AI",
-        "program": "Elective",
-        "instructor": "Dr. Atif Tahir",
-        "id": "100562",
-        "room": "MAC-6",
-        "day": "Tuesday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Generative AI",
-        "program": "Elective",
-        "instructor": "Dr. Atif Tahir",
-        "id": "100562",
-        "room": "MAC-6",
-        "day": "Thursday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "NLP with Deep Learning",
-        "program": "Elective",
-        "instructor": "Dr. Sajjad Haider",
-        "id": "100893",
-        "room": "MTC-19",
-        "day": "Tuesday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "NLP with Deep Learning",
-        "program": "Elective",
-        "instructor": "Dr. Sajjad Haider",
-        "id": "100893",
-        "room": "MTC-19",
-        "day": "Thursday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Software Testing",
-        "program": "Elective",
-        "instructor": "Mr. Farrukh Hassan",
-        "id": "100896",
-        "room": "MAC-7",
-        "day": "Tuesday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Software Testing",
-        "program": "Elective",
-        "instructor": "Mr. Farrukh Hassan",
-        "id": "100896",
-        "room": "MAC-7",
-        "day": "Thursday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "NLP with Deep Learning",
-        "program": "Elective",
-        "instructor": "Ms. Solat Jabeen",
-        "id": "100894",
-        "room": "MTC 16",
-        "day": "Monday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "NLP with Deep Learning",
-        "program": "Elective",
-        "instructor": "Ms. Solat Jabeen",
-        "id": "100894",
-        "room": "MTC 16",
-        "day": "Wednesday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Introduction to Computer Vision",
-        "program": "Elective",
-        "instructor": "Dr. Rizwan Khan",
-        "id": "100528",
-        "room": "MTC-17",
-        "day": "Tuesday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Introduction to Computer Vision",
-        "program": "Elective",
-        "instructor": "Dr. Rizwan Khan",
-        "id": "100528",
-        "room": "MTC-17",
-        "day": "Thursday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Introduction to Blockchain",
-        "program": "Elective",
-        "instructor": "Dr. Ahmed Akhtar",
-        "id": "100570",
-        "room": "MTC-26",
-        "day": "Tuesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Introduction to Blockchain",
-        "program": "Elective",
-        "instructor": "Dr. Ahmed Akhtar",
-        "id": "100570",
-        "room": "MTC-26",
-        "day": "Thursday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Network Security",
-        "program": "Elective",
-        "instructor": "Dr. Faisal Iradat",
-        "id": "100529",
-        "room": "Testimg Lab - NBP",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Network Security",
-        "program": "Elective",
-        "instructor": "Dr. Faisal Iradat",
-        "id": "100529",
-        "room": "Testimg Lab - NBP",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Tech Product Development",
-        "program": "Elective",
-        "instructor": "Mr. Jawwad Ahmed Farid",
-        "id": "100527",
-        "room": "MAS-2",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": "Only Wednesday from 4:00 pm to 6:45 pm"
-    },
-    {
-        "name": "Data Models Decisions",
-        "program": "Elective",
-        "instructor": "Mr. Jawwad Ahmed Farid",
-        "id": "100895",
-        "room": "MAS-2",
-        "day": "Thursday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Web Based Application Development",
-        "program": "Elective",
-        "instructor": "Dr. Ahmed Akhtar",
-        "id": "100573",
-        "room": "MTC-26",
-        "day": "Tuesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Web Based Application Development",
-        "program": "Elective",
-        "instructor": "Dr. Ahmed Akhtar",
-        "id": "100573",
-        "room": "MTC-26",
-        "day": "Thursday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Tech Product Development",
-        "program": "Elective",
-        "instructor": "Mr. Jawwad Ahmed Farid",
-        "id": "100527",
-        "room": "MAS-2",
-        "day": "Wednesday",
-        "time": "17:30-18:45",
-        "comments": ""
-    },
-    {
-        "name": "Data Models Decisions",
-        "program": "Elective",
-        "instructor": "Mr. Jawwad Ahmed Farid",
-        "id": "100895",
-        "room": "MAS-2",
-        "day": "Thursday",
-        "time": "17:30-18:45",
-        "comments": ""
-    }
+  {
+    "name": "Reinforcement Learning",
+    "program": "Elective",
+    "instructor": "Dr. Syed Ali Raza",
+    "id": "F26-0413",
+    "room": "MCL-3",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Reinforcement Learning",
+    "program": "Elective",
+    "instructor": "Dr. Syed Ali Raza",
+    "id": "F26-0413",
+    "room": "MCL-3",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Web Based Application Development",
+    "program": "Elective",
+    "instructor": "TBA",
+    "id": "F26-0453",
+    "room": "MTC-18",
+    "day": "Friday",
+    "time": "08:30-11:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Cloud Computing",
+    "program": "Elective",
+    "instructor": "TBA",
+    "id": "F26-0212",
+    "room": "MTC-19",
+    "day": "Friday",
+    "time": "08:30-11:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Cryptography",
+    "program": "Elective",
+    "instructor": "Ms. Tasbiha Fatima",
+    "id": "F26-0218",
+    "room": "MTC-20A",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Cryptography",
+    "program": "Elective",
+    "instructor": "Ms. Tasbiha Fatima",
+    "id": "F26-0218",
+    "room": "MTC-20A",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Big Data Analytics",
+    "program": "Elective",
+    "instructor": "TBA",
+    "id": "F26-0198",
+    "room": "MTC-20A",
+    "day": "Friday",
+    "time": "08:30-11:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Software Architecture & Design",
+    "program": "Elective",
+    "instructor": "TBA",
+    "id": "F26-0417",
+    "room": "MTS 6",
+    "day": "Friday",
+    "time": "08:30-11:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Machine Learning",
+    "program": "Elective",
+    "instructor": "Dr. Atif Tahir",
+    "id": "F26-0222",
+    "room": "MTS-7",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Machine Learning",
+    "program": "Elective",
+    "instructor": "Dr. Atif Tahir",
+    "id": "F26-0222",
+    "room": "MTS-7",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Machine Learning",
+    "program": "Elective",
+    "instructor": "TBA",
+    "id": "F26-0225",
+    "room": "MTS 8",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Machine Learning",
+    "program": "Elective",
+    "instructor": "TBA",
+    "id": "F26-0225",
+    "room": "MTS 8",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Compiler Construction",
+    "program": "Elective",
+    "instructor": "Ms. Sadaf Alvi",
+    "id": "F26-0068",
+    "room": "Testing Lab - NBP",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Compiler Construction",
+    "program": "Elective",
+    "instructor": "Ms. Sadaf Alvi",
+    "id": "F26-0068",
+    "room": "Testing Lab - NBP",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Machine Learning",
+    "program": "Elective",
+    "instructor": "Dr. Sajjad Haider",
+    "id": "F26-0224",
+    "room": "MTC-21",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Machine Learning",
+    "program": "Elective",
+    "instructor": "Dr. Sajjad Haider",
+    "id": "F26-0224",
+    "room": "MTC-21",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Neural Networks and Deep Learning",
+    "program": "Elective",
+    "instructor": "Dr. Taslim Murad",
+    "id": "F26-0328",
+    "room": "MAV-2",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Neural Networks and Deep Learning",
+    "program": "Elective",
+    "instructor": "Dr. Taslim Murad",
+    "id": "F26-0328",
+    "room": "MAV-2",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "MLOps: Engineering AI Systems",
+    "program": "Elective",
+    "instructor": "TBA",
+    "id": "F26-0271",
+    "room": "MTC-17",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "MLOps: Engineering AI Systems",
+    "program": "Elective",
+    "instructor": "TBA",
+    "id": "F26-0271",
+    "room": "MTC-17",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Parallel and Scalable Architectures",
+    "program": "Elective",
+    "instructor": "Dr. Salman Zafar",
+    "id": "F26-0343",
+    "room": "MTC 25",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Parallel and Scalable Architectures",
+    "program": "Elective",
+    "instructor": "Dr. Salman Zafar",
+    "id": "F26-0343",
+    "room": "MTC 25",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Datawarehousing",
+    "program": "Elective",
+    "instructor": "Dr. Tariq Mehmood",
+    "id": "F26-0099",
+    "room": "MTS 6",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Datawarehousing",
+    "program": "Elective",
+    "instructor": "Dr. Tariq Mehmood",
+    "id": "F26-0099",
+    "room": "MTS 6",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Machine Learning",
+    "program": "Elective",
+    "instructor": "Dr. Rizwan Khan",
+    "id": "F26-0223",
+    "room": "MTS 7",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Machine Learning",
+    "program": "Elective",
+    "instructor": "Dr. Rizwan Khan",
+    "id": "F26-0223",
+    "room": "MTS 7",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Computer Security",
+    "program": "Elective",
+    "instructor": "Dr. Faisal Iradat",
+    "id": "F26-0071",
+    "room": "Testing Lab - NBP",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Computer Security",
+    "program": "Elective",
+    "instructor": "Dr. Faisal Iradat",
+    "id": "F26-0071",
+    "room": "Testing Lab - NBP",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Bioinformatics",
+    "program": "Elective",
+    "instructor": "Dr. Taslim Murad",
+    "id": "F26-0199",
+    "room": "MAV-1",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "CS Elective"
+  },
+  {
+    "name": "Introduction to Bioinformatics",
+    "program": "Elective",
+    "instructor": "Dr. Taslim Murad",
+    "id": "F26-0199",
+    "room": "MAV-1",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "CS Elective"
+  }
 ]

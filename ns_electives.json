@@ -1,1162 +1,2862 @@
 [
-    {
-        "name": "Probability and Statistical Models",
-        "program": "NS-Elective",
-        "instructor": "Dr. Muhammad Sheraz",
-        "id": "100646",
-        "room": "MAS-1",
-        "day": "Monday",
-        "time": "08:30-09:45",
-        "comments": ""
-    },
-    {
-        "name": "Probability and Statistical Models",
-        "program": "NS-Elective",
-        "instructor": "Dr. Muhammad Sheraz",
-        "id": "100646",
-        "room": "MAS-1",
-        "day": "Wednesday",
-        "time": "08:30-09:45",
-        "comments": ""
-    },
-    {
-        "name": "Stochastic Processes",
-        "program": "NS-Elective",
-        "instructor": "Dr. Muhammad Sheraz",
-        "id": "100575",
-        "room": "MAS-1",
-        "day": "Tuesday",
-        "time": "08:30-09:45",
-        "comments": ""
-    },
-    {
-        "name": "Stochastic Processes",
-        "program": "NS-Elective",
-        "instructor": "Dr. Muhammad Sheraz",
-        "id": "100575",
-        "room": "MAS-1",
-        "day": "Thursday",
-        "time": "08:30-09:45",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Ms Yasmin Lodhi",
-        "id": "100175",
-        "room": "MCC-10",
-        "day": "Monday",
-        "time": "08:30-09:45",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Ms Yasmin Lodhi",
-        "id": "100175",
-        "room": "MCC-10",
-        "day": "Wednesday",
-        "time": "08:30-09:45",
-        "comments": ""
-    },
-    {
-        "name": "Probability Theory",
-        "program": "NS-Elective",
-        "instructor": "Dr. Amir Bashir",
-        "id": "100662",
-        "room": "MAC-6",
-        "day": "Monday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Probability Theory",
-        "program": "NS-Elective",
-        "instructor": "Dr. Amir Bashir",
-        "id": "100662",
-        "room": "MAC-6",
-        "day": "Wednesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Probability Theory",
-        "program": "NS-Elective",
-        "instructor": "Dr. Amir Bashir",
-        "id": "100670",
-        "room": "MAC 6",
-        "day": "Tuesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Probability Theory",
-        "program": "NS-Elective",
-        "instructor": "Dr. Amir Bashir",
-        "id": "100670",
-        "room": "MAC 6",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Saher Iqbal",
-        "id": "100187",
-        "room": "MCC-09",
-        "day": "Tuesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Saher Iqbal",
-        "id": "100187",
-        "room": "MCC-09",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Yasmin Lodhi",
-        "id": "100175",
-        "room": "MCC-10",
-        "day": "Monday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Yasmin Lodhi",
-        "id": "100175",
-        "room": "MCC-10",
-        "day": "Wednesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Mirza Qaisar Ahmed Baig",
-        "id": "100176",
-        "room": "MCC-11",
-        "day": "Monday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Mirza Qaisar Ahmed Baig",
-        "id": "100176",
-        "room": "MCC-11",
-        "day": "Wednesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "German 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Mokhashaf Muntazir",
-        "id": "100188",
-        "room": "MCC-11",
-        "day": "Tuesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "German 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Mokhashaf Muntazir",
-        "id": "100188",
-        "room": "MCC-11",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Farhan Ahmed Siddiqui",
-        "id": "100189",
-        "room": "MCC-12",
-        "day": "Tuesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Farhan Ahmed Siddiqui",
-        "id": "100189",
-        "room": "MCC-12",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Financial Derivatives & Stochastic Models",
-        "program": "NS-Elective",
-        "instructor": "Dr. Muhammad Sheraz",
-        "id": "100882",
-        "room": "MCC-13",
-        "day": "Tuesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Financial Derivatives & Stochastic Models",
-        "program": "NS-Elective",
-        "instructor": "Dr. Muhammad Sheraz",
-        "id": "100882",
-        "room": "MCC-13",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Mathematical Economics",
-        "program": "NS-Elective",
-        "instructor": "Dr. Shahzad Ahmed",
-        "id": "100826",
-        "room": "MCC-15",
-        "day": "Saturday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Optimization Techniques",
-        "program": "NS-Elective",
-        "instructor": "Dr. Nasir Touheed",
-        "id": "100578",
-        "room": "MTC-22",
-        "day": "Monday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Optimization Techniques",
-        "program": "NS-Elective",
-        "instructor": "Dr. Nasir Touheed",
-        "id": "100578",
-        "room": "MTC-22",
-        "day": "Wednesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Abstract Algebra",
-        "program": "NS-Elective",
-        "instructor": "Dr. Junaid Alam",
-        "id": "100664",
-        "room": "MTS 6",
-        "day": "Tuesday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Abstract Algebra",
-        "program": "NS-Elective",
-        "instructor": "Dr. Junaid Alam",
-        "id": "100664",
-        "room": "MTS 6",
-        "day": "Thursday",
-        "time": "10:00-11:15",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Saher Iqbal",
-        "id": "100187",
-        "room": "MCC-09",
-        "day": "Tuesday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Saher Iqbal",
-        "id": "100187",
-        "room": "MCC-09",
-        "day": "Thursday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Teacher to be Allocated",
-        "id": "100190",
-        "room": "MCC-10",
-        "day": "Tuesday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Teacher to be Allocated",
-        "id": "100190",
-        "room": "MCC-10",
-        "day": "Thursday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Mirza Qaisar Ahmed Baig",
-        "id": "100176",
-        "room": "MCC-11",
-        "day": "Monday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Mirza Qaisar Ahmed Baig",
-        "id": "100176",
-        "room": "MCC-11",
-        "day": "Wednesday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "German 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Mokhashaf Muntazir",
-        "id": "100188",
-        "room": "MCC-11",
-        "day": "Tuesday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "German 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Mokhashaf Muntazir",
-        "id": "100188",
-        "room": "MCC-11",
-        "day": "Thursday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Saher Iqbal",
-        "id": "100177",
-        "room": "MCC12",
-        "day": "Monday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Saher Iqbal",
-        "id": "100177",
-        "room": "MCC12",
-        "day": "Wednesday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Sobia Akber",
-        "id": "100189",
-        "room": "MCC-12",
-        "day": "Tuesday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Sobia Akber",
-        "id": "100189",
-        "room": "MCC-12",
-        "day": "Thursday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Mathematical Economics",
-        "program": "NS-Elective",
-        "instructor": "Dr. Shahzad Ahmed",
-        "id": "100826",
-        "room": "MCC-15",
-        "day": "Saturday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Differential Geometry",
-        "program": "NS-Elective",
-        "instructor": "Dr. Umar Shehzad",
-        "id": "100668",
-        "room": "MTS 7",
-        "day": "Tuesday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Differential Geometry",
-        "program": "NS-Elective",
-        "instructor": "Dr. Umar Shehzad",
-        "id": "100668",
-        "room": "MTS 7",
-        "day": "Thursday",
-        "time": "11:30-12:45",
-        "comments": ""
-    },
-    {
-        "name": "Mathematical Economics",
-        "program": "NS-Elective",
-        "instructor": "Dr. Ilfan Oh",
-        "id": "100828",
-        "room": "MAC 6",
-        "day": "Monday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Mathematical Economics",
-        "program": "NS-Elective",
-        "instructor": "Dr. Ilfan Oh",
-        "id": "100828",
-        "room": "MAC 6",
-        "day": "Wednesday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Mathematical Economics",
-        "program": "NS-Elective",
-        "instructor": "Dr. Ilfan Oh",
-        "id": "100829",
-        "room": "MAC 6",
-        "day": "Tuesday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Mathematical Economics",
-        "program": "NS-Elective",
-        "instructor": "Dr. Ilfan Oh",
-        "id": "100829",
-        "room": "MAC 6",
-        "day": "Thursday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Teacher to be Allocated",
-        "id": "100190",
-        "room": "MCC-10",
-        "day": "Tuesday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Teacher to be Allocated",
-        "id": "100190",
-        "room": "MCC-10",
-        "day": "Thursday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Saher Iqbal",
-        "id": "100177",
-        "room": "MCC12",
-        "day": "Monday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Chinese 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Saher Iqbal",
-        "id": "100177",
-        "room": "MCC12",
-        "day": "Wednesday",
-        "time": "13:00-14:15",
-        "comments": ""
-    },
-    {
-        "name": "Mathematical Economics",
-        "program": "NS-Elective",
-        "instructor": "Dr. Ilfan Oh",
-        "id": "100831",
-        "room": "MAC 6",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Mathematical Economics",
-        "program": "NS-Elective",
-        "instructor": "Dr. Ilfan Oh",
-        "id": "100831",
-        "room": "MAC 6",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Probability Theory",
-        "program": "NS-Elective",
-        "instructor": "Dr. Amir Bashir",
-        "id": "100671",
-        "room": "MAC 6",
-        "day": "Tuesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Probability Theory",
-        "program": "NS-Elective",
-        "instructor": "Dr. Amir Bashir",
-        "id": "100671",
-        "room": "MAC 6",
-        "day": "Thursday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Muhammad Naeem",
-        "id": "100185",
-        "room": "MAS-1",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Muhammad Naeem",
-        "id": "100185",
-        "room": "MAS-1",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Sarra Boumellassa",
-        "id": "100179",
-        "room": "MCC-10",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Sarra Boumellassa",
-        "id": "100179",
-        "room": "MCC-10",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Teacher to be Allocated",
-        "id": "100191",
-        "room": "MCC-10",
-        "day": "Tuesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Teacher to be Allocated",
-        "id": "100191",
-        "room": "MCC-10",
-        "day": "Thursday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Ubaid ur Rahman",
-        "id": "100186",
-        "room": "MCC-11",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Ubaid ur Rahman",
-        "id": "100186",
-        "room": "MCC-11",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "French 2",
-        "program": "NS-Elective",
-        "instructor": "Ms.Hira Fahad",
-        "id": "100192",
-        "room": "MCC-11",
-        "day": "Tuesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "French 2",
-        "program": "NS-Elective",
-        "instructor": "Ms.Hira Fahad",
-        "id": "100192",
-        "room": "MCC-11",
-        "day": "Thursday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "French 2",
-        "program": "NS-Elective",
-        "instructor": "Ms. Sarra Boumellassa",
-        "id": "100181",
-        "room": "MCC12",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "French 2",
-        "program": "NS-Elective",
-        "instructor": "Ms. Sarra Boumellassa",
-        "id": "100181",
-        "room": "MCC12",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "German 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Huma Ghazanfar",
-        "id": "100193",
-        "room": "MCC12",
-        "day": "Tuesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "German 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Huma Ghazanfar",
-        "id": "100193",
-        "room": "MCC12",
-        "day": "Thursday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Spanish 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Francisco",
-        "id": "100182",
-        "room": "MCC-13",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Spanish 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Francisco",
-        "id": "100182",
-        "room": "MCC-13",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "German 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Furqan Abban Khatri",
-        "id": "100178",
-        "room": "MCC13",
-        "day": "Tuesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "German 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Furqan Abban Khatri",
-        "id": "100178",
-        "room": "MCC13",
-        "day": "Thursday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Syed Farid Iqbal",
-        "id": "100183",
-        "room": "MTC-22",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Syed Farid Iqbal",
-        "id": "100183",
-        "room": "MTC-22",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Abdullah M Yousuf",
-        "id": "100195",
-        "room": "MTC-22",
-        "day": "Tuesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Abdullah M Yousuf",
-        "id": "100195",
-        "room": "MTC-22",
-        "day": "Thursday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Ali Zaman",
-        "id": "",
-        "room": "MTC-22",
-        "day": "Friday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Ali Zaman",
-        "id": "",
-        "room": "MTC-22",
-        "day": "Saturday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Abu Tahir Siddiq",
-        "id": "100184",
-        "room": "MTC-23",
-        "day": "Monday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Abu Tahir Siddiq",
-        "id": "100184",
-        "room": "MTC-23",
-        "day": "Wednesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Syed Farid Iqbal",
-        "id": "100196",
-        "room": "MTC-23",
-        "day": "Tuesday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Syed Farid Iqbal",
-        "id": "100196",
-        "room": "MTC-23",
-        "day": "Thursday",
-        "time": "14:30-15:45",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Muhammad Naeem",
-        "id": "100185",
-        "room": "MAS-1",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Muhammad Naeem",
-        "id": "100185",
-        "room": "MAS-1",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Sarra Boumellassa",
-        "id": "100179",
-        "room": "MCC-10",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Sarra Boumellassa",
-        "id": "100179",
-        "room": "MCC-10",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Teacher to be Allocated",
-        "id": "100191",
-        "room": "MCC-10",
-        "day": "Tuesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Teacher to be Allocated",
-        "id": "100191",
-        "room": "MCC-10",
-        "day": "Thursday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Teacher to be Allocated",
-        "id": "100180",
-        "room": "MCC-11",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 1",
-        "program": "NS-Elective",
-        "instructor": "Teacher to be Allocated",
-        "id": "100180",
-        "room": "MCC-11",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 2",
-        "program": "NS-Elective",
-        "instructor": "Ms. Hira Fahad",
-        "id": "100192",
-        "room": "MCC-11",
-        "day": "Tuesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 2",
-        "program": "NS-Elective",
-        "instructor": "Ms. Hira Fahad",
-        "id": "100192",
-        "room": "MCC-11",
-        "day": "Thursday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 2",
-        "program": "NS-Elective",
-        "instructor": "Ms. Sarra Boumellassa",
-        "id": "100181",
-        "room": "MCC12",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 2",
-        "program": "NS-Elective",
-        "instructor": "Ms. Sarra Boumellassa",
-        "id": "100181",
-        "room": "MCC12",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "German 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Huma Ghazanfar",
-        "id": "100193",
-        "room": "MCC12",
-        "day": "Tuesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "German 1",
-        "program": "NS-Elective",
-        "instructor": "Ms. Huma Ghazanfar",
-        "id": "100193",
-        "room": "MCC12",
-        "day": "Thursday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Spanish 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Francisco Javier Merello",
-        "id": "100182",
-        "room": "MCC-13",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Spanish 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Francisco Javier Merello",
-        "id": "100182",
-        "room": "MCC-13",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "German 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Furqan Abban Khatri",
-        "id": "100178",
-        "room": "MCC-13",
-        "day": "Thursday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 4",
-        "program": "NS-Elective",
-        "instructor": "TBA",
-        "id": "100634",
-        "room": "MTC-20",
-        "day": "Tuesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 4",
-        "program": "NS-Elective",
-        "instructor": "TBA",
-        "id": "100634",
-        "room": "MTC-20",
-        "day": "Thursday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr.Syed Farid Iqbal",
-        "id": "100183",
-        "room": "MTC-22",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr.Syed Farid Iqbal",
-        "id": "100183",
-        "room": "MTC-22",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr.Abdullah M Yousuf",
-        "id": "100195",
-        "room": "MTC-22",
-        "day": "Tuesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr.Abdullah M Yousuf",
-        "id": "100195",
-        "room": "MTC-22",
-        "day": "Thursday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Ali Zaman",
-        "id": "",
-        "room": "MTC-22",
-        "day": "Friday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Ali Zaman",
-        "id": "",
-        "room": "MTC-22",
-        "day": "Saturday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Abu Tahir Siddiq",
-        "id": "100184",
-        "room": "MTC-23",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 1",
-        "program": "NS-Elective",
-        "instructor": "Mr. Abu Tahir Siddiq",
-        "id": "100184",
-        "room": "MTC-23",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic- 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Syed Farid Iqbal",
-        "id": "100196",
-        "room": "MTC-23",
-        "day": "Tuesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic- 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Syed Farid Iqbal",
-        "id": "100196",
-        "room": "MTC-23",
-        "day": "Thursday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Ubaid ur Rehman",
-        "id": "100186",
-        "room": "MTC-25",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Arabic 2",
-        "program": "NS-Elective",
-        "instructor": "Mr. Ubaid ur Rehman",
-        "id": "100186",
-        "room": "MTC-25",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Einstein, Relativity & Spacetime (Mathematical Physics Elective)",
-        "program": "NS-Elective",
-        "instructor": "Dr. Babar Ahmed Qureshi",
-        "id": "100867",
-        "room": "MTS 7",
-        "day": "Monday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "Einstein, Relativity & Spacetime (Mathematical Physics Elective)",
-        "program": "NS-Elective",
-        "instructor": "Dr. Babar Ahmed Qureshi",
-        "id": "100867",
-        "room": "MTS 7",
-        "day": "Wednesday",
-        "time": "16:00-17:15",
-        "comments": ""
-    },
-    {
-        "name": "French 4",
-        "program": "NS-Elective",
-        "instructor": "TBA",
-        "id": "100634",
-        "room": "MTC-20",
-        "day": "Tuesday",
-        "time": "17:30-18:45",
-        "comments": ""
-    }
+  {
+    "name": "International Banking and trade finance",
+    "program": "NS-Elective",
+    "instructor": "Mr. Naveed Rabbani",
+    "id": "F26-0190",
+    "room": "MAC-4",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "International Banking and trade finance",
+    "program": "NS-Elective",
+    "instructor": "Mr. Naveed Rabbani",
+    "id": "F26-0190",
+    "room": "MAC-4",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Media Management",
+    "program": "NS-Elective",
+    "instructor": "Ms. Kiran Khan Ali",
+    "id": "F26-0306",
+    "room": "MAC-4",
+    "day": "Friday",
+    "time": "09:00-11:30",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Generative and Agentic AI for Business",
+    "program": "NS-Elective",
+    "instructor": "Mr. Irteza",
+    "id": "F26-0173",
+    "room": "MAC 6",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": "Business Analytics Elective"
+  },
+  {
+    "name": "Generative and Agentic AI for Business",
+    "program": "NS-Elective",
+    "instructor": "Mr. Irteza",
+    "id": "F26-0173",
+    "room": "MAC 6",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": "Business Analytics Elective"
+  },
+  {
+    "name": "Derivatives",
+    "program": "NS-Elective",
+    "instructor": "Ms. Muniba Abdullah",
+    "id": "F26-0100",
+    "room": "MAC 6",
+    "day": "Saturday",
+    "time": "09:00-12:00",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Digital Marketing",
+    "program": "NS-Elective",
+    "instructor": "Ms. Rakhshanda Mustafa",
+    "id": "F26-0116",
+    "room": "MAS-2",
+    "day": "Friday",
+    "time": "08:30-09:45",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Digital Marketing",
+    "program": "NS-Elective",
+    "instructor": "Ms. Rakhshanda Mustafa",
+    "id": "F26-0116",
+    "room": "MAS-2",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Network Analysis for Accounting and Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Asif Jaffer",
+    "id": "F26-0327",
+    "room": "MCL-3",
+    "day": "Thursday",
+    "time": "08:30-09:45",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Network Analysis for Accounting and Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Asif Jaffer",
+    "id": "F26-0327",
+    "room": "MCL-3",
+    "day": "Tuesday",
+    "time": "08:30-09:45",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Financial Data Analytics",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0127",
+    "room": "MCS-3",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Financial Data Analytics",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0127",
+    "room": "MCS-3",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Arabic-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Syed Farid Iqbal",
+    "id": "F26-0021",
+    "room": "MTC-17",
+    "day": "Friday",
+    "time": "08:30-09:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Syed Farid Iqbal",
+    "id": "F26-0021",
+    "room": "MTC-17",
+    "day": "Saturday",
+    "time": "08:30-09:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Constitutional Development in Pakistan",
+    "program": "NS-Elective",
+    "instructor": "Dr. Syed Jaffar Ahmed.",
+    "id": "101342",
+    "room": "MTC-18",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "Social Science Elective | Open To All | UMS 101342"
+  },
+  {
+    "name": "Constitutional Development in Pakistan",
+    "program": "NS-Elective",
+    "instructor": "Dr. Syed Jaffar Ahmed.",
+    "id": "101342",
+    "room": "MTC-18",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "Social Science Elective | Open To All | UMS 101342"
+  },
+  {
+    "name": "International Banking and trade finance",
+    "program": "NS-Elective",
+    "instructor": "Mr. Naveed Rabbani",
+    "id": "F26-0191",
+    "room": "MTC-19",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "International Banking and trade finance",
+    "program": "NS-Elective",
+    "instructor": "Mr. Naveed Rabbani",
+    "id": "F26-0191",
+    "room": "MTC-19",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Elements of Business Analytics",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0119",
+    "room": "MTC-21",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Elements of Business Analytics",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0119",
+    "room": "MTC-21",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Understanding Family Businesses",
+    "program": "NS-Elective",
+    "instructor": "Mr. Mohsin Adhi",
+    "id": "F26-0452",
+    "room": "MTC-29",
+    "day": "Monday",
+    "time": "08:30-09:45",
+    "comments": "Management Elective"
+  },
+  {
+    "name": "Understanding Family Businesses",
+    "program": "NS-Elective",
+    "instructor": "Mr. Mohsin Adhi",
+    "id": "F26-0452",
+    "room": "MTC-29",
+    "day": "Wednesday",
+    "time": "08:30-09:45",
+    "comments": "Management Elective"
+  },
+  {
+    "name": "Investment Banking",
+    "program": "NS-Elective",
+    "instructor": "Mr. Najmul Hassan",
+    "id": "F26-0257",
+    "room": "EVENT HALL",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Investment Banking",
+    "program": "NS-Elective",
+    "instructor": "Mr. Najmul Hassan",
+    "id": "F26-0257",
+    "room": "EVENT HALL",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Chinese-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Mirza Qaiser Ahmed",
+    "id": "F26-0059",
+    "room": "MAC-2",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Chinese-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Mirza Qaiser Ahmed",
+    "id": "F26-0059",
+    "room": "MAC-2",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Principle of Marketing",
+    "program": "NS-Elective",
+    "instructor": "Mr. Kamil Yousuf",
+    "id": "F26-0359",
+    "room": "MAC-3",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Principle of Marketing",
+    "program": "NS-Elective",
+    "instructor": "Mr. Kamil Yousuf",
+    "id": "F26-0359",
+    "room": "MAC-3",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Portfolio Management",
+    "program": "NS-Elective",
+    "instructor": "Dr. Mujeeb U Rehman Bhayo",
+    "id": "F26-0350",
+    "room": "MAC-5",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Portfolio Management",
+    "program": "NS-Elective",
+    "instructor": "Dr. Mujeeb U Rehman Bhayo",
+    "id": "F26-0350",
+    "room": "MAC-5",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "French-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0153",
+    "room": "MAC-6",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "French-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0153",
+    "room": "MAC-6",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Financial Reporting",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sharjeel Hasnie",
+    "id": "F26-0144",
+    "room": "MAS-1",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Financial Reporting",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sharjeel Hasnie",
+    "id": "F26-0144",
+    "room": "MAS-1",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Industrial Economics and Business Strategy",
+    "program": "NS-Elective",
+    "instructor": "Dr. Amir Jahan Khan",
+    "id": "F26-0184",
+    "room": "MCC-09",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "Industrial Economics and Business Strategy",
+    "program": "NS-Elective",
+    "instructor": "Dr. Amir Jahan Khan",
+    "id": "F26-0184",
+    "room": "MCC-09",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "French-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Yasmin Marie Lodhi",
+    "id": "F26-0156",
+    "room": "MCC-10",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "French-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Yasmin Marie Lodhi",
+    "id": "F26-0156",
+    "room": "MCC-10",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Are We Becoming Post-Human? Technology, Ethics and Society",
+    "program": "NS-Elective",
+    "instructor": "Dr. Amana Raqib",
+    "id": "101323",
+    "room": "MCC12",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101323"
+  },
+  {
+    "name": "Are We Becoming Post-Human? Technology, Ethics and Society",
+    "program": "NS-Elective",
+    "instructor": "Dr. Amana Raqib",
+    "id": "101323",
+    "room": "MCC12",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101323"
+  },
+  {
+    "name": "Financial Reporting",
+    "program": "NS-Elective",
+    "instructor": "Dr. Asad Ilyas",
+    "id": "F26-0141",
+    "room": "MCC-13",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Financial Reporting",
+    "program": "NS-Elective",
+    "instructor": "Dr. Asad Ilyas",
+    "id": "F26-0141",
+    "room": "MCC-13",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Spanish-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Fransisco",
+    "id": "F26-0424",
+    "room": "MCL-1",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Spanish-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Fransisco",
+    "id": "F26-0424",
+    "room": "MCL-1",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "French-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Yasmin Marie Lodhi",
+    "id": "F26-0162",
+    "room": "MTC 16",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "French-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Yasmin Marie Lodhi",
+    "id": "F26-0162",
+    "room": "MTC 16",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Urban Planning Theories and Paradigms",
+    "program": "NS-Elective",
+    "instructor": "Dr. Adam Abdullah.",
+    "id": "101350",
+    "room": "MTC 16",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101350"
+  },
+  {
+    "name": "Urban Planning Theories and Paradigms",
+    "program": "NS-Elective",
+    "instructor": "Dr. Adam Abdullah.",
+    "id": "101350",
+    "room": "MTC 16",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101350"
+  },
+  {
+    "name": "Arabic-2 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Syed Farid Iqbal",
+    "id": "F26-0018",
+    "room": "MTC-17",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Urban Mental Health",
+    "program": "NS-Elective",
+    "instructor": "Dr. Ayesha Zia",
+    "id": "101334",
+    "room": "MTC-18",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101334"
+  },
+  {
+    "name": "Urban Mental Health",
+    "program": "NS-Elective",
+    "instructor": "Dr. Ayesha Zia",
+    "id": "101334",
+    "room": "MTC-18",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101334"
+  },
+  {
+    "name": "Corporate Governance and Sustainability",
+    "program": "NS-Elective",
+    "instructor": "Dr. Aitzaz Ahsan Alias Sarang",
+    "id": "F26-0076",
+    "room": "MTC-18",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Corporate Governance and Sustainability",
+    "program": "NS-Elective",
+    "instructor": "Dr. Aitzaz Ahsan Alias Sarang",
+    "id": "F26-0076",
+    "room": "MTC-18",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Who Owns the Truth? Introduction to the Philosophy of Science",
+    "program": "NS-Elective",
+    "instructor": "Dr. Moiz Hasan",
+    "id": "101500",
+    "room": "MTC-19",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101500"
+  },
+  {
+    "name": "Who Owns the Truth? Introduction to the Philosophy of Science",
+    "program": "NS-Elective",
+    "instructor": "Dr. Moiz Hasan",
+    "id": "101500",
+    "room": "MTC-19",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101500"
+  },
+  {
+    "name": "The Making of the Suspense Thriller: Hitchcock\u2019s Obsessions & Cinematic Craft",
+    "program": "NS-Elective",
+    "instructor": "Ms. Mariam Aziz",
+    "id": "101509",
+    "room": "MTC-19",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101509"
+  },
+  {
+    "name": "The Making of the Suspense Thriller: Hitchcock\u2019s Obsessions & Cinematic Craft",
+    "program": "NS-Elective",
+    "instructor": "Ms. Mariam Aziz",
+    "id": "101509",
+    "room": "MTC-19",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101509"
+  },
+  {
+    "name": "Personality Psychology",
+    "program": "NS-Elective",
+    "instructor": "Ms. Afia Najmi",
+    "id": "101346",
+    "room": "MTC-20A",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101346"
+  },
+  {
+    "name": "Personality Psychology",
+    "program": "NS-Elective",
+    "instructor": "Ms. Afia Najmi",
+    "id": "101346",
+    "room": "MTC-20A",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101346"
+  },
+  {
+    "name": "Islamic Banking & Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Azima Khan",
+    "id": "F26-0260",
+    "room": "MTC-21",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Islamic Banking & Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Azima Khan",
+    "id": "F26-0260",
+    "room": "MTC-21",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Fundamentals of E-Commerce",
+    "program": "NS-Elective",
+    "instructor": "Rakhshanda Mustafa",
+    "id": "F26-0167",
+    "room": "MTC-22",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Fundamentals of E-Commerce",
+    "program": "NS-Elective",
+    "instructor": "Rakhshanda Mustafa",
+    "id": "F26-0167",
+    "room": "MTC-22",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Islamic Banking & Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Irum Saba",
+    "id": "F26-0261",
+    "room": "MTC-23",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Islamic Banking & Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Irum Saba",
+    "id": "F26-0261",
+    "room": "MTC-23",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Negotiation and Conflict Resolution",
+    "program": "NS-Elective",
+    "instructor": "Dr. Farhan Hanif Siddiqi",
+    "id": "101333",
+    "room": "MTC-23",
+    "day": "Thursday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101333"
+  },
+  {
+    "name": "Negotiation and Conflict Resolution",
+    "program": "NS-Elective",
+    "instructor": "Dr. Farhan Hanif Siddiqi",
+    "id": "101333",
+    "room": "MTC-23",
+    "day": "Tuesday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101333"
+  },
+  {
+    "name": "International Relations",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sajjad Ahmed",
+    "id": "101329",
+    "room": "MTC-24",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101329"
+  },
+  {
+    "name": "International Relations",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sajjad Ahmed",
+    "id": "101329",
+    "room": "MTC-24",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "Social Science Elective | Open To All | UMS 101329"
+  },
+  {
+    "name": "Turkish-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0451",
+    "room": "MTC-25",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Turkish-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0451",
+    "room": "MTC-25",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Abdullah Yousuf",
+    "id": "F26-0020",
+    "room": "MTC-26",
+    "day": "Friday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Abdullah Yousuf",
+    "id": "F26-0020",
+    "room": "MTC-26",
+    "day": "Saturday",
+    "time": "10:00-11:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Machine Learning for Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Mohsin Zahid Khawaja",
+    "id": "F26-0272",
+    "room": "MTC-29",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Machine Learning for Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Mohsin Zahid Khawaja",
+    "id": "F26-0272",
+    "room": "MTC-29",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Corporate Finance",
+    "program": "NS-Elective",
+    "instructor": "Ms. Tehseen Valjee",
+    "id": "F26-0072",
+    "room": "Finance Lab",
+    "day": "Monday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Corporate Finance",
+    "program": "NS-Elective",
+    "instructor": "Ms. Tehseen Valjee",
+    "id": "F26-0072",
+    "room": "Finance Lab",
+    "day": "Wednesday",
+    "time": "10:00-11:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Investment Banking",
+    "program": "NS-Elective",
+    "instructor": "Mr. Najmul Hassan",
+    "id": "F26-0258",
+    "room": "MAC-1",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Investment Banking",
+    "program": "NS-Elective",
+    "instructor": "Mr. Najmul Hassan",
+    "id": "F26-0258",
+    "room": "MAC-1",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Sustainable Finance and Investments",
+    "program": "NS-Elective",
+    "instructor": "Dr. Muhammad Arif Khan",
+    "id": "F26-0439",
+    "room": "MAC-2",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Sustainable Finance and Investments",
+    "program": "NS-Elective",
+    "instructor": "Dr. Muhammad Arif Khan",
+    "id": "F26-0439",
+    "room": "MAC-2",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Fundamentals of Sales Management",
+    "program": "NS-Elective",
+    "instructor": "Syed Atif Murtaza Qaiser",
+    "id": "F26-0168",
+    "room": "MAS-1",
+    "day": "Friday",
+    "time": "11:30-12:45",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Fundamentals of Sales Management",
+    "program": "NS-Elective",
+    "instructor": "Syed Atif Murtaza Qaiser",
+    "id": "F26-0168",
+    "room": "MAS-1",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Chinese-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Mirza Qaiser Ahmed",
+    "id": "F26-0056",
+    "room": "MAV-2",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Marketing for Startups",
+    "program": "NS-Elective",
+    "instructor": "Mr. Kashif Rashid",
+    "id": "F26-0304",
+    "room": "MCC-10",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Marketing for Startups",
+    "program": "NS-Elective",
+    "instructor": "Mr. Kashif Rashid",
+    "id": "F26-0304",
+    "room": "MCC-10",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "French-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Yasmin Marie Lodhi",
+    "id": "F26-0151",
+    "room": "MCC-10",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Behavioral Economics",
+    "program": "NS-Elective",
+    "instructor": "Dr. Anwar Shah",
+    "id": "F26-0023",
+    "room": "MCC-13",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "Behavioral Economics",
+    "program": "NS-Elective",
+    "instructor": "Dr. Anwar Shah",
+    "id": "F26-0023",
+    "room": "MCC-13",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "Life Career Development",
+    "program": "NS-Elective",
+    "instructor": "Dr. Nyla Ansari",
+    "id": "101557",
+    "room": "MCC-14",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "Management Elective | UMS 101557"
+  },
+  {
+    "name": "Life Career Development",
+    "program": "NS-Elective",
+    "instructor": "Dr. Nyla Ansari",
+    "id": "101557",
+    "room": "MCC-14",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "Management Elective | UMS 101557"
+  },
+  {
+    "name": "Visual Methods in Urban Research",
+    "program": "NS-Elective",
+    "instructor": "Ms. Soha Macktoom",
+    "id": "101463",
+    "room": "MCL-1",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101463"
+  },
+  {
+    "name": "Visual Methods in Urban Research",
+    "program": "NS-Elective",
+    "instructor": "Ms. Soha Macktoom",
+    "id": "101463",
+    "room": "MCL-1",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101463"
+  },
+  {
+    "name": "Network Analysis for Accounting and Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Asif Jaffer",
+    "id": "F26-0326",
+    "room": "MCL-3",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Network Analysis for Accounting and Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Asif Jaffer",
+    "id": "F26-0326",
+    "room": "MCL-3",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "FinTech:Technical Foundations of Blockchain,Cryptography, & DeFi",
+    "program": "NS-Elective",
+    "instructor": "Dr. Vassilis Polimenis",
+    "id": "F26-0126",
+    "room": "MCL-3",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "FinTech:Technical Foundations of Blockchain,Cryptography, & DeFi",
+    "program": "NS-Elective",
+    "instructor": "Dr. Vassilis Polimenis",
+    "id": "F26-0126",
+    "room": "MCL-3",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Brand Management",
+    "program": "NS-Elective",
+    "instructor": "Dr. Farah Naz Baig",
+    "id": "F26-0025",
+    "room": "MCS-3",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Brand Management",
+    "program": "NS-Elective",
+    "instructor": "Dr. Farah Naz Baig",
+    "id": "F26-0025",
+    "room": "MCS-3",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Fundamentals of Sport Marketing",
+    "program": "NS-Elective",
+    "instructor": "Dr. Nida Aslam Khan",
+    "id": "F26-0171",
+    "room": "MCS-4",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "Fundamentals of Sport Marketing",
+    "program": "NS-Elective",
+    "instructor": "Dr. Nida Aslam Khan",
+    "id": "F26-0171",
+    "room": "MCS-4",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "English over the Ages: History and Reception",
+    "program": "NS-Elective",
+    "instructor": "Dr. Anum Tariq",
+    "id": "101542",
+    "room": "MTC 16",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101542"
+  },
+  {
+    "name": "English over the Ages: History and Reception",
+    "program": "NS-Elective",
+    "instructor": "Dr. Anum Tariq",
+    "id": "101542",
+    "room": "MTC 16",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101542"
+  },
+  {
+    "name": "Managing Firms in the Entertainment Industries",
+    "program": "NS-Elective",
+    "instructor": "Dr. Jamal Shamsie",
+    "id": "F26-0303",
+    "room": "MTC-18",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Management Elective"
+  },
+  {
+    "name": "Managing Firms in the Entertainment Industries",
+    "program": "NS-Elective",
+    "instructor": "Dr. Jamal Shamsie",
+    "id": "F26-0303",
+    "room": "MTC-18",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Management Elective"
+  },
+  {
+    "name": "Introduction to FinTech",
+    "program": "NS-Elective",
+    "instructor": "Dr. Noureen Ayaz",
+    "id": "F26-0221",
+    "room": "MTC-19",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Introduction to FinTech",
+    "program": "NS-Elective",
+    "instructor": "Dr. Noureen Ayaz",
+    "id": "F26-0221",
+    "room": "MTC-19",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Positive Psychology",
+    "program": "NS-Elective",
+    "instructor": "Ms. Hajrah Rehman",
+    "id": "101336",
+    "room": "MTC-20A",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101336"
+  },
+  {
+    "name": "Positive Psychology",
+    "program": "NS-Elective",
+    "instructor": "Ms. Hajrah Rehman",
+    "id": "101336",
+    "room": "MTC-20A",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101336"
+  },
+  {
+    "name": "Sufis, Steppe Nomads, and Silk Roads: A History of Islamic Central Asia",
+    "program": "NS-Elective",
+    "instructor": "Dr. Ali Gibran",
+    "id": "101324",
+    "room": "MTC-20A",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101324"
+  },
+  {
+    "name": "Sufis, Steppe Nomads, and Silk Roads: A History of Islamic Central Asia",
+    "program": "NS-Elective",
+    "instructor": "Dr. Ali Gibran",
+    "id": "101324",
+    "room": "MTC-20A",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101324"
+  },
+  {
+    "name": "China's Contemporary Security Environment",
+    "program": "NS-Elective",
+    "instructor": "Dr. Bilal Munshi",
+    "id": "101340",
+    "room": "MTC-22",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101340"
+  },
+  {
+    "name": "China's Contemporary Security Environment",
+    "program": "NS-Elective",
+    "instructor": "Dr. Bilal Munshi",
+    "id": "101340",
+    "room": "MTC-22",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101340"
+  },
+  {
+    "name": "French-2 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Yasmin Marie Lodhi",
+    "id": "F26-0159",
+    "room": "MTC-23",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Organizational Psychology",
+    "program": "NS-Elective",
+    "instructor": "Dr. Tehzeeb Sakina Amir",
+    "id": "101349",
+    "room": "MTC-23",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101349"
+  },
+  {
+    "name": "Organizational Psychology",
+    "program": "NS-Elective",
+    "instructor": "Dr. Tehzeeb Sakina Amir",
+    "id": "101349",
+    "room": "MTC-23",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101349"
+  },
+  {
+    "name": "Islamic Banking & Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Irum Saba",
+    "id": "F26-0262",
+    "room": "MTC-24",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Islamic Banking & Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Irum Saba",
+    "id": "F26-0262",
+    "room": "MTC-24",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Financial Reporting",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sharjeel Hasnie",
+    "id": "F26-0145",
+    "room": "MTC 25",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Financial Reporting",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sharjeel Hasnie",
+    "id": "F26-0145",
+    "room": "MTC 25",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Turkish-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0450",
+    "room": "MTC 25",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Political Islam in the Middle East",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sajjad Ahmed",
+    "id": "101332",
+    "room": "MTC-26",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101332"
+  },
+  {
+    "name": "Political Islam in the Middle East",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sajjad Ahmed",
+    "id": "101332",
+    "room": "MTC-26",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "Social Science Elective | Open To All | UMS 101332"
+  },
+  {
+    "name": "Arabic-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Abdullah Yousuf",
+    "id": "F26-0012",
+    "room": "MTC-26",
+    "day": "Saturday",
+    "time": "11:30-12:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Financial Mathematics with a Computational Approach",
+    "program": "NS-Elective",
+    "instructor": "Dr. Muhammad Sheraz",
+    "id": "101530",
+    "room": "MTC-28",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "Mathematics Elective | UMS 101530"
+  },
+  {
+    "name": "Financial Mathematics with a Computational Approach",
+    "program": "NS-Elective",
+    "instructor": "Dr. Muhammad Sheraz",
+    "id": "101530",
+    "room": "MTC-28",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "Mathematics Elective | UMS 101530"
+  },
+  {
+    "name": "Machine Learning for Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Mohsin Zahid Khawaja",
+    "id": "F26-0273",
+    "room": "MTC-29",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Machine Learning for Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Mohsin Zahid Khawaja",
+    "id": "F26-0273",
+    "room": "MTC-29",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "French-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0152",
+    "room": "Adamjee Conference Room",
+    "day": "Thursday",
+    "time": "11:30-12:45",
+    "comments": "NS"
+  },
+  {
+    "name": "French-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0152",
+    "room": "Adamjee Conference Room",
+    "day": "Tuesday",
+    "time": "11:30-12:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Corporate Finance",
+    "program": "NS-Elective",
+    "instructor": "Ms. Tehseen Valjee",
+    "id": "F26-0073",
+    "room": "Finance Lab",
+    "day": "Monday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Corporate Finance",
+    "program": "NS-Elective",
+    "instructor": "Ms. Tehseen Valjee",
+    "id": "F26-0073",
+    "room": "Finance Lab",
+    "day": "Wednesday",
+    "time": "11:30-12:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Entrepreneurial Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Nauman J. Amin",
+    "id": "F26-0123",
+    "room": "MAC-5",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Entrepreneurial Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Nauman J. Amin",
+    "id": "F26-0123",
+    "room": "MAC-5",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Investment Banking",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0259",
+    "room": "MAC 6",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Investment Banking",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0259",
+    "room": "MAC 6",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Corporate Finance",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0074",
+    "room": "MAC-7",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Corporate Finance",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0074",
+    "room": "MAC-7",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Fraud Analytics",
+    "program": "NS-Elective",
+    "instructor": "Faizan Waheed",
+    "id": "F26-0147",
+    "room": "MAC 8",
+    "day": "Saturday",
+    "time": "13:00-14:15",
+    "comments": "Business Analytics Elective"
+  },
+  {
+    "name": "Fraud Analytics",
+    "program": "NS-Elective",
+    "instructor": "Faizan Waheed",
+    "id": "F26-0147",
+    "room": "MAC 8",
+    "day": "Saturday",
+    "time": "14:30-15:45",
+    "comments": "Business Analytics Elective"
+  },
+  {
+    "name": "Game Theory",
+    "program": "NS-Elective",
+    "instructor": "Dr. Anwar Shah",
+    "id": "F26-0172",
+    "room": "MAS-2",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "Game Theory",
+    "program": "NS-Elective",
+    "instructor": "Dr. Anwar Shah",
+    "id": "F26-0172",
+    "room": "MAS-2",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "French-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0148",
+    "room": "MAV-1",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Product Analytics & Growth Intelligence",
+    "program": "NS-Elective",
+    "instructor": "Mr. Bilal Khan",
+    "id": "F26-0386",
+    "room": "MAV-2",
+    "day": "Saturday",
+    "time": "13:00-14:15",
+    "comments": "Business Analytics Elective"
+  },
+  {
+    "name": "Product Analytics & Growth Intelligence",
+    "program": "NS-Elective",
+    "instructor": "Mr. Bilal Khan",
+    "id": "F26-0386",
+    "room": "MAV-2",
+    "day": "Saturday",
+    "time": "14:30-15:45",
+    "comments": "Business Analytics Elective"
+  },
+  {
+    "name": "Postcolonial Science Fiction and Fantasy",
+    "program": "NS-Elective",
+    "instructor": "Ms. Rameen Saad",
+    "id": "101344",
+    "room": "MTC 16",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101344"
+  },
+  {
+    "name": "Postcolonial Science Fiction and Fantasy",
+    "program": "NS-Elective",
+    "instructor": "Ms. Rameen Saad",
+    "id": "101344",
+    "room": "MTC 16",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101344"
+  },
+  {
+    "name": "International Financial Management",
+    "program": "NS-Elective",
+    "instructor": "Dr. Noureen Ayaz",
+    "id": "F26-0193",
+    "room": "MTC-17",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "International Financial Management",
+    "program": "NS-Elective",
+    "instructor": "Dr. Noureen Ayaz",
+    "id": "F26-0193",
+    "room": "MTC-17",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Sufis, Steppe Nomads, and Silk Roads: A History of Islamic Central Asia",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0438",
+    "room": "MTC-18",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective"
+  },
+  {
+    "name": "Sufis, Steppe Nomads, and Silk Roads: A History of Islamic Central Asia",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0438",
+    "room": "MTC-18",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective"
+  },
+  {
+    "name": "Modern India: Nehru to Modi",
+    "program": "NS-Elective",
+    "instructor": "Mr. Yaqoob Bangash",
+    "id": "F26-0322",
+    "room": "MTC-20A",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101487"
+  },
+  {
+    "name": "Modern India: Nehru to Modi",
+    "program": "NS-Elective",
+    "instructor": "Mr. Yaqoob Bangash",
+    "id": "F26-0322",
+    "room": "MTC-20A",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101487"
+  },
+  {
+    "name": "Digital Activism and Democracy",
+    "program": "NS-Elective",
+    "instructor": "Mr. Shahzeb Ahmed Hashim",
+    "id": "101322",
+    "room": "MTC-20A",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101322"
+  },
+  {
+    "name": "Digital Activism and Democracy",
+    "program": "NS-Elective",
+    "instructor": "Mr. Shahzeb Ahmed Hashim",
+    "id": "101322",
+    "room": "MTC-20A",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101322"
+  },
+  {
+    "name": "Psychoanalytic Psychology",
+    "program": "NS-Elective",
+    "instructor": "Dr. Muhammad Shameel Khan",
+    "id": "101348",
+    "room": "MTC-21",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101348"
+  },
+  {
+    "name": "Psychoanalytic Psychology",
+    "program": "NS-Elective",
+    "instructor": "Dr. Muhammad Shameel Khan",
+    "id": "101348",
+    "room": "MTC-21",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101348"
+  },
+  {
+    "name": "Family and Society: Intersections of Communication, Culture, and Technology",
+    "program": "NS-Elective",
+    "instructor": "Dr. Tarik Yildirim",
+    "id": "101317",
+    "room": "MTC-22",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101317"
+  },
+  {
+    "name": "Family and Society: Intersections of Communication, Culture, and Technology",
+    "program": "NS-Elective",
+    "instructor": "Dr. Tarik Yildirim",
+    "id": "101317",
+    "room": "MTC-22",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101317"
+  },
+  {
+    "name": "National Security Process",
+    "program": "NS-Elective",
+    "instructor": "Dr. Bilal Munshi",
+    "id": "101341",
+    "room": "MTC-22",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101341"
+  },
+  {
+    "name": "National Security Process",
+    "program": "NS-Elective",
+    "instructor": "Dr. Bilal Munshi",
+    "id": "101341",
+    "room": "MTC-22",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective | Open To All | UMS 101341"
+  },
+  {
+    "name": "Security Analysis",
+    "program": "NS-Elective",
+    "instructor": "Mr. Arif Irfanullah",
+    "id": "F26-0414",
+    "room": "MTC-23",
+    "day": "Monday",
+    "time": "13:00-14:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Security Analysis",
+    "program": "NS-Elective",
+    "instructor": "Mr. Arif Irfanullah",
+    "id": "F26-0414",
+    "room": "MTC-23",
+    "day": "Wednesday",
+    "time": "13:00-14:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Family and Society: Intersections of Communication, Culture, and Technology",
+    "program": "NS-Elective",
+    "instructor": "Dr. Tarik Yildirim",
+    "id": "F26-0125",
+    "room": "MTC-23",
+    "day": "Thursday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective"
+  },
+  {
+    "name": "Family and Society: Intersections of Communication, Culture, and Technology",
+    "program": "NS-Elective",
+    "instructor": "Dr. Tarik Yildirim",
+    "id": "F26-0125",
+    "room": "MTC-23",
+    "day": "Tuesday",
+    "time": "13:00-14:15",
+    "comments": "Social Science Elective"
+  },
+  {
+    "name": "Shakespeare\u2019s Enigmatic Women: Juliet, Gertrude, Lady Macbeth",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "101490",
+    "room": "MAC-1",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | UMS 101490"
+  },
+  {
+    "name": "Shakespeare\u2019s Enigmatic Women: Juliet, Gertrude, Lady Macbeth",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "101490",
+    "room": "MAC-1",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | UMS 101490"
+  },
+  {
+    "name": "Accounting for Shari'ah Compliance",
+    "program": "NS-Elective",
+    "instructor": "Mr. Haroon Tabraze",
+    "id": "F26-0001",
+    "room": "MAC-1",
+    "day": "Friday",
+    "time": "14:30-15:45",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Accounting for Shari'ah Compliance",
+    "program": "NS-Elective",
+    "instructor": "Mr. Haroon Tabraze",
+    "id": "F26-0001",
+    "room": "MAC-1",
+    "day": "Saturday",
+    "time": "14:30-15:45",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "French-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Pierre-Antoine Simon",
+    "id": "F26-0160",
+    "room": "MAC-3",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "French-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Pierre-Antoine Simon",
+    "id": "F26-0160",
+    "room": "MAC-3",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Advertising",
+    "program": "NS-Elective",
+    "instructor": "Ms. Kiran Sardar Khan",
+    "id": "F26-0002",
+    "room": "MAC-4",
+    "day": "Saturday",
+    "time": "14:30-17:15",
+    "comments": "Marketing Elective"
+  },
+  {
+    "name": "French-3 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Hira Fahad",
+    "id": "F26-0164",
+    "room": "MAC-5",
+    "day": "Friday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "French-3 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Hira Fahad",
+    "id": "F26-0164",
+    "room": "MAC-5",
+    "day": "Saturday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Portfolio Management",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0351",
+    "room": "MAC 8",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Portfolio Management",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0351",
+    "room": "MAC 8",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Behavioral Finance in Theory and Practice",
+    "program": "NS-Elective",
+    "instructor": "Dr. Fawad Ahmad",
+    "id": "F26-0024",
+    "room": "MAS-1",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Behavioral Finance in Theory and Practice",
+    "program": "NS-Elective",
+    "instructor": "Dr. Fawad Ahmad",
+    "id": "F26-0024",
+    "room": "MAS-1",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Arabic-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ali Zaman",
+    "id": "F26-0016",
+    "room": "MAS-1",
+    "day": "Friday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ali Zaman",
+    "id": "F26-0016",
+    "room": "MAS-1",
+    "day": "Saturday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ubaid Ur Rehman",
+    "id": "F26-0022",
+    "room": "MAS-2",
+    "day": "Friday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ubaid Ur Rehman",
+    "id": "F26-0022",
+    "room": "MAS-2",
+    "day": "Saturday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Impact Evaluation Methods",
+    "program": "NS-Elective",
+    "instructor": "Dr. Muhammad Nasir",
+    "id": "F26-0183",
+    "room": "MAV-2",
+    "day": "Monday",
+    "time": "15:00-17:00",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "Impact Evaluation Methods",
+    "program": "NS-Elective",
+    "instructor": "Dr. Muhammad Nasir",
+    "id": "F26-0183",
+    "room": "MAV-2",
+    "day": "Wednesday",
+    "time": "15:00-17:00",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "French-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Hira Fahad",
+    "id": "F26-0161",
+    "room": "MCC-9",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "French-2 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Hira Fahad",
+    "id": "F26-0161",
+    "room": "MCC-9",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Law and Violence in Colonial India",
+    "program": "NS-Elective",
+    "instructor": "Mr. Faseeh Ahmed",
+    "id": "101430",
+    "room": "MCC-10",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101430"
+  },
+  {
+    "name": "Law and Violence in Colonial India",
+    "program": "NS-Elective",
+    "instructor": "Mr. Faseeh Ahmed",
+    "id": "101430",
+    "room": "MCC-10",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101430"
+  },
+  {
+    "name": "International Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Ilfan Oh",
+    "id": "F26-0192",
+    "room": "MCC-10",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "International Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Ilfan Oh",
+    "id": "F26-0192",
+    "room": "MCC-10",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "Chinese-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Saher Iqbal",
+    "id": "F26-0061",
+    "room": "MCC-11",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Chinese-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Saher Iqbal",
+    "id": "F26-0061",
+    "room": "MCC-11",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Chinese-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sobia Akbar",
+    "id": "F26-0062",
+    "room": "MCC12",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Chinese-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sobia Akbar",
+    "id": "F26-0062",
+    "room": "MCC12",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Abdullah Yousuf",
+    "id": "F26-0015",
+    "room": "MCC-14",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Abdullah Yousuf",
+    "id": "F26-0015",
+    "room": "MCC-14",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "French-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0154",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "French-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0154",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Persian-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Faizeh",
+    "id": "F26-0347",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Persian-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Faizeh",
+    "id": "F26-0347",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Graph Theory",
+    "program": "NS-Elective",
+    "instructor": "Dr. Junaid Alam",
+    "id": "F26-0174",
+    "room": "MCS-3",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "Mathematics Elective"
+  },
+  {
+    "name": "Graph Theory",
+    "program": "NS-Elective",
+    "instructor": "Dr. Junaid Alam",
+    "id": "F26-0174",
+    "room": "MCS-3",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "Mathematics Elective"
+  },
+  {
+    "name": "Political Communication",
+    "program": "NS-Elective",
+    "instructor": "Dr. Amir Hamza Marwan",
+    "id": "101320",
+    "room": "MTC 16",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101320"
+  },
+  {
+    "name": "Political Communication",
+    "program": "NS-Elective",
+    "instructor": "Dr. Amir Hamza Marwan",
+    "id": "101320",
+    "room": "MTC 16",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101320"
+  },
+  {
+    "name": "Computational Content Analysis",
+    "program": "NS-Elective",
+    "instructor": "Mr. Raja Shahzad Shaikh",
+    "id": "F26-0069",
+    "room": "MTC 16",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Computational Content Analysis",
+    "program": "NS-Elective",
+    "instructor": "Mr. Raja Shahzad Shaikh",
+    "id": "F26-0069",
+    "room": "MTC 16",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Shakespeare\u2019s Enigmatic Women: Juliet, Gertrude, Lady Macbeth",
+    "program": "NS-Elective",
+    "instructor": "Ms. Mehreen Odho",
+    "id": "101495",
+    "room": "MTC-17",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101495"
+  },
+  {
+    "name": "Shakespeare\u2019s Enigmatic Women: Juliet, Gertrude, Lady Macbeth",
+    "program": "NS-Elective",
+    "instructor": "Ms. Mehreen Odho",
+    "id": "101495",
+    "room": "MTC-17",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101495"
+  },
+  {
+    "name": "Comparative Colonialisms",
+    "program": "NS-Elective",
+    "instructor": "Mr. Shehroze Shaikh",
+    "id": "101486",
+    "room": "MTC-18",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101486"
+  },
+  {
+    "name": "Comparative Colonialisms",
+    "program": "NS-Elective",
+    "instructor": "Mr. Shehroze Shaikh",
+    "id": "101486",
+    "room": "MTC-18",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101486"
+  },
+  {
+    "name": "Fragments, Footnotes, and Other Forms of Fiction",
+    "program": "NS-Elective",
+    "instructor": "Ms. Palvashay Sethi",
+    "id": "101331",
+    "room": "MTC-19",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101331"
+  },
+  {
+    "name": "Fragments, Footnotes, and Other Forms of Fiction",
+    "program": "NS-Elective",
+    "instructor": "Ms. Palvashay Sethi",
+    "id": "101331",
+    "room": "MTC-19",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101331"
+  },
+  {
+    "name": "Violence and Civil War",
+    "program": "NS-Elective",
+    "instructor": "Ms. Yumna Fatima",
+    "id": "101339",
+    "room": "MTC-19",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101339"
+  },
+  {
+    "name": "Violence and Civil War",
+    "program": "NS-Elective",
+    "instructor": "Ms. Yumna Fatima",
+    "id": "101339",
+    "room": "MTC-19",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101339"
+  },
+  {
+    "name": "Cognitive Psychology",
+    "program": "NS-Elective",
+    "instructor": "Ms. Afia Najmi",
+    "id": "101347",
+    "room": "MTC-20",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101347"
+  },
+  {
+    "name": "Cognitive Psychology",
+    "program": "NS-Elective",
+    "instructor": "Ms. Afia Najmi",
+    "id": "101347",
+    "room": "MTC-20",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101347"
+  },
+  {
+    "name": "Analyzing the News",
+    "program": "NS-Elective",
+    "instructor": "Mr. Shahzeb Ahmed Hashim",
+    "id": "101321",
+    "room": "MTC-20A",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101321"
+  },
+  {
+    "name": "Analyzing the News",
+    "program": "NS-Elective",
+    "instructor": "Mr. Shahzeb Ahmed Hashim",
+    "id": "101321",
+    "room": "MTC-20A",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101321"
+  },
+  {
+    "name": "Cyber Psychology",
+    "program": "NS-Elective",
+    "instructor": "Ms. Hajrah Rehman",
+    "id": "101337",
+    "room": "MTC-21",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101337"
+  },
+  {
+    "name": "Cyber Psychology",
+    "program": "NS-Elective",
+    "instructor": "Ms. Hajrah Rehman",
+    "id": "101337",
+    "room": "MTC-21",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101337"
+  },
+  {
+    "name": "Corporate Governance And Responsible Business",
+    "program": "NS-Elective",
+    "instructor": "Dr. Amama",
+    "id": "F26-0075",
+    "room": "MTC-22",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Corporate Governance And Responsible Business",
+    "program": "NS-Elective",
+    "instructor": "Dr. Amama",
+    "id": "F26-0075",
+    "room": "MTC-22",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Arabic-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ubaid Ur Rehman",
+    "id": "F26-0017",
+    "room": "MTC-22",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ubaid Ur Rehman",
+    "id": "F26-0017",
+    "room": "MTC-22",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Security Analysis",
+    "program": "NS-Elective",
+    "instructor": "Mr. Arif Irfanullah",
+    "id": "F26-0415",
+    "room": "MTC-23",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Security Analysis",
+    "program": "NS-Elective",
+    "instructor": "Mr. Arif Irfanullah",
+    "id": "F26-0415",
+    "room": "MTC-23",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "French-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0155",
+    "room": "MTC-23",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "French-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0155",
+    "room": "MTC-23",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "English over the Ages: History and Reception",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0122",
+    "room": "MTC-24",
+    "day": "Monday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All"
+  },
+  {
+    "name": "English over the Ages: History and Reception",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0122",
+    "room": "MTC-24",
+    "day": "Wednesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All"
+  },
+  {
+    "name": "Persian-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Mansoora Raza",
+    "id": "F26-0348",
+    "room": "MTC-26",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Persian-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Mansoora Raza",
+    "id": "F26-0348",
+    "room": "MTC-26",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "NS"
+  },
+  {
+    "name": "Financial Reporting",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sharjeel Hasnie",
+    "id": "F26-0143",
+    "room": "MTS 6",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Financial Reporting",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sharjeel Hasnie",
+    "id": "F26-0143",
+    "room": "MTS 6",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Islamic Architecture and Urbanism",
+    "program": "NS-Elective",
+    "instructor": "Dr. Adam Abdullah.",
+    "id": "101351",
+    "room": "MTS 7",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101351"
+  },
+  {
+    "name": "Islamic Architecture and Urbanism",
+    "program": "NS-Elective",
+    "instructor": "Dr. Adam Abdullah.",
+    "id": "101351",
+    "room": "MTS 7",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Social Science Elective | Open To All | UMS 101351"
+  },
+  {
+    "name": "Social Network Analysis",
+    "program": "NS-Elective",
+    "instructor": "Dr. Owais",
+    "id": "F26-0416",
+    "room": "Finance Lab",
+    "day": "Thursday",
+    "time": "14:30-15:45",
+    "comments": "Business Analytics Elective"
+  },
+  {
+    "name": "Social Network Analysis",
+    "program": "NS-Elective",
+    "instructor": "Dr. Owais",
+    "id": "F26-0416",
+    "room": "Finance Lab",
+    "day": "Tuesday",
+    "time": "14:30-15:45",
+    "comments": "Business Analytics Elective"
+  },
+  {
+    "name": "Financial Risk Management",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ammar Habib Khan",
+    "id": "F26-0146",
+    "room": "AUDITORIUM",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "Revolutions, Evolutions: Word and Image in the 20th Century",
+    "program": "NS-Elective",
+    "instructor": "Ms. Saima Zaidi",
+    "id": "101497",
+    "room": "MAC-1",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | Open To All | UMS 101497"
+  },
+  {
+    "name": "Revolutions, Evolutions: Word and Image in the 20th Century",
+    "program": "NS-Elective",
+    "instructor": "Ms. Saima Zaidi",
+    "id": "101497",
+    "room": "MAC-1",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | Open To All | UMS 101497"
+  },
+  {
+    "name": "Taxation",
+    "program": "NS-Elective",
+    "instructor": "Mr. Haroon Tabraze",
+    "id": "F26-0440",
+    "room": "MAC-3",
+    "day": "Friday",
+    "time": "16:00-17:15",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Taxation",
+    "program": "NS-Elective",
+    "instructor": "Mr. Haroon Tabraze",
+    "id": "F26-0440",
+    "room": "MAC-3",
+    "day": "Saturday",
+    "time": "16:00-17:15",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "French-3 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Hira Fahad",
+    "id": "F26-0163",
+    "room": "MAC-5",
+    "day": "Friday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Time Series Forecasting for Finance",
+    "program": "NS-Elective",
+    "instructor": "Mr. Akash Kumar",
+    "id": "F26-0449",
+    "room": "MAC-7",
+    "day": "Saturday",
+    "time": "16:00-17:15",
+    "comments": "Business Analytics Elective"
+  },
+  {
+    "name": "Time Series Forecasting for Finance",
+    "program": "NS-Elective",
+    "instructor": "Mr. Akash Kumar",
+    "id": "F26-0449",
+    "room": "MAC-7",
+    "day": "Saturday",
+    "time": "17:30-18:45",
+    "comments": "Business Analytics Elective"
+  },
+  {
+    "name": "Financial Reporting",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sharjeel Hasnie",
+    "id": "F26-0142",
+    "room": "MAC-8",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Financial Reporting",
+    "program": "NS-Elective",
+    "instructor": "Dr. Sharjeel Hasnie",
+    "id": "F26-0142",
+    "room": "MAC-8",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "Accounting Elective"
+  },
+  {
+    "name": "Arabic-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ali Zaman",
+    "id": "F26-0013",
+    "room": "MAS-1",
+    "day": "Friday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ali Zaman",
+    "id": "F26-0013",
+    "room": "MAS-1",
+    "day": "Saturday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Poverty and Income Distribution",
+    "program": "NS-Elective",
+    "instructor": "Dr. Lubna Naz",
+    "id": "F26-0352",
+    "room": "MAS-2",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "Poverty and Income Distribution",
+    "program": "NS-Elective",
+    "instructor": "Dr. Lubna Naz",
+    "id": "F26-0352",
+    "room": "MAS-2",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "Arabic-2 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ubaid Ur Rehman",
+    "id": "F26-0019",
+    "room": "MAS-2",
+    "day": "Saturday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Public Finance",
+    "program": "NS-Elective",
+    "instructor": "Dr. Imtiaz Bhatti",
+    "id": "F26-0401",
+    "room": "MAV-1",
+    "day": "Wednesday",
+    "time": "16:00-18:30",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "French-2 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Pierre-Antoine Simon",
+    "id": "F26-0157",
+    "room": "MCC-9",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "French-2 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Hira Fahad",
+    "id": "F26-0158",
+    "room": "MCC-9",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Ubaid Ur Rehman",
+    "id": "F26-0014",
+    "room": "MCC-10",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Chinese-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Mirza Qaiser Ahmed",
+    "id": "F26-0060",
+    "room": "MCC-11",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Chinese-1 (Language)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Mirza Qaiser Ahmed",
+    "id": "F26-0060",
+    "room": "MCC-11",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Chinese-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Saher Iqbal",
+    "id": "F26-0057",
+    "room": "MCC-11",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Chinese-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sobia Akbar",
+    "id": "F26-0058",
+    "room": "MCC12",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Arabic-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Abdullah Yousuf",
+    "id": "F26-0011",
+    "room": "MCC-13",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "French-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0149",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Persian-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Faizeh",
+    "id": "F26-0345",
+    "room": "MCL-2 (Main Campus Library)",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Programming for Finance",
+    "program": "NS-Elective",
+    "instructor": "Mr. Farhan Ahmed Siddiqui",
+    "id": "F26-0396",
+    "room": "MCL-3",
+    "day": "Tuesday",
+    "time": "16:00-18:45",
+    "comments": "Finance Elective"
+  },
+  {
+    "name": "We Sinful Women: Gender and Sexuality in Urdu Literature and Film",
+    "program": "NS-Elective",
+    "instructor": "Mr. Asadullah",
+    "id": "101496",
+    "room": "MTC 16",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | Open To All | UMS 101496"
+  },
+  {
+    "name": "We Sinful Women: Gender and Sexuality in Urdu Literature and Film",
+    "program": "NS-Elective",
+    "instructor": "Mr. Asadullah",
+    "id": "101496",
+    "room": "MTC 16",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | Open To All | UMS 101496"
+  },
+  {
+    "name": "Psychoanalytic Psychology",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0397",
+    "room": "MTC-18",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective"
+  },
+  {
+    "name": "Psychoanalytic Psychology",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0397",
+    "room": "MTC-18",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective"
+  },
+  {
+    "name": "Political Communication",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0349",
+    "room": "MTC-19",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | Open To All"
+  },
+  {
+    "name": "Political Communication",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0349",
+    "room": "MTC-19",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | Open To All"
+  },
+  {
+    "name": "From Empires to Nation-States: A History of the Pre-20th Century World",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0165",
+    "room": "MTC-20",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | UMS 101481"
+  },
+  {
+    "name": "From Empires to Nation-States: A History of the Pre-20th Century World",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0165",
+    "room": "MTC-20",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | UMS 101481"
+  },
+  {
+    "name": "Modern India: Nehru to Modi",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0323",
+    "room": "MTC-22",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | Open To All | UMS 101487"
+  },
+  {
+    "name": "Modern India: Nehru to Modi",
+    "program": "NS-Elective",
+    "instructor": "TBA",
+    "id": "F26-0323",
+    "room": "MTC-22",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | Open To All | UMS 101487"
+  },
+  {
+    "name": "French-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Sarra Boumellassa",
+    "id": "F26-0150",
+    "room": "MTC-23",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Reading Karachi: History and Urban Transformations",
+    "program": "NS-Elective",
+    "instructor": "Ms. Soha Macktoom",
+    "id": "101465",
+    "room": "MTC-24",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | Open Toall | UMS 101465"
+  },
+  {
+    "name": "Reading Karachi: History and Urban Transformations",
+    "program": "NS-Elective",
+    "instructor": "Ms. Soha Macktoom",
+    "id": "101465",
+    "room": "MTC-24",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "Social Science Elective | Open Toall | UMS 101465"
+  },
+  {
+    "name": "Persian-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Ms. Mansoora Raza",
+    "id": "F26-0346",
+    "room": "MTC-26",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "NS"
+  },
+  {
+    "name": "Introduction to Social Marketing",
+    "program": "NS-Elective",
+    "instructor": "Tabish Shahzad",
+    "id": "101575",
+    "room": "MTC-28",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "Marketing Elective | UMS 101575"
+  },
+  {
+    "name": "Introduction to Social Marketing",
+    "program": "NS-Elective",
+    "instructor": "Tabish Shahzad",
+    "id": "101575",
+    "room": "MTC-28",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": "Marketing Elective | UMS 101575"
+  },
+  {
+    "name": "Graph Theory",
+    "program": "NS-Elective",
+    "instructor": "Dr. Junaid Alam",
+    "id": "F26-0175",
+    "room": "MTS 6",
+    "day": "Monday",
+    "time": "16:00-17:15",
+    "comments": "Mathematics Elective"
+  },
+  {
+    "name": "Graph Theory",
+    "program": "NS-Elective",
+    "instructor": "Dr. Junaid Alam",
+    "id": "F26-0175",
+    "room": "MTS 6",
+    "day": "Wednesday",
+    "time": "16:00-17:15",
+    "comments": "Mathematics Elective"
+  },
+  {
+    "name": "Environmental Economics",
+    "program": "NS-Elective",
+    "instructor": "Dr. Ghamz e Ali Siyal",
+    "id": "F26-0124",
+    "room": "MTS 6",
+    "day": "Thursday",
+    "time": "16:00-17:15",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "Environmental Economics",
+    "program": "NS-Elective",
+    "instructor": "Dr. Ghamz e Ali Siyal",
+    "id": "F26-0124",
+    "room": "MTS 6",
+    "day": "Tuesday",
+    "time": "16:00-17:15",
+    "comments": "Economics Elective"
+  },
+  {
+    "name": "Chinese-1 (Lab)",
+    "program": "NS-Elective",
+    "instructor": "Mr. Mirza Qaiser Ahmed",
+    "id": "F26-0055",
+    "room": "MCC-11",
+    "day": "Wednesday",
+    "time": "17:30-18:45",
+    "comments": "NS"
+  }
 ]

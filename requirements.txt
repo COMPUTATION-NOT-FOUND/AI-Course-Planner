@@ -1,5 +1,5 @@
-flask
-flask-session
-pandas
-gunicorn
-flask-limiter
+flask==3.1.0
+flask-session==0.8.0
+flask-limiter==3.10.1
+gunicorn==23.0.0
+ortools>=9.11,<10

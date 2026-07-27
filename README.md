@@ -7,14 +7,14 @@ A comprehensive automated scheduling system designed to solve complex resource a
 - **Automated Scheduling:** Generates university course schedules while minimizing conflicts.
 - **Constraint Satisfaction:** Models the scheduling problem as a Constraint Satisfaction Problem (CSP).
 - **Algorithms:**
-  - **Arc Consistency Algorithm #3 (AC-3):** A domain pruning technique used to enforce constraints and ensure conflict-free schedules within the CSP solver.
+  - **CP-SAT (Google OR-Tools):** The CSP is handed to OR-Tools' CP-SAT solver, which enumerates every conflict-free schedule exactly once. Interchangeable elective slots are symmetry-broken so the same schedule is never reported twice in a different order.
+  - **Partial schedules:** When no complete schedule fits, the solver maximises the number of courses it can place and returns all schedules of that size.
 - **Web Interface:** A Flask-based web application provides an interactive interface for uploading data, generating schedules, and viewing results.
 
 ## Tech Stack
 
 - **Backend:** Python, Flask
-- **Data Processing:** Pandas
-- **Algorithms:** Custom implementation of AC-3 for constraint satisfaction.
+- **Solver:** Google OR-Tools (CP-SAT)
 - **Frontend:** HTML/CSS (Jinja2 templates)
 
 ## Installation & Usage
@@ -52,13 +52,15 @@ The scheduler requires specific data files to function. These can be managed dir
     - Follow the 4-step wizard to:
         - Define "No-Class" constraints (times you want to keep free).
         - Select specific sections for Core, Electives, and NS Electives if preferred.
-    - Click "Generate" to run the AC-3 solver.
+    - Click "Generate" to run the CP-SAT solver.
 5.  **View & Export:** Review the generated schedules, filter by number of days, or sort by gaps. You can export the results to CSV.
 
 ## Project Structure
 
 - `app.py`: The main Flask application entry point and route handlers.
-- `ac3.py`: Implementation of the AC-3 algorithm and CSP solving logic.
+- `cpsat_solver.py`: The CP-SAT model - conflict, duplicate-subject and symmetry-breaking constraints, plus solution enumeration.
+- `tools/extract_fall2026.py`: One-off extractor that turns the Fall 2026 timetable workbook into the course JSON files.
+- `tools/verify_solver.py`: Headless regression checks for the solver.
 - `templates/`: HTML templates for the web interface.
 - `config.json`: Stores days and time slot configurations.
 - `program_requirements.json`: Defines course requirements per program.
