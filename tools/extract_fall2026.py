@@ -22,7 +22,7 @@ from collections import defaultdict
 NS = '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}'
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-WORKBOOK = os.path.join(ROOT, 'Fall Schedule 2026.xlsx')
+WORKBOOK = os.path.join(ROOT, 'data', 'Fall Schedule 2026.xlsx')
 SHEET = 'xl/worksheets/sheet1.xml'
 
 # Column groups in the undergrad sheet. Each group covers TWO days: a cell in the

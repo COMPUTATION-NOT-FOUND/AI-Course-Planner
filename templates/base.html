@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Course Planner{% endblock %} · IBA Course Planner</title>
+    <meta name="description" content="Pick the sections you want and the times you can't make; the planner builds every clash-free IBA timetable that fits.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+                        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+                    },
+                    colors: {
+                        ink: { DEFAULT: '#1c2430', soft: '#4a5565', faint: '#7a8494' },
+                        paper: { DEFAULT: '#f6f5f1', card: '#ffffff', line: '#e3e1da' },
+                        accent: { DEFAULT: '#1f5f8b', dark: '#174a6d', soft: '#e3eef6' },
+                    },
+                },
+            },
+        };
+    </script>
+    <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+    <script>
+        // Boosted forms swap only #planner / #results; keep the page where the user is.
+        htmx.config.scrollIntoViewOnBoost = false;
+    </script>
+    <style>
+        body { background: #f6f5f1; color: #1c2430; }
+        :focus-visible { outline: 2px solid #1f5f8b; outline-offset: 2px; }
+
+        /* Course colours, picked per course name by the |tone filter. */
+        .tone-0 { --tone-bg: #e6f0fa; --tone-line: #6c9cc8; --tone-ink: #1d3f5e; }
+        .tone-1 { --tone-bg: #e8f4ec; --tone-line: #6aab80; --tone-ink: #1f4a2e; }
+        .tone-2 { --tone-bg: #fbeee2; --tone-line: #d0925a; --tone-ink: #5e3613; }
+        .tone-3 { --tone-bg: #f1ebf8; --tone-line: #9a7cc4; --tone-ink: #3d2860; }
+        .tone-4 { --tone-bg: #fbe9ec; --tone-line: #cf7c8b; --tone-ink: #5e1f2b; }
+        .tone-5 { --tone-bg: #e5f4f4; --tone-line: #5aa9a6; --tone-ink: #19494a; }
+        .tone-6 { --tone-bg: #f6f2dc; --tone-line: #b8a24a; --tone-ink: #4a3f0c; }
+        .tone-7 { --tone-bg: #edeef2; --tone-line: #8a90a2; --tone-ink: #2c3140; }
+        .blocked-cell { background: repeating-linear-gradient(135deg, #f1efe9 0 6px, #e7e4dc 6px 12px); }
+        .chip { background: var(--tone-bg); border-left: 3px solid var(--tone-line); color: var(--tone-ink); }
+
+        .htmx-request #planner, .htmx-request#planner,
+        .htmx-request #results, .htmx-request#results { opacity: .65; transition: opacity .15s ease; }
+        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased">
+    <header class="border-b border-paper-line bg-paper-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+            <a href="{{ url_for('home') }}" class="flex items-center gap-2 font-semibold tracking-tight">
+                <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="text-accent">
+                    <rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v3M16 3v3M7.5 13.5h3M13.5 13.5h3M7.5 17h3"/>
+                </svg>
+                Course Planner
+            </a>
+            <nav class="flex items-center gap-1 text-sm">
+                {% if session.get('program_name') %}
+                <a href="{{ url_for('schedule') }}" class="px-3 py-1.5 rounded-md text-ink-soft hover:bg-paper hover:text-ink">Planner</a>
+                {% if session.get('required_vars') %}
+                <a href="{{ url_for('generated_schedules') }}" class="px-3 py-1.5 rounded-md text-ink-soft hover:bg-paper hover:text-ink">Results</a>
+                {% endif %}
+                {% endif %}
+                <a href="https://github.com/COMPUTATION-NOT-FOUND/AI-Course-Planner" class="px-3 py-1.5 rounded-md text-ink-soft hover:bg-paper hover:text-ink">Source</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="border-t border-paper-line mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 text-xs text-ink-faint leading-relaxed space-y-1">
+            <p>Timetable data: IBA Karachi, Fall 2026 offering. Always confirm sections on the official portal before you register.</p>
+            <p><strong class="font-medium text-ink-soft">AI disclosure:</strong> much of this app's code, interface and documentation was written or refactored with AI assistants (Claude) and reviewed by the author. See the README for details.</p>
+        </div>
+    </footer>
+</body>
+</html>

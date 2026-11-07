@@ -1,246 +1,306 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Course Schedule</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    .selected-course {
-      background-color: #a7f3d0;
-      color: #115e59;
-    }
-  </style>
-</head>
-<body class="bg-gray-100">
-  <div class="container mx-auto p-4 max-w-6xl">
+{% extends 'base.html' %}
+{% block title %}{{ step.label }} · {{ program_name }}{% endblock %}
+{% block content %}
+{% set pool = step.pool %}
+{% set pool_need = requirements.get(pool, 0) if pool not in (None, 'core') else 0 %}
+<div id="planner" hx-boost="true" hx-select="#planner" hx-target="#planner" hx-swap="outerHTML"
+     class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
 
-    <!-- Flash Messages -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-      {% if messages %}
-        <div class="mb-4">
-          {% for category, message in messages %}
-            <div class="p-4 rounded shadow-md {{ 'bg-red-100 text-red-700 border-l-4 border-red-500' if category == 'error' else 'bg-blue-100 text-blue-700 border-l-4 border-blue-500' }}">
-              {{ message }}
-            </div>
-            {% if category == 'error' %}
-              <script>
-                alert("{{ message }}");
-              </script>
-            {% endif %}
-          {% endfor %}
+    <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+            <p class="text-sm text-ink-faint">{{ program_name }} · <a href="{{ url_for('select_program') }}" hx-boost="false" class="underline decoration-paper-line underline-offset-2 hover:text-ink">change</a></p>
+            <h1 class="text-2xl font-bold tracking-tight mt-0.5">
+                {% if current_step == 1 %}When can't you be on campus?
+                {% elif current_step == 2 %}Choose your core sections
+                {% elif current_step == 3 %}Choose electives
+                {% else %}Choose NS electives{% endif %}
+            </h1>
         </div>
-      {% endif %}
-    {% endwith %}
-    
-    <!-- Wizard Header -->
-    <div class="mb-6 text-center">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">{{ step_title }}</h1>
-        <div class="flex justify-center items-center gap-2">
-            {% for i in range(1, total_steps + 1) %}
-                <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm
-                    {% if i == current_step %} bg-blue-600 text-white
-                    {% elif i < current_step %} bg-green-500 text-white
-                    {% else %} bg-gray-300 text-gray-600 {% endif %}">
-                    {{ i }}
-                </div>
-                {% if not loop.last %}
-                    <div class="w-8 h-1 bg-gray-300">
-                        <div class="h-full {% if i < current_step %}bg-green-500{% endif %}"></div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-
-    <!-- Navigation Top -->
-    <div class="flex justify-between mb-4">
-        {% if current_step > 1 %}
-            <a href="{{ url_for('schedule', step=current_step-1) }}" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
-                &larr; Back
-            </a>
-        {% else %}
-            <div></div> <!-- Spacer -->
-        {% endif %}
-
-        <div class="flex gap-2">
-             <!-- Clear buttons for current step context could go here -->
-             <form method="post" action="{{ url_for('clear_constraints') }}">
-                <button type="submit" class="text-xs text-red-500 hover:underline">Reset All Selections</button>
-             </form>
-        </div>
-
-        {% if current_step < total_steps %}
-            <a href="{{ url_for('schedule', step=current_step+1) }}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded shadow-lg">
-                Next Step &rarr;
-            </a>
-        {% else %}
-            <form method="get" action="{{ url_for('ac3_schedule') }}">
-                <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded shadow-lg">
-                    Generate Schedule &rarr;
-                </button>
-            </form>
-        {% endif %}
-    </div>
-
-    <!-- Constraints Summary (Collapsible/Compact) -->
-    {% if constraints or no_class_constraints %}
-    <details class="mb-4 bg-white rounded shadow p-2">
-        <summary class="cursor-pointer font-semibold text-gray-700">View Selected Constraints ({{ constraints|length + no_class_constraints|length }})</summary>
-        <div class="mt-2 text-sm grid grid-cols-1 md:grid-cols-2 gap-4">
-            {% if constraints %}
-            <div>
-                <h4 class="font-bold text-gray-600">Courses:</h4>
-                <ul class="list-disc list-inside text-gray-600">
-                    {% for c in constraints %}
-                        <li>{{ c.name }} ({{ c.day }} {{ c.time }})</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
-            {% if no_class_constraints %}
-            <div>
-                <h4 class="font-bold text-gray-600">Blocked Times:</h4>
-                <ul class="list-disc list-inside text-gray-600">
-                    {% for d, t in no_class_constraints %}
-                        <li>{{ d }} {{ t }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
-        </div>
-    </details>
-    {% endif %}
-
-    <!-- Main Schedule Grid -->
-    <div class="overflow-x-auto bg-white rounded-lg shadow">
-        <table class="table-auto border-collapse border w-full">
-          <thead>
-            <tr class="bg-gray-50 text-gray-700">
-              <th class="px-4 py-3 border font-bold text-left w-24">Day</th>
-              {% for slot in all_unique_slots %}
-                <th class="px-4 py-3 border font-bold text-left min-w-[150px]">{{ slot }}</th>
-              {% endfor %}
-            </tr>
-          </thead>
-          <tbody>
-            {% for day in days %}
-              <tr>
-                <td class="px-4 py-2 border font-bold text-gray-800 bg-gray-50">{{ day }}</td>
-    
-                {% for time in all_unique_slots %}
-                  {% set is_available = time in time_slots.get(day, []) %}
-                  
-                  {% if is_available %}
-                      <td class="px-2 py-2 border align-top h-32 relative group transition-colors hover:bg-gray-50">
-                        
-                        <!-- 1. Check No Class Constraint -->
-                        {% set ns_blocked = false %}
-                        {% for nc_day, nc_time in no_class_constraints %}
-                            {% if nc_day == day and nc_time == time %}
-                                {% set ns_blocked = true %}
-                            {% endif %}
-                        {% endfor %}
-
-                        {% if ns_blocked %}
-                            <div class="h-full w-full bg-red-100 border-l-4 border-red-500 p-2 rounded mb-1 flex flex-col justify-between">
-                                <span class="text-xs font-bold text-red-700 uppercase tracking-wide">Blocked</span>
-                                <form method="post" action="{{ url_for('schedule', step=current_step) }}">
-                                    <input type="hidden" name="no_class_day_remove" value="{{ day }}">
-                                    <input type="hidden" name="no_class_time_remove" value="{{ time }}">
-                                    <button type="submit" class="text-xs text-red-600 hover:text-red-800 underline">Unblock</button>
-                                </form>
-                            </div>
-                        {% endif %}
-
-                        <!-- 2. Check Course Constraints -->
-                        {% for c in constraints %}
-                            {% if c.day == day and c.time == time %}
-                                <div class="bg-green-100 border-l-4 border-green-500 p-2 rounded mb-1 shadow-sm">
-                                    <div class="text-xs font-bold text-green-800">{{ c.name }}</div>
-                                    <div class="text-xs text-green-700">{{ c.instructor }}</div>
-                                    <form method="post" action="{{ url_for('schedule', step=current_step) }}" class="mt-1">
-                                        <input type="hidden" name="remove_course_id" value="{{ c.id }}">
-                                        <button type="submit" class="text-xs text-green-600 hover:text-green-800 underline">Remove</button>
-                                    </form>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-
-                        <!-- 3. Show Available Options (Current Step) -->
-                        {% if not ns_blocked %} <!-- Hide options if blocked? Or show them but disabled? Hiding is cleaner. -->
-                            {% set row = schedule.get(time, {}) %}
-                            {% if row.get(day) %}
-                                <div class="space-y-1 mt-1">
-                                    {% for course in row[day] %}
-                                        <!-- Check if this specific course is already selected (in constraints) to hide it from options list -->
-                                        {% set is_selected = false %}
-                                        {% for c in constraints %}
-                                            {% if c.id == course.id %}{% set is_selected = true %}{% endif %}
-                                        {% endfor %}
-
-                                        {% if not is_selected %}
-                                            <form method="post" action="{{ url_for('schedule', step=current_step) }}">
-                                                <input type="hidden" name="course_id" value="{{ course.id }}">
-                                                <button type="submit" class="w-full text-left p-2 rounded border border-gray-200 hover:border-blue-400 hover:bg-blue-50 transition-all shadow-sm bg-white group">
-                                                    <div class="text-xs font-semibold text-gray-800 group-hover:text-blue-700">{{ course.name }}</div>
-                                                    <div class="text-[10px] text-gray-500">{{ course.instructor }}</div>
-                                                </button>
-                                            </form>
-                                        {% endif %}
-                                    {% endfor %}
-                                </div>
-                            {% endif %}
-                        {% endif %}
-
-                        <!-- 4. No Class Toggle (Always visible in Step 1, or if not blocked) -->
-                        {% if current_step == 1 and not ns_blocked %}
-                             <form method="post" action="{{ url_for('schedule', step=current_step) }}" class="absolute bottom-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <input type="hidden" name="no_class_day" value="{{ day }}">
-                                <input type="hidden" name="no_class_time" value="{{ time }}">
-                                <button type="submit" class="bg-gray-200 hover:bg-red-200 text-gray-600 hover:text-red-600 text-xs px-2 py-1 rounded" title="Block this slot">
-                                    Block
-                                </button>
-                            </form>
-                        {% endif %}
-
-                      </td>
-                  {% else %}
-                      <td class="px-2 py-2 border bg-gray-100"></td>
-                  {% endif %}
+        <nav aria-label="Planner steps">
+            <ol class="flex gap-1 text-sm">
+                {% for s in steps %}
+                <li>
+                    <a href="{{ url_for('schedule', step=s.n) }}"
+                       {% if s.n == current_step %}aria-current="step"{% endif %}
+                       class="flex items-center gap-2 px-3 py-1.5 rounded-full border {{ 'bg-ink text-white border-ink' if s.n == current_step else 'bg-paper-card border-paper-line text-ink-soft hover:border-ink-faint' }}">
+                        <span class="font-mono text-xs">{{ s.n }}</span><span class="hidden sm:inline">{{ s.label }}</span>
+                    </a>
+                </li>
                 {% endfor %}
-    
-              </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+            </ol>
+        </nav>
     </div>
 
-    <!-- Navigation Bottom -->
-    <div class="flex justify-between mt-6">
-        {% if current_step > 1 %}
-            <a href="{{ url_for('schedule', step=current_step-1) }}" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded text-lg">
-                &larr; Back
-            </a>
+    <p class="mt-3 text-ink-soft max-w-3xl leading-relaxed">
+        {% if current_step == 1 %}
+        Click any hour you can't attend. Sections that meet during a blocked hour are left out of every timetable. Skip this if you're free all week.
+        {% elif current_step == 2 %}
+        Click a section to lock it in. Courses you don't pick are still in every timetable, filled with whichever section fits, so only pick the ones you've decided on.
+        {% elif pool_need %}
+        Your semester needs <strong class="text-ink">{{ pool_need }}</strong> {{ 'course' if pool_need == 1 else 'courses' }} from this list.
+        Pick {{ pool_need }} to lock them in, pick more to give the planner a shortlist, or pick none and let it choose from all of them.
         {% else %}
-            <div></div>
+        {{ program_name }} doesn't need any {{ step.label|lower }} this semester, so you can skip this step.
         {% endif %}
+    </p>
 
-        {% if current_step < total_steps %}
-            <a href="{{ url_for('schedule', step=current_step+1) }}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded shadow-lg text-lg">
-                Next Step &rarr;
-            </a>
-        {% else %}
-            <form method="get" action="{{ url_for('ac3_schedule') }}">
-                <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded shadow-lg text-lg">
-                    Generate Schedule &rarr;
-                </button>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}
+    <p role="alert" class="mt-4 text-sm rounded-lg px-4 py-3 border {{ 'bg-red-50 border-red-200 text-red-800' if category == 'error' else 'bg-accent-soft border-accent/20 text-accent-dark' }}">{{ message }}</p>
+    {% endfor %}
+    {% endwith %}
+
+    <div class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem] items-start">
+
+        <div class="min-w-0 space-y-6">
+            <div class="bg-paper-card border border-paper-line rounded-xl overflow-x-auto">
+                <table class="w-full min-w-[46rem] border-collapse text-sm table-fixed">
+                    <caption class="sr-only">Weekly timetable, days across, time blocks down</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="w-20 p-2 text-left text-xs font-medium text-ink-faint border-b border-paper-line">Time</th>
+                            {% for day in days %}
+                            <th scope="col" class="p-2 text-left text-xs font-semibold border-b border-l border-paper-line">{{ day[:3] }}<span class="hidden xl:inline">{{ day[3:] }}</span></th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for slot in grid_slots %}
+                        {% set parts = slot.split('-') %}
+                        <tr>
+                            <th scope="row" class="p-2 align-top text-left font-mono text-xs font-normal text-ink-soft border-b border-paper-line whitespace-nowrap">
+                                {{ parts[0] }}<br><span class="text-ink-faint">{{ parts[1] }}</span>
+                            </th>
+                            {% for day in days %}
+                            {% set is_blocked = (day ~ '|' ~ slot) in blocked %}
+                            <td class="p-1 align-top border-b border-l border-paper-line {{ 'blocked-cell' if is_blocked }}">
+                                {% if current_step == 1 %}
+                                <form method="post">
+                                    {% if is_blocked %}
+                                    <input type="hidden" name="no_class_day_remove" value="{{ day }}">
+                                    <input type="hidden" name="no_class_time_remove" value="{{ slot }}">
+                                    {% else %}
+                                    <input type="hidden" name="no_class_day" value="{{ day }}">
+                                    <input type="hidden" name="no_class_time" value="{{ slot }}">
+                                    {% endif %}
+                                    <button type="submit" aria-pressed="{{ 'true' if is_blocked else 'false' }}"
+                                            aria-label="{{ 'Unblock' if is_blocked else 'Block' }} {{ day }} {{ slot }}"
+                                            class="w-full h-12 rounded-md text-xs font-medium {{ 'text-ink-soft hover:bg-white/60' if is_blocked else 'text-transparent hover:text-ink-faint hover:bg-paper focus-visible:text-ink-faint' }}">
+                                        {{ 'Blocked' if is_blocked else 'Block' }}
+                                    </button>
+                                </form>
+                                {% else %}
+                                <div class="space-y-1 min-h-[3rem]">
+                                    {% if dense %}
+                                    {% set here = cells[slot][day] %}
+                                    {% for course in here if course.id in picked_ids %}
+                                    <div class="chip tone-{{ course.name|tone }} rounded-md px-2 py-1 leading-tight ring-2 ring-ink" title="{{ course.name }} · {{ course.instructor }}">
+                                        <span class="block text-xs font-medium truncate">{{ course.name }}</span>
+                                        <span class="block text-[11px] opacity-80 truncate">{{ course.instructor }}</span>
+                                    </div>
+                                    {% endfor %}
+                                    {% set open_here = here|rejectattr('id', 'in', picked_ids)|rejectattr('id', 'in', unavailable_ids)|list %}
+                                    {% if open_here %}<p class="px-1 text-[11px] text-ink-faint">{{ open_here|length }} {{ 'section' if open_here|length == 1 else 'sections' }}</p>{% endif %}
+                                    {% else %}
+                                    {% for course in cells[slot][day] %}
+                                    {% set picked = course.id in picked_ids %}
+                                    {% set unavailable = course.id in unavailable_ids %}
+                                    <form method="post">
+                                        <input type="hidden" name="{{ 'remove_course_id' if picked else 'course_id' }}" value="{{ course.id }}">
+                                        <button type="submit" {{ 'disabled' if unavailable and not picked }}
+                                                aria-pressed="{{ 'true' if picked else 'false' }}"
+                                                title="{{ course.name }} · {{ course.instructor }} · {{ course.day }} {{ course.time }}{{ ' · ' ~ course.room if course.room }}{{ ' · meets during a blocked hour' if unavailable }}"
+                                                class="chip tone-{{ course.name|tone }} w-full text-left rounded-md px-2 py-1 leading-tight {{ 'ring-2 ring-ink' if picked }} {{ 'opacity-40 line-through cursor-not-allowed' if unavailable and not picked else 'hover:brightness-95' }}">
+                                            <span class="flex items-start justify-between gap-1">
+                                                <span class="block text-xs font-medium truncate">{{ course.name }}</span>
+                                                {% if picked %}<svg aria-hidden="true" class="shrink-0 mt-0.5" width="12" height="12" viewBox="0 0 12 12"><path d="M2 6.5l2.5 2.5L10 3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>{% endif %}
+                                            </span>
+                                            <span class="block text-[11px] opacity-80 truncate">{{ course.instructor }}</span>
+                                            {% if course.time != slot %}<span class="block font-mono text-[10px] opacity-70">{{ course.time }}</span>{% endif %}
+                                        </button>
+                                    </form>
+                                    {% endfor %}
+                                    {% endif %}
+                                </div>
+                                {% endif %}
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% if current_step > 1 and dense %}
+            <form method="get" action="{{ url_for('schedule') }}" role="search"
+                  hx-get="{{ url_for('schedule') }}" hx-trigger="input changed delay:300ms from:#course-search, submit"
+                  hx-push-url="true" class="bg-paper-card border border-paper-line rounded-xl p-4">
+                <input type="hidden" name="step" value="{{ current_step }}">
+                <label for="course-search" class="block font-semibold">Find a course</label>
+                <p class="text-xs text-ink-faint mt-0.5 mb-2">{{ section_total }} courses are offered in this pool. Search by course name or instructor; the grid above shows how many open sections meet in each block.</p>
+                <input id="course-search" type="search" name="q" value="{{ query }}" autocomplete="off" placeholder="e.g. Physics, Statistics"
+                       class="w-full rounded-lg border border-paper-line bg-white px-3 py-2">
+                <p class="text-xs text-ink-faint mt-2" aria-live="polite">
+                    {% if query %}{{ match_count }} {{ 'match' if match_count == 1 else 'matches' }}{% if match_count > sections|length %}, showing the first {{ sections|length }}{% endif %}.
+                    {% else %}Showing {{ sections|length }} of {{ section_total }}. Search to narrow the list.{% endif %}
+                </p>
             </form>
-        {% endif %}
-    </div>
+            {% endif %}
 
-  </div>
-</body>
-</html>
+            {% if current_step > 1 and sections %}
+            <details class="bg-paper-card border border-paper-line rounded-xl" {{ 'open' if current_step > 2 }}>
+                <summary class="cursor-pointer px-4 py-3 font-medium">{% if dense %}Matching courses{% else %}All {{ sections|length }} courses as a list{% endif %}</summary>
+                <ul class="divide-y divide-paper-line border-t border-paper-line">
+                    {% for name, by_id in sections.items() %}
+                    <li class="px-4 py-3">
+                        <p class="font-medium flex items-center gap-2"><span class="chip tone-{{ name|tone }} w-1 h-4 rounded-sm" aria-hidden="true"></span>{{ name }}</p>
+                        <ul class="mt-2 grid gap-2 sm:grid-cols-2">
+                            {% for cid, meetings in by_id.items() %}
+                            {% set picked = cid in picked_ids %}
+                            {% set unavailable = cid in unavailable_ids %}
+                            <li>
+                                <form method="post" class="flex items-center justify-between gap-3 rounded-lg border px-3 py-2 {{ 'border-ink' if picked else 'border-paper-line' }}">
+                                    <div class="min-w-0 text-sm">
+                                        <p class="truncate">{{ meetings[0].instructor }}</p>
+                                        <p class="font-mono text-xs text-ink-faint">{% for m in meetings %}{{ m.day[:3] }} {{ m.time }}{{ ', ' if not loop.last }}{% endfor %}</p>
+                                    </div>
+                                    <input type="hidden" name="{{ 'remove_course_id' if picked else 'course_id' }}" value="{{ cid }}">
+                                    {% if unavailable and not picked %}
+                                    <span class="text-xs text-ink-faint whitespace-nowrap">Blocked hour</span>
+                                    {% else %}
+                                    <button type="submit" aria-label="{{ 'Remove' if picked else 'Pick' }} {{ name }}, {{ meetings[0].instructor }}"
+                                            class="text-sm font-medium whitespace-nowrap px-3 py-1 rounded-md {{ 'bg-ink text-white' if picked else 'border border-paper-line hover:border-ink-faint' }}">
+                                        {{ 'Picked' if picked else 'Pick' }}
+                                    </button>
+                                    {% endif %}
+                                </form>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </details>
+            {% elif current_step > 1 and query %}
+            <p class="text-sm text-ink-faint">No course or instructor matches "{{ query }}".</p>
+            {% elif current_step > 1 %}
+            <p class="text-sm text-ink-faint">No sections are offered for this step.</p>
+            {% endif %}
+        </div>
+
+        <aside class="space-y-4 lg:sticky lg:top-4" aria-label="Your plan">
+            <section class="bg-paper-card border border-paper-line rounded-xl p-4">
+                <h2 class="font-semibold">Your semester</h2>
+                {% set picked_names = picks|map(attribute='name')|list %}
+                <ul class="mt-3 space-y-1.5 text-sm">
+                    {% for name in core_names %}
+                    <li class="flex items-center justify-between gap-2">
+                        <span class="truncate">{{ name }}</span>
+                        <span class="text-xs whitespace-nowrap {{ 'text-ink font-medium' if name in picked_names else 'text-ink-faint' }}">{{ 'locked' if name in picked_names else 'any section' }}</span>
+                    </li>
+                    {% endfor %}
+                    {% for pool_name, need in requirements.items() %}
+                    {% set got = picks|selectattr('program', 'equalto', pool_name)|map(attribute='name')|unique|list|length %}
+                    <li class="flex items-center justify-between gap-2 pt-1.5 border-t border-paper-line">
+                        <span>{{ pool_name }} × {{ need }}</span>
+                        <span class="text-xs whitespace-nowrap text-ink-faint">
+                            {% if got == 0 %}planner chooses{% elif got < need %}{{ got }} locked, {{ need - got }} open{% elif got == need %}locked{% else %}best {{ need }} of {{ got }}{% endif %}
+                        </span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            {% if clashes %}
+            <section role="alert" class="rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900">
+                <h2 class="font-semibold">These picks overlap</h2>
+                <ul class="mt-1.5 space-y-1">
+                    {% for a, b in clashes %}
+                    <li>{{ a.name }} ({{ a.instructor }}) and {{ b.name }} ({{ b.instructor }})</li>
+                    {% endfor %}
+                </ul>
+                <p class="mt-1.5">No timetable can hold both. Remove one, or allow partial timetables.</p>
+            </section>
+            {% endif %}
+
+            <section class="bg-paper-card border border-paper-line rounded-xl p-4">
+                <div class="flex items-center justify-between">
+                    <h2 class="font-semibold">Picked sections <span class="font-normal text-ink-faint">({{ picks|length }})</span></h2>
+                    {% if picks %}
+                    <form method="post" action="{{ url_for('clear_constraints') }}">
+                        <input type="hidden" name="step" value="{{ current_step }}">
+                        <button type="submit" class="text-xs text-ink-faint hover:text-red-700">Clear all</button>
+                    </form>
+                    {% endif %}
+                </div>
+                {% if picks %}
+                <ul class="mt-3 space-y-1.5">
+                    {% for c in picks %}
+                    <li class="chip tone-{{ c.name|tone }} rounded-md pl-2.5 pr-1 py-1.5 flex items-center justify-between gap-2 text-sm">
+                        <span class="min-w-0">
+                            <span class="block truncate font-medium">{{ c.name }}</span>
+                            <span class="block text-xs opacity-80 truncate">{{ c.instructor }}</span>
+                        </span>
+                        <form method="post">
+                            <input type="hidden" name="remove_course_id" value="{{ c.id }}">
+                            <button type="submit" aria-label="Remove {{ c.name }}, {{ c.instructor }}" class="p-1.5 rounded hover:bg-white/60">
+                                <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.6"/></svg>
+                            </button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="mt-2 text-sm text-ink-faint">None yet. That's fine: the planner will consider every section.</p>
+                {% endif %}
+            </section>
+
+            <section class="bg-paper-card border border-paper-line rounded-xl p-4 text-sm">
+                <div class="flex items-center justify-between">
+                    <h2 class="font-semibold">Blocked hours <span class="font-normal text-ink-faint">({{ no_class_constraints|length }})</span></h2>
+                    {% if no_class_constraints %}
+                    <form method="post" action="{{ url_for('clear_no_class_constraints') }}">
+                        <input type="hidden" name="step" value="{{ current_step }}">
+                        <button type="submit" class="text-xs text-ink-faint hover:text-red-700">Clear all</button>
+                    </form>
+                    {% endif %}
+                </div>
+                {% if no_class_constraints %}
+                <p class="mt-2 text-ink-soft">{% for d, t in no_class_constraints %}{{ d[:3] }} {{ t.split('-')[0] }}{{ ', ' if not loop.last }}{% endfor %}</p>
+                {% elif current_step != 1 %}
+                <p class="mt-2 text-ink-faint">None. <a href="{{ url_for('schedule', step=1) }}" class="underline underline-offset-2">Block some hours</a></p>
+                {% endif %}
+            </section>
+
+            <section class="bg-paper-card border border-paper-line rounded-xl p-4 space-y-3">
+                <form method="post" class="flex items-start gap-3 text-sm">
+                    <input type="hidden" name="toggle_partial" value="1">
+                    <button type="submit" role="switch" aria-checked="{{ 'true' if allow_partial else 'false' }}" aria-labelledby="partial-label"
+                            class="mt-0.5 shrink-0 w-9 h-5 rounded-full relative {{ 'bg-accent' if allow_partial else 'bg-paper-line' }}">
+                        <span class="absolute top-0.5 {{ 'left-[1.15rem]' if allow_partial else 'left-0.5' }} w-4 h-4 rounded-full bg-white shadow"></span>
+                    </button>
+                    <span>
+                        <span id="partial-label" class="font-medium">Also show partial timetables</span>
+                        <span class="block text-ink-faint text-xs mt-0.5">Ones that leave a course out. They're shown anyway if nothing complete fits.</span>
+                    </span>
+                </form>
+
+                <form method="post" action="{{ url_for('ac3_schedule') }}" hx-boost="false"
+                      onsubmit="const b=this.querySelector('button'); b.disabled=true; b.textContent='Searching timetables…';">
+                    <button type="submit" class="w-full bg-accent text-white py-2.5 rounded-lg font-medium hover:bg-accent-dark disabled:opacity-70">
+                        Find timetables
+                    </button>
+                </form>
+                <div class="flex justify-between text-sm">
+                    {% if current_step > 1 %}
+                    <a href="{{ url_for('schedule', step=current_step - 1) }}" class="text-ink-soft hover:text-ink">&larr; Back</a>
+                    {% else %}<span></span>{% endif %}
+                    {% if current_step < total_steps %}
+                    <a href="{{ url_for('schedule', step=current_step + 1) }}" class="font-medium text-accent hover:text-accent-dark">Next: {{ steps[current_step].label }} &rarr;</a>
+                    {% endif %}
+                </div>
+            </section>
+        </aside>
+    </div>
+</div>
+{% endblock %}

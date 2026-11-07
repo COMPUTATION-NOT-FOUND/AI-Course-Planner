@@ -68,5 +68,11 @@
             "17:30-18:45",
             "19:00-20:15"
         ]
+    },
+    "term": {
+        "start": "2026-08-24",
+        "end": "2026-12-12",
+        "utc_offset_hours": 5,
+        "note": "Assumed Fall 2026 dates; update from the IBA academic calendar."
     }
 }

@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, session, redirect, url_for, flash
+from flask import (Flask, Response, abort, flash, redirect, render_template, request,
+                   session, url_for)
 from flask_session import Session
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -7,7 +8,9 @@ import io
 import json
 from typing import List, Dict
 from collections import defaultdict
-from datetime import datetime
+from datetime import date, datetime, timedelta, timezone
+import hmac
+import zlib
 import os
 from cpsat_solver import ScheduleSolver, parse_slot
 
@@ -64,6 +67,60 @@ def slot_span(time_str, grid_slots):
             covered.append(slot)
     return covered or [time_str]
 
+def overlaps_blocked(meetings, no_class):
+    """True if any 'Day HH:MM-HH:MM' meeting overlaps one of the blocked (day, slot) cells.
+
+    Compared by time rather than by string, so a 08:30-11:15 double class is ruled
+    out when the student blocks 10:00-11:15 on that day.
+    """
+    blocks = [parse_slot('%s %s' % (d, t)) for d, t in no_class]
+    for meeting in meetings:
+        m = parse_slot(meeting)
+        if not m:
+            continue
+        for b in blocks:
+            if b and b[0] == m[0] and b[1] < m[2] and m[1] < b[2]:
+                return True
+    return False
+
+
+def load_program_requirements(program_name):
+    """Elective pools a program needs, e.g. {'Elective': 2, 'NS-Elective': 1}."""
+    try:
+        with open('program_requirements.json', 'r') as f:
+            all_requirements = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+    reqs = all_requirements.get(program_name) or all_requirements.get(program_name.replace(' ', '')) or {}
+    return {k: v for k, v in reqs.items() if isinstance(v, int) and v > 0}
+
+
+def load_term():
+    """Term dates for the calendar export. Edit config.json to match the academic calendar."""
+    try:
+        with open('config.json', 'r') as f:
+            term = json.load(f).get('term', {})
+    except (FileNotFoundError, json.JSONDecodeError):
+        term = {}
+    start = date.fromisoformat(term.get('start', '2026-08-24'))
+    end = date.fromisoformat(term.get('end', '2026-12-12'))
+    return start, end, float(term.get('utc_offset_hours', 5))
+
+
+TONES = 8
+
+
+def course_tone(name):
+    """A stable colour index per course name, so a course keeps its colour on every page."""
+    return zlib.crc32((name or '').encode('utf-8')) % TONES
+
+
+def display_name(var):
+    """'Elective 2' -> 'Elective'; core course names pass through."""
+    head, _, tail = (var or '').rpartition(' ')
+    return head if head in ('Elective', 'NS-Elective') and tail.isdigit() else var
+
+
 app = Flask(__name__)
 # Security: Use env var for secret key in production
 app.secret_key = os.environ.get("SECRET_KEY", "super_secret_fallback_key_for_dev_only")
@@ -81,10 +138,39 @@ app.config["SESSION_TYPE"] = "filesystem"
 app.config["SESSION_PERMANENT"] = False
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload size
 Session(app)
+app.jinja_env.filters['tone'] = course_tone
+app.jinja_env.filters['display_name'] = display_name
+app.jinja_env.filters['dict_without'] = lambda d, key: {k: v for k, v in d.items() if k != key}
+
+# The data editor rewrites the JSON files the app runs on, so a public deploy only
+# exposes it when ADMIN_TOKEN is set: open /admin?token=<value> once per session.
+ADMIN_TOKEN = os.environ.get("ADMIN_TOKEN", "")
 
 
-@app.route('/', methods=['GET', 'POST'])
-def root():
+def admin_allowed():
+    if not ADMIN_TOKEN:
+        return app.debug
+    supplied = request.args.get('token', '')
+    if supplied and hmac.compare_digest(supplied, ADMIN_TOKEN):
+        session['is_admin'] = True
+    return session.get('is_admin', False)
+
+
+@app.route('/')
+def home():
+    loader = CourseDataLoader(['program_core.json', 'electives.json', 'ns_electives.json'])
+    courses = loader.load_courses()
+    programs = {c.program for c in courses} - {'Elective', 'NS-Elective'}
+    return render_template('home.html',
+                           section_count=len({c.id for c in courses}),
+                           program_count=len(programs),
+                           has_session=bool(session.get('program_name')))
+
+
+@app.route('/admin', methods=['GET', 'POST'])
+def admin():
+    if not admin_allowed():
+        abort(404)
     message = None
     error = None
     requirements_path = 'program_requirements.json'
@@ -224,7 +310,7 @@ def root():
     except FileNotFoundError:
         config_content = '{\n    "days": [],\n    "time_slots": []\n}'
 
-    return render_template('landing.html', 
+    return render_template('admin.html',
                            requirements_content=requirements_content, 
                            schedule_content=schedule_content,
                            ns_electives_content=ns_electives_content,
@@ -385,10 +471,7 @@ class CourseDataLoader:
         return course_id_mapping 
     
     def get_course_id_constraint_mapping(self):
-        from collections import defaultdict
-
-
-        course_id_constraint_mapping = defaultdict(lambda: {'constraints': [], 'course_name': None, 'instructor': None})
+        course_id_constraint_mapping = defaultdict(lambda: {'constraints': [], 'course_name': None, 'instructor': None, 'room': None})
         course_id_mapping = self.get_course_id_mapping()
 
         for course_id, courses in course_id_mapping.items():
@@ -396,6 +479,9 @@ class CourseDataLoader:
                 if course_id_constraint_mapping[course_id]['course_name'] is None:
                     course_id_constraint_mapping[course_id]['course_name'] = course.name
                 
+                if not course_id_constraint_mapping[course_id]['room']:
+                    course_id_constraint_mapping[course_id]['room'] = course.room
+
                 if course_id_constraint_mapping[course_id]['instructor'] is None:
                     course_id_constraint_mapping[course_id]['instructor'] = course.instructor
 
@@ -446,64 +532,19 @@ def get_no_class_constraints_from_session():
     """
     Returns a list of (day, time) tuples stored in session under 'no_class'.
     """
-    return session.get('no_class', [])
+    return [tuple(x) for x in session.get('no_class', [])]
 
 def save_no_class_constraints_to_session(no_class_list):
     """
     Persists the list of (day, time) tuples to session['no_class'].
     """
-    session['no_class'] = no_class_list
+    session['no_class'] = [list(x) for x in no_class_list]
     session.modified = True
 
 
-from datetime import datetime
-
-def parse_time_slot(time_input):
-    """
-    Accept either:
-      - A string "Day HH-HH" or "Day HH–HH"
-      - A list/tuple [Day, start_hour, end_hour]
-    Returns (day, start_datetime, end_datetime).
-    """
-    # Case 1: already a Day/HH-HH string
-    if isinstance(time_input, str):
-        day, time_range = time_input.strip().split()
-        start_str, end_str = time_range.replace('–', '-').split('-')
-        start = datetime.strptime(start_str.strip(), '%H')
-        end = datetime.strptime(end_str.strip(), '%H')
-
-    # Case 2: list/tuple [Day, start, end]
-    elif isinstance(time_input, (list, tuple)) and len(time_input) == 3:
-        day = str(time_input[0]).strip()
-        start = datetime.strptime(str(time_input[1]).strip(), '%H')
-        end   = datetime.strptime(str(time_input[2]).strip(), '%H')
-
-    else:
-        raise ValueError(f"Invalid time slot format: {time_input!r}")
-
-    return day, start, end
-
-
-def check_time_conflict(times1, times2):
-    """
-    Given two lists of time slots (each slot either a string or [day, start, end]),
-    returns True if any slot in times1 overlaps any in times2 on the same day.
-    """
-    # Parse into canonical (day, start, end) tuples
-    slots1 = [parse_time_slot(t) for t in times1]
-    slots2 = [parse_time_slot(t) for t in times2]
-
-    # Check pairwise overlap
-    for day1, s1, e1 in slots1:
-        for day2, s2, e2 in slots2:
-            if day1 == day2 and (s1 < e2 and s2 < e1):
-                return True
-
-    return False
 
 @app.route('/select_program', methods=['GET', 'POST'])
 def select_program():
-    session.clear()
     course_loader = CourseDataLoader(['program_core.json'])
     available_programs = sorted(list(course_loader.get_available_programs()))
     # Offer the default first so it heads the datalist.
@@ -522,6 +563,11 @@ def select_program():
                     matched_program = prog
                     break
             
+            if matched_program not in available_programs:
+                flash("We don't have a timetable for \"%s\". Pick one from the list, e.g. %s."
+                      % (user_input, DEFAULT_PROGRAM), "error")
+                return redirect(url_for('select_program'))
+            session.clear()
             session['program_name'] = matched_program
             # Redirect to the schedule route after selecting the program
             return redirect(url_for('schedule'))
@@ -532,72 +578,39 @@ def select_program():
                            default_program=default_program)
 
 
+STEPS = [
+    {'n': 1, 'label': 'Block times', 'files': [], 'pool': None},
+    {'n': 2, 'label': 'Core courses', 'files': ['program_core.json'], 'pool': 'core'},
+    {'n': 3, 'label': 'Electives', 'files': ['electives.json'], 'pool': 'Elective'},
+    {'n': 4, 'label': 'NS electives', 'files': ['ns_electives.json'], 'pool': 'NS-Elective'},
+]
+
+
+DENSE_LIMIT = 40
+LIST_LIMIT = 30
+
+
 @app.route('/schedule', methods=['GET', 'POST'])
 def schedule():
     program_name = session.get('program_name', None)
     if not program_name:
         return redirect(url_for('select_program'))
 
-    # Determine current step
     try:
-        current_step = int(request.args.get('step', 1))
+        current_step = min(max(int(request.args.get('step', 1)), 1), len(STEPS))
     except ValueError:
         current_step = 1
-    
-    total_steps = 4
-    
-    # Determine files and target program based on step
-    files_to_load = []
-    target_program = None
-    step_title = ""
+    step = STEPS[current_step - 1]
+    target_program = program_name if step['pool'] == 'core' else step['pool']
 
-    if current_step == 1:
-        files_to_load = [] # No courses, just time slots
-        target_program = None
-        step_title = "Step 1: Define No-Class Constraints"
-    elif current_step == 2:
-        files_to_load = ['program_core.json']
-        target_program = program_name
-        step_title = "Step 2: Select Core Courses"
-    elif current_step == 3:
-        files_to_load = ['electives.json']
-        target_program = 'Elective'
-        step_title = "Step 3: Select Electives"
-    elif current_step == 4:
-        files_to_load = ['ns_electives.json']
-        target_program = 'NS-Elective'
-        step_title = "Step 4: Select NS Electives"
-
-    course_loader = CourseDataLoader(files_to_load)
-    # Highlighted IDs might need to be loaded from all files or just current? 
-    # Let's load from current to be safe, or we can load global if we want consistent colors.
-    # For simplicity, load from current.
-    highlighted_course_ids = course_loader.get_highlighted_course_ids()
-    
-    # We need all_courses for the POST constraint addition to work.
-    # If we only load current step files, we can only add constraints from current step.
-    # This is correct for the wizard flow.
+    course_loader = CourseDataLoader(step['files'])
     all_courses = course_loader.load_courses()
-
     constraints = get_constraints_from_session()
     no_class_constraints = get_no_class_constraints_from_session()
 
-    # Load schedule for the target program of this step
-    schedule = defaultdict(lambda: defaultdict(list))
-    if target_program:
-        schedule = course_loader.get_schedule(target_program)
-
     if request.method == 'POST':
-        # Handle Constraint Addition (Add to Session)
         if 'course_id' in request.form:
             course_id = request.form['course_id']
-            # We need to find the course object. 
-            # If it's not in `all_courses` (current step), we can't add it.
-            # But wait, if I'm in Step 3 and I remove a Step 2 constraint, 
-            # I need `constraints` list to handle it.
-            # The removal logic uses `constraints` list which is loaded from session.
-            # So removal works fine.
-            # Addition only happens from the displayed options (which are in `all_courses`).
             for c in all_courses:
                 if c.id == course_id and c not in constraints:
                     constraints.append(c)
@@ -609,86 +622,116 @@ def schedule():
             save_constraints_to_session(constraints)
 
         if 'no_class_day' in request.form and 'no_class_time' in request.form:
-            day = request.form['no_class_day']
-            time = request.form['no_class_time']
-            if (day, time) not in no_class_constraints:
-                no_class_constraints.append((day, time))
+            cell = (request.form['no_class_day'], request.form['no_class_time'])
+            if cell not in no_class_constraints:
+                no_class_constraints.append(cell)
                 save_no_class_constraints_to_session(no_class_constraints)
 
         if 'no_class_day_remove' in request.form and 'no_class_time_remove' in request.form:
-            rd, rt = request.form['no_class_day_remove'], request.form['no_class_time_remove']
-            no_class_constraints = [(d, t) for (d, t) in no_class_constraints if not (d == rd and t == rt)]
+            cell = (request.form['no_class_day_remove'], request.form['no_class_time_remove'])
+            no_class_constraints = [c for c in no_class_constraints if c != cell]
             save_no_class_constraints_to_session(no_class_constraints)
 
         if 'toggle_partial' in request.form:
             session['allow_partial'] = not session.get('allow_partial', False)
             session.modified = True
-            
-        # Redirect to same step after POST
-        return redirect(url_for('schedule', step=current_step))
-    
-    # Load Configuration (Time Slots and Days)
-    time_slots = {}
-    days = []
-    all_unique_slots = []
-    
-    try:
-        with open('config.json', 'r') as f:
-            config = json.load(f)
-            days = config.get('days', [])
-            raw_slots = config.get('time_slots', {})
-            
-            if isinstance(raw_slots, list):
-                for d in days:
-                    time_slots[d] = raw_slots
-                all_unique_slots = sorted(list(set(raw_slots)))
-            else:
-                time_slots = raw_slots
-                unique = set()
-                for d_slots in time_slots.values():
-                    unique.update(d_slots)
-                all_unique_slots = sorted(list(unique))
-                
-    except (FileNotFoundError, json.JSONDecodeError):
-        default_slots = ['08:30-09:45','10:00-11:15','11:30-12:45','13:00-14:15','14:30-15:45','16:00-17:15','17:30-18:45']
-        days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
-        all_unique_slots = default_slots
-        for d in days:
-            time_slots[d] = default_slots
+
+        return redirect(url_for('schedule', step=current_step, q=request.args.get('q') or None))
+
+    days, grid_slots = load_grid_layout()
+
+    # slot -> day -> sections meeting in that block. A meeting that runs across
+    # several blocks, or starts off-grid, is listed in every block it overlaps.
+    cells = defaultdict(lambda: defaultdict(list))
+    unavailable_ids = set()
+    # course name -> section id -> its meetings, for the list view under the calendar
+    sections = defaultdict(lambda: defaultdict(list))
+    if target_program:
+        mapping = course_loader.get_course_id_constraint_mapping()
+        for course in course_loader.load_courses_by_program(target_program):
+            for column in slot_span(normalize(course.time), grid_slots):
+                cells[column][normalize(course.day)].append(course)
+            sections[course.name][course.id].append(course)
+            if overlaps_blocked(mapping[course.id]['constraints'], no_class_constraints):
+                unavailable_ids.add(course.id)
+
+    picked_ids = {c.id for c in constraints}
+    requirements = load_program_requirements(program_name)
+    core_names = sorted({c.name for c in CourseDataLoader(['program_core.json'])
+                         .load_courses_by_program(program_name)})
+
+    # Picks that meet at the same time as another pick can never share a schedule.
+    clashes = []
+    picks = {}
+    for c in constraints:
+        picks.setdefault(c.id, c)
+    meetings = {cid: ['%s %s' % (normalize(c.day), normalize(c.time)) for c in constraints if c.id == cid]
+                for cid in picks}
+    ids = sorted(picks)
+    for i, a in enumerate(ids):
+        for b in ids[i + 1:]:
+            if picks[a].name == picks[b].name:
+                continue
+            pa = [parse_slot(m) for m in meetings[a]]
+            pb = [parse_slot(m) for m in meetings[b]]
+            if any(x and y and x[0] == y[0] and x[1] < y[2] and y[1] < x[2] for x in pa for y in pb):
+                clashes.append((picks[a], picks[b]))
+
+    # Big pools (the NS-elective list has hundreds of courses) are too many to
+    # draw as chips, so the grid shows counts and the list is searched instead.
+    dense = len(sections) > DENSE_LIMIT
+    query = request.args.get('q', '').strip()
+    listed = sorted(sections.items())
+    if dense:
+        if query:
+            needle = query.lower()
+            listed = [(name, by_id) for name, by_id in listed
+                      if needle in name.lower()
+                      or any(needle in m[0].instructor.lower() for m in by_id.values())]
+        # Always list picked courses, then the first matches.
+        picked_names = {c.name for c in constraints}
+        listed.sort(key=lambda item: item[0] not in picked_names)
+    match_count = len(listed)
+    if dense:
+        listed = listed[:LIST_LIMIT]
 
     return render_template(
         'schedule.html',
+        dense=dense,
+        query=query,
+        match_count=match_count,
         program_name=program_name,
-        schedule=schedule,
-        highlighted_course_ids=highlighted_course_ids,
-        constraints=constraints,
-        no_class_constraints=no_class_constraints,
-        allow_partial=session.get('allow_partial', False),
-        time_slots=time_slots,
-        all_unique_slots=all_unique_slots,
-        days=days,
+        steps=STEPS,
+        step=step,
         current_step=current_step,
-        total_steps=total_steps,
-        step_title=step_title
+        total_steps=len(STEPS),
+        days=days,
+        grid_slots=grid_slots,
+        cells=cells,
+        picked_ids=picked_ids,
+        unavailable_ids=unavailable_ids,
+        picks=list(picks.values()),
+        no_class_constraints=no_class_constraints,
+        blocked={'%s|%s' % c for c in no_class_constraints},
+        allow_partial=session.get('allow_partial', False),
+        requirements=requirements,
+        core_names=core_names,
+        clashes=clashes,
+        sections={name: dict(by_id) for name, by_id in listed},
+        section_total=len(sections),
     )
 
 
 @app.route('/clear_constraints', methods=['POST'])
 def clear_constraints():
     save_constraints_to_session([])
-    return redirect(url_for('schedule'))
+    return redirect(url_for('schedule', step=request.form.get('step', 2)))
 
 @app.route('/clear_no_class_constraints', methods=['POST'])
 def clear_no_class_constraints():
     save_no_class_constraints_to_session([])
-    return redirect(url_for('schedule'))
+    return redirect(url_for('schedule', step=request.form.get('step', 1)))
 
-
-
-@app.route('/quick_schedule_no_constraints', methods=['POST'])
-def quick_schedule_no_constraints():
-    flash("Please select at least one course to proceed.", "error")
-    return redirect(url_for('schedule', step=2))
 
 
 @app.route('/ac3_schedule', methods=['GET','POST'])
@@ -701,48 +744,26 @@ def ac3_schedule():
     session_course_constraints = get_constraints_from_session() 
     session_no_class = get_no_class_constraints_from_session()
     
-    # Validation: Ensure at least one course constraint is selected
-    if not session_course_constraints:
-        flash("To prevent computational overload, please select at least one course constraint.", "error")
-        return redirect(url_for('schedule', step=2))
-
     allow_partial = session.get('allow_partial', False)
+    program_reqs = load_program_requirements(program_name)
 
-    # 1. Load Program Requirements
-    try:
-        with open('program_requirements.json', 'r') as f:
-            all_requirements = json.load(f)
-            program_reqs = all_requirements.get(program_name, {})
-            if not program_reqs:
-                program_reqs = all_requirements.get(program_name.replace(" ", ""), {})
-    except FileNotFoundError:
-        program_reqs = {}
-    
-    print(f"DEBUG: Program Requirements for {program_name}: {program_reqs}")
+    app.logger.debug(f"Program Requirements for {program_name}: {program_reqs}")
 
     # 2. Build Domains and Constraint Map
     domains = {}
     full_mapping = course_loader.get_course_id_constraint_mapping()
     active_cid_constraints = {} # Map for AC3 (ID -> Constraints)
     
-    # Prepare forbidden set for O(1) lookup
-    forbidden_slots = {f"{d} {t}" for d, t in session_no_class}
-
-    # Helper to check if a course ID is valid (no conflict with forbidden slots)
+    # A section is ruled out when any of its meetings overlaps a blocked cell.
     def is_id_valid(cid):
-        constraints = full_mapping[cid]['constraints']
-        # If ANY slot matches forbidden, it's invalid
-        for slot in constraints:
-            if slot in forbidden_slots:
-                return False
-        return True
+        return not overlaps_blocked(full_mapping[cid]['constraints'], session_no_class)
 
     pool_slots = defaultdict(list)   # pool -> its slot variables, in order
     locked_vars = set()              # variables pinned to a single user-picked section
 
     # A. Core Courses
     program_courses = course_loader.load_courses_by_program(program_name)
-    print(f"DEBUG: Found {len(program_courses)} raw core courses for {program_name}")
+    app.logger.debug(f"Found {len(program_courses)} raw core courses for {program_name}")
     
     # Group core by name to build domains. Every course the program requires becomes a
     # variable even if the user has blocked all of its sections - the domain is then
@@ -765,18 +786,18 @@ def ac3_schedule():
         else:
             domains[name] = sorted(valid_ids)
             
-    print(f"DEBUG: Constructed Core Domains: {list(domains.keys())}")
+    app.logger.debug(f"Constructed Core Domains: {list(domains.keys())}")
 
     # B. Elective Slots
     for pool_name, count in program_reqs.items():
         pool_courses = course_loader.load_courses_by_program(pool_name)
-        print(f"DEBUG: Found {len(pool_courses)} courses for pool '{pool_name}'")
+        app.logger.debug(f"Found {len(pool_courses)} courses for pool '{pool_name}'")
         if not pool_courses:
             continue
             
         # Filter pool IDs (use set to distinct)
         pool_ids = list({c.id for c in pool_courses if is_id_valid(c.id)})
-        print(f"DEBUG: Valid IDs for '{pool_name}': {len(pool_ids)}")
+        app.logger.debug(f"Valid IDs for '{pool_name}': {len(pool_ids)}")
         
         # Add to active constraint map
         for cid in pool_ids:
@@ -818,7 +839,7 @@ def ac3_schedule():
                 remaining_ids = [pid for pid in pool_ids if pid not in seen_picked]
                 domains[var_name] = remaining_ids
 
-    print(f"DEBUG: Final Domains Keys: {list(domains.keys())}")
+    app.logger.debug(f"Final Domains Keys: {list(domains.keys())}")
 
     def run_solver(partial):
         # A fresh model every time. The old solver reused a domains dict its first
@@ -838,7 +859,7 @@ def ac3_schedule():
 
     # Nothing fits perfectly - fall back to the best partial schedules we can build.
     if not solutions and not allow_partial:
-        print("DEBUG: No complete schedules found. Retrying with partial schedules enabled.")
+        app.logger.debug("No complete schedules found. Retrying with partial schedules enabled.")
         solver = run_solver(True)
         solutions = solver.solve()
         session['auto_partial_fallback'] = True
@@ -852,8 +873,13 @@ def ac3_schedule():
     # is partial - the old count looked only at core courses, so any schedule with
     # electives was reported as complete even when a course was missing.
     session['total_slots'] = len(domains)
+    session['required_vars'] = list(domains.keys())
 
     return redirect(url_for('generated_schedules'))
+
+
+DAY_ORDER = {'Monday': 1, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 4, 'Friday': 5,
+             'Saturday': 6, 'Sunday': 7}
 
 
 def read_priorities(args, max_levels=20):
@@ -888,6 +914,7 @@ def get_processed_schedules(solutions, program_name, args):
         total_program_courses = len(unique_names)
 
     grid_days, grid_slots = load_grid_layout()
+    required_vars = session.get('required_vars', [])
 
     schedule_data = []
     all_instructors = set()
@@ -912,6 +939,7 @@ def get_processed_schedules(solutions, program_name, args):
             if course_info:
                 name = course_info['course_name']
                 instructor = course_info.get('instructor', '')
+                room = course_info.get('room') or ''
                 if instructor:
                     all_instructors.add(instructor)
                     instructors_in_schedule.add(instructor)
@@ -927,6 +955,7 @@ def get_processed_schedules(solutions, program_name, args):
                         for column in slot_span(time, grid_slots):
                             grid[column][day].append({'id': cid, 'name': name,
                                                       'instructor': instructor,
+                                                      'room': room,
                                                       'time': time})
                             if column in grid_slots:
                                 busy_columns[day].add(grid_slots.index(column))
@@ -935,8 +964,9 @@ def get_processed_schedules(solutions, program_name, args):
                         flat_courses.append({
                             'id': cid, 
                             'name': name, 
-                            'instructor': instructor, 
-                            'day': day, 
+                            'instructor': instructor,
+                            'room': room,
+                            'day': day,
                             'time': time
                         })
                         days_with_classes.add(day)
@@ -968,8 +998,13 @@ def get_processed_schedules(solutions, program_name, args):
             else:
                 priority_matches.append(0)
 
+        flat_courses.sort(key=lambda c: (DAY_ORDER.get(c['day'], 99), c['time']))
+        filled = set(sol.keys())
+        missing = [display_name(v) for v in required_vars if v not in filled]
+
         schedule_data.append({
-            'schedule_index': idx + 1, # Original index
+            'schedule_index': idx + 1,  # position in the solver output, stable across sorts
+            'missing': missing,
             'grid': grid,
             'flat_courses': flat_courses,
             'count': count,
@@ -1020,45 +1055,45 @@ def generated_schedules():
     solutions = session.get('ac3_solutions', [])
     progress = session.get('ac3_progress', [])
     program_name = session.get('program_name', '')
-    
-    # Use helper to process schedules
+    if not program_name:
+        return redirect(url_for('select_program'))
+
     schedule_data, total_program_courses, all_instructors, day_counts = get_processed_schedules(
         solutions, program_name, request.args)
 
-    # Get params for template
-    sort_by = request.args.get('sort_by', 'count')
-    filter_days = request.args.get('filter_days', '')
-
-    # Reconstruct the list of priorities to repopulate the UI
-    priority_instructors = read_priorities(request.args)
-
-
-    course_loader = CourseDataLoader(['program_core.json', 'electives.json', 'ns_electives.json'])
-    highlighted_course_ids = course_loader.get_highlighted_course_ids()
-
-    # The solver already stops at MAX_SCHEDULES, so this is normally just a report
-    # of that. The slice stays as a guard for sessions written by an older build.
     limit_reached = session.get('solver_limit_reached', False)
     if len(schedule_data) > MAX_SCHEDULES:
         schedule_data = schedule_data[:MAX_SCHEDULES]
         limit_reached = True
 
-    # Check if filtering resulted in empty set
-    filter_empty = (len(schedule_data) == 0 and len(solutions) > 0)
+    # One schedule is drawn at a time; ?page=N picks which one of the ranked list.
+    try:
+        page = int(request.args.get('page', 1))
+    except ValueError:
+        page = 1
+    page = min(max(page, 1), max(len(schedule_data), 1))
+    current = schedule_data[page - 1] if schedule_data else None
+
+    # Query string for links that keep the current filters but change the page.
+    keep = {k: v for k, v in request.args.items() if k != 'page' and v}
 
     grid_days, grid_slots = load_grid_layout()
 
     return render_template('generated_schedules.html',
+                           program_name=program_name,
                            schedule_data=schedule_data,
+                           current=current,
+                           page=page,
+                           keep=keep,
                            progress=progress,
-                           highlighted_course_ids=highlighted_course_ids,
                            total_courses=total_program_courses,
                            auto_partial_fallback=session.get('auto_partial_fallback', False),
-                           current_sort=sort_by,
-                           current_filter_days=filter_days,
-                           current_priorities=priority_instructors,
+                           current_sort=request.args.get('sort_by', 'days'),
+                           current_filter_days=request.args.get('filter_days', ''),
+                           current_priorities=read_priorities(request.args),
                            all_instructors=all_instructors,
-                           filter_empty=filter_empty,
+                           solved=bool(session.get('required_vars')),
+                           filter_empty=(not schedule_data and bool(solutions)),
                            limit_reached=limit_reached,
                            max_schedules=MAX_SCHEDULES,
                            grid_days=grid_days,
@@ -1066,97 +1101,79 @@ def generated_schedules():
                            day_counts=day_counts)
 
 
+def pick_schedules(args):
+    """Ranked schedules for an export; ?schedule=N limits it to one of them."""
+    schedule_data, _, _, _ = get_processed_schedules(
+        session.get('ac3_solutions', []), session.get('program_name', ''), args)
+    wanted = args.get('schedule', '')
+    if wanted.isdigit():
+        schedule_data = [x for x in schedule_data if x['schedule_index'] == int(wanted)]
+    return schedule_data
+
+
 @app.route('/export_schedules', methods=['GET'])
 def export_schedules():
-    solutions = session.get('ac3_solutions', [])
-    if not solutions:
+    if not session.get('ac3_solutions'):
         return redirect(url_for('generated_schedules'))
 
-    program_name = session.get('program_name', '')
-    
-    # Reuse the same processing logic to get filtered & sorted schedules
-    schedule_data, _, _, _ = get_processed_schedules(solutions, program_name, request.args)
-    
-    csv_rows = []
-    
-    # Helper for sorting days
-    days_order = {'Monday': 1, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 4, 'Friday': 5, 'Saturday': 6, 'Sunday': 7}
-    
-    for idx, item in enumerate(schedule_data):
-        # Summary Header for each schedule
-        csv_rows.append([f"Schedule #{idx + 1}"])
-        csv_rows.append([f"Courses: {item['count']}", f"Days: {item['num_days']}"])
-        
-        # Column Headers
-        csv_rows.append(["Day", "Time", "Course Name", "Instructor", "Course ID"])
-        
-        # Sort courses: Day first, then Time
-        courses = item['flat_courses']
-        courses.sort(key=lambda c: (days_order.get(c['day'], 99), c['time']))
-        
-        for c in courses:
-            csv_rows.append([c['day'], c['time'], c['name'], c['instructor'], c['id']])
-            
-        # Blank row separation
-        csv_rows.append([])
-        csv_rows.append([])
+    out = io.StringIO()
+    writer = csv.writer(out)
+    writer.writerow(['Rank', 'Schedule', 'Day', 'Time', 'Course', 'Instructor', 'Room', 'Section ID'])
+    for rank, item in enumerate(pick_schedules(request.args), start=1):
+        for c in item['flat_courses']:
+            writer.writerow([rank, item['schedule_index'], c['day'], c['time'], c['name'],
+                             c['instructor'], c['room'], c['id']])
 
-    # Convert to CSV string
-    def generate():
-        for row in csv_rows:
-            # Simple CSV formatting: quote fields, comma separated
-            yield ','.join(f'"{str(x)}"' for x in row) + '\n'
-
-    from flask import Response
-    return Response(generate(), mimetype='text/csv', headers={"Content-Disposition": "attachment;filename=generated_schedules.csv"})
+    return Response(out.getvalue(), mimetype='text/csv',
+                    headers={"Content-Disposition": "attachment; filename=schedules.csv"})
 
 
+def ics_escape(text):
+    return (str(text or '').replace('\\', '\\\\').replace(';', '\\;')
+            .replace(',', '\\,').replace('\n', '\\n'))
 
 
+@app.route('/export_ics', methods=['GET'])
+def export_ics():
+    """One schedule as weekly calendar events for Google Calendar, Outlook or Apple Calendar."""
+    picked = pick_schedules(request.args)
+    if not request.args.get('schedule', '').isdigit() or not picked:
+        abort(404)
+    item = picked[0]
 
+    term_start, term_end, offset_hours = load_term()
+    local = timezone(timedelta(hours=offset_hours))
+    stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+    until = datetime.combine(term_end, datetime.max.time().replace(microsecond=0), local)
+    until = until.astimezone(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 
-# @app.route('/generated_schedules', methods=['GET'])
-# def generated_schedules():
-#     solutions = session.get('ac3_solutions', [])
-#     progress = session.get('ac3_progress', [])
+    lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//IBA Course Planner//EN',
+             'CALSCALE:GREGORIAN', 'METHOD:PUBLISH']
+    for n, c in enumerate(item['flat_courses']):
+        parsed = parse_slot('%s %s' % (c['day'], c['time']))
+        if not parsed:
+            continue
+        _, start_min, end_min = parsed
+        weekday = DAY_ORDER.get(c['day'], 1) - 1
+        first = term_start + timedelta(days=(weekday - term_start.weekday()) % 7)
+        begin = datetime.combine(first, datetime.min.time(), local) + timedelta(minutes=start_min)
+        finish = datetime.combine(first, datetime.min.time(), local) + timedelta(minutes=end_min)
+        fmt = lambda d: d.astimezone(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+        lines += ['BEGIN:VEVENT',
+                  'UID:%s-%d-%d@course-planner' % (c['id'], item['schedule_index'], n),
+                  'DTSTAMP:' + stamp,
+                  'DTSTART:' + fmt(begin),
+                  'DTEND:' + fmt(finish),
+                  'RRULE:FREQ=WEEKLY;UNTIL=' + until,
+                  'SUMMARY:' + ics_escape(c['name']),
+                  'LOCATION:' + ics_escape(c['room']),
+                  'DESCRIPTION:' + ics_escape('%s - section %s' % (c['instructor'], c['id'])),
+                  'END:VEVENT']
+    lines.append('END:VCALENDAR')
 
-#     course_loader = CourseDataLoader('courses.json')
-#     course_id_mapping = course_loader.get_course_id_constraint_mapping()
-
-#     schedule_tables = []
-#     all_rows = []  # To collect rows for CSV
-
-#     for idx, sol in enumerate(solutions):
-#         rows = []
-#         for var, cid in sol.items():
-#             course_info = course_id_mapping.get(cid)
-#             if course_info:
-#                 course_name = course_info['course_name']
-#                 constraints = course_info['constraints']  # List of "Day Time" strings
-#                 row = {
-#                     'ID': cid,
-#                     'Name': course_name,
-#                     'Constraints': ", ".join(constraints)
-#                 }
-#                 rows.append(row)
-#         schedule_tables.append(rows)
-
-#         # Add to master list for CSV, with a header row for each solution
-#         df = pd.DataFrame(rows)
-#         df.insert(0, 'Solution', f'Solution #{idx + 1}')
-#         all_rows.append(df)
-
-#         # Add a blank row (gap) between solutions
-#         all_rows.append(pd.DataFrame([[""] * len(df.columns)], columns=df.columns))
-
-#     # Concatenate all into a single DataFrame and save to CSV
-#     final_df = pd.concat(all_rows, ignore_index=True)
-#     final_df.to_csv("generated_schedules.csv", index=False)
-
-#     return render_template('generated_schedules.html',
-#                            schedule_tables=schedule_tables,
-#                            progress=progress)
-
+    return Response('\r\n'.join(lines) + '\r\n', mimetype='text/calendar',
+                    headers={"Content-Disposition":
+                             "attachment; filename=schedule-%d.ics" % item['schedule_index']})
 
 
 if __name__ == '__main__':

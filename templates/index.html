@@ -1,40 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Schedule</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 h-screen flex items-center justify-center">
-    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h1 class="text-3xl font-semibold text-center mb-6">Enter Program Name</h1>
-        <form method="post" class="space-y-4">
-            <div>
-                <input
-                    type="text"
-                    name="program"
-                    placeholder="Enter program name"
-                    value="{{ default_program }}"
-                    required
-                    list="programs"
-                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                <datalist id="programs">
-                    {% for prog in available_programs %}
-                        <option value="{{ prog }}"></option>
-                    {% endfor %}
-                </datalist>
-            </div>
-            <div class="flex justify-center">
-                <button 
-                    type="submit" 
-                    class="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                    Submit
-                </button>
-            </div>
-        </form>
-    </div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Choose your program{% endblock %}
+{% block content %}
+<section class="max-w-lg mx-auto px-4 sm:px-6 pt-14">
+    <p class="text-sm text-ink-faint mb-2">Step 0 of 4</p>
+    <h1 class="text-2xl font-bold tracking-tight">Which program and semester are you in?</h1>
+    <p class="mt-2 text-ink-soft leading-relaxed">
+        This decides your core courses and how many electives you need. Choosing a program
+        starts a fresh plan.
+    </p>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}
+    <p role="alert" class="mt-5 text-sm rounded-lg px-4 py-3 border {{ 'bg-red-50 border-red-200 text-red-800' if category == 'error' else 'bg-accent-soft border-accent/20 text-accent-dark' }}">{{ message }}</p>
+    {% endfor %}
+    {% endwith %}
+
+    <form method="post" class="mt-6 bg-paper-card border border-paper-line rounded-xl p-5 space-y-4">
+        <div>
+            <label for="program" class="block text-sm font-medium mb-1.5">Program</label>
+            <select id="program" name="program" required
+                    class="w-full rounded-lg border border-paper-line bg-white px-3 py-2.5 focus:border-accent focus:ring-0">
+                {% for prog in available_programs %}
+                <option value="{{ prog }}" {{ 'selected' if prog == (session.get('program_name') or default_program) }}>{{ prog }}</option>
+                {% endfor %}
+            </select>
+            <p class="text-xs text-ink-faint mt-1.5">{{ available_programs|length }} programs have Fall 2026 sections.</p>
+        </div>
+        <button type="submit" class="w-full bg-accent text-white py-2.5 rounded-lg font-medium hover:bg-accent-dark">
+            Continue
+        </button>
+    </form>
+</section>
+{% endblock %}

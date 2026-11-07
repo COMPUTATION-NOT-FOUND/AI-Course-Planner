@@ -10,3 +10,5 @@ services:
         value: 3.11.0
       - key: SECRET_KEY
         generateValue: true
+      - key: ADMIN_TOKEN
+        sync: false

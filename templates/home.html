@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Plan your semester{% endblock %}
+{% block content %}
+<section class="max-w-5xl mx-auto px-4 sm:px-6 pt-14 pb-10">
+    <p class="text-sm font-medium text-accent mb-3">IBA Karachi · Fall 2026</p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight max-w-2xl leading-tight">
+        Every clash-free timetable for your semester, in one go.
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft max-w-2xl leading-relaxed">
+        Tell the planner which hours you can't make and which sections you want. It searches
+        every combination of the remaining sections and ranks the timetables that fit by
+        fewest days on campus, fewest gaps, or the instructors you prefer.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+        <a href="{{ url_for('select_program') }}" class="inline-flex items-center gap-2 bg-accent text-white px-5 py-2.5 rounded-lg font-medium hover:bg-accent-dark">
+            Start planning <span aria-hidden="true">&rarr;</span>
+        </a>
+        {% if has_session %}
+        <a href="{{ url_for('schedule') }}" class="inline-flex items-center px-5 py-2.5 rounded-lg font-medium border border-paper-line bg-paper-card hover:border-ink-faint">
+            Continue where you left off
+        </a>
+        {% endif %}
+    </div>
+    <dl class="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-sm">
+        <div><dt class="text-ink-faint">Sections in the timetable</dt><dd class="text-2xl font-semibold mt-0.5">{{ section_count }}</dd></div>
+        <div><dt class="text-ink-faint">Programs and semesters</dt><dd class="text-2xl font-semibold mt-0.5">{{ program_count }}</dd></div>
+        <div><dt class="text-ink-faint">Timetables shown per search</dt><dd class="text-2xl font-semibold mt-0.5">up to 500</dd></div>
+    </dl>
+</section>
+
+<section class="max-w-5xl mx-auto px-4 sm:px-6">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-ink-faint mb-4">How it works</h2>
+    <ol class="grid gap-4 sm:grid-cols-3">
+        <li class="bg-paper-card border border-paper-line rounded-xl p-5">
+            <span class="font-mono text-xs text-ink-faint">01</span>
+            <h3 class="font-semibold mt-1">Block your busy hours</h3>
+            <p class="text-sm text-ink-soft mt-1.5 leading-relaxed">Click the hours you can't attend: a job, a commute, Friday prayers. Any section meeting then is left out.</p>
+        </li>
+        <li class="bg-paper-card border border-paper-line rounded-xl p-5">
+            <span class="font-mono text-xs text-ink-faint">02</span>
+            <h3 class="font-semibold mt-1">Pick what you want, or nothing</h3>
+            <p class="text-sm text-ink-soft mt-1.5 leading-relaxed">Lock in sections you've decided on and shortlist electives. Courses you leave open are filled with whichever section fits.</p>
+        </li>
+        <li class="bg-paper-card border border-paper-line rounded-xl p-5">
+            <span class="font-mono text-xs text-ink-faint">03</span>
+            <h3 class="font-semibold mt-1">Compare and export</h3>
+            <p class="text-sm text-ink-soft mt-1.5 leading-relaxed">Browse the ranked timetables, filter by days on campus, and add the one you like to your calendar.</p>
+        </li>
+    </ol>
+    <p class="mt-6 text-sm text-ink-soft leading-relaxed max-w-3xl">
+        Under the hood each required course is a variable whose values are its open sections, and
+        Google's OR-Tools CP-SAT solver enumerates the assignments with no two meetings overlapping.
+        If nothing complete fits, it falls back to the timetables that drop the fewest courses and
+        tells you which ones are missing.
+    </p>
+</section>
+{% endblock %}
